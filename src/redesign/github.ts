@@ -56,3 +56,63 @@ export async function getGithubStats(): Promise<GithubStats | null> {
     return null;
   }
 }
+
+/* ---------- Contribution heatmap ---------- */
+
+/** Below this many contributions in the last year the heatmap is hidden. */
+const MIN_CONTRIBUTIONS = 50;
+
+export interface ContributionDay { date: string; count: number; level: 0 | 1 | 2 | 3 | 4 }
+export interface Contributions { total: number; weeks: ContributionDay[][] }
+
+interface CalendarResponse {
+  data?: { user?: { contributionsCollection?: { contributionCalendar?: {
+    totalContributions: number;
+    weeks: { contributionDays: { date: string; contributionCount: number }[] }[];
+  } } } | null };
+}
+
+/** Pure: buckets daily counts into five intensity levels relative to the busiest day. */
+export function toContributions(calendar: NonNullable<NonNullable<NonNullable<CalendarResponse['data']>['user']>['contributionsCollection']>['contributionCalendar']): Contributions | null {
+  if (!calendar || calendar.totalContributions < MIN_CONTRIBUTIONS) return null;
+  const max = Math.max(1, ...calendar.weeks.flatMap((week) => week.contributionDays.map((day) => day.contributionCount)));
+  return {
+    total: calendar.totalContributions,
+    weeks: calendar.weeks.map((week) =>
+      week.contributionDays.map(({ date, contributionCount: count }) => ({
+        date,
+        count,
+        level: (count === 0 ? 0 : Math.min(4, Math.ceil((count / max) * 4))) as ContributionDay['level'],
+      })),
+    ),
+  };
+}
+
+const CALENDAR_QUERY = `query($login: String!) {
+  user(login: $login) { contributionsCollection { contributionCalendar {
+    totalContributions weeks { contributionDays { date contributionCount } }
+  } } }
+}`;
+
+/**
+ * Needs a read-only token in GITHUB_STATS_TOKEN (server only, never sent to the browser).
+ * Without it, or on any failure, the heatmap is simply not shown.
+ */
+export async function getContributions(): Promise<Contributions | null> {
+  const token = process.env.GITHUB_STATS_TOKEN;
+  if (!token) return null;
+  try {
+    const response = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: CALENDAR_QUERY, variables: { login: SITE.githubUser } }),
+      next: { revalidate: REVALIDATE_SECONDS },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    });
+    if (!response.ok) return null;
+    const json = (await response.json()) as CalendarResponse;
+    return toContributions(json.data?.user?.contributionsCollection?.contributionCalendar);
+  } catch {
+    return null;
+  }
+}

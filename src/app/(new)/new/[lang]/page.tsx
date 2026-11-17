@@ -6,7 +6,7 @@ import { Cases } from '@/redesign/components/Cases';
 import { Contact } from '@/redesign/components/Contact';
 import { Footer } from '@/redesign/components/Footer';
 import { Header } from '@/redesign/components/Header';
-import { getGithubStats } from '@/redesign/github';
+import { getContributions, getGithubStats } from '@/redesign/github';
 import { Hero } from '@/redesign/components/Hero';
 import { Services } from '@/redesign/components/Services';
 import { Skills } from '@/redesign/components/Skills';
@@ -21,7 +21,7 @@ export function generateStaticParams() {
 export default async function NewSitePage({ params }: { params: { lang: string } }) {
   if (!isLocale(params.lang)) notFound();
   const t = dictionaries[params.lang];
-  const github = await getGithubStats();
+  const [github, contributions] = await Promise.all([getGithubStats(), getContributions()]);
   return (
     <>
       <Header t={t} locale={params.lang} />
@@ -31,7 +31,7 @@ export default async function NewSitePage({ params }: { params: { lang: string }
         <Cases t={t} />
         <Services t={t} />
         <Skills t={t} />
-        <About t={t} github={github} locale={params.lang} />
+        <About t={t} github={github} contributions={contributions} locale={params.lang} />
         <Contact t={t} />
       </main>
       <Footer t={t} />
