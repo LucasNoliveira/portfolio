@@ -141,6 +141,7 @@ export const en: Dictionary = {
       'I care about clean design, tests, security and observability, and about explaining trade-offs plainly to teammates and stakeholders.',
       'I work remotely with international teams and I’m open to relocating for the right role.',
     ],
+    github: { title: 'On GitHub', repos: 'Public repositories', stars: 'Stars', languages: 'Most used', lastPush: 'Last push', profile: 'View profile' },
     languagesTitle: 'Languages',
     languages: [
       { flag: 'br', name: 'Portuguese', level: 'Native', score: 5 },
