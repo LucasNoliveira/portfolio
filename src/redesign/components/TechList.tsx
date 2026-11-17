@@ -8,12 +8,11 @@ interface TechListProps {
   className?: string;
 }
 
-/** Package-badge style chips: logo + monospace name. */
-export function TechList({ items, size = 16, className = '' }: TechListProps) {
+export function TechList({ items, size = 20, className = '' }: TechListProps) {
   return (
-    <ul className={`flex flex-wrap gap-2 ${className}`}>
+    <ul className={`flex flex-wrap gap-x-5 gap-y-2 ${className}`}>
       {items.map((id) => (
-        <li key={id} className="inline-flex items-center gap-1.5 rounded-md border border-rule bg-paper-2 px-2 py-1 font-code text-[.78rem]">
+        <li key={id} className="inline-flex items-center gap-2 text-[.93rem] font-medium">
           <TechIcon id={id} size={size} />
           <span>{TECH[id].label}</span>
         </li>
