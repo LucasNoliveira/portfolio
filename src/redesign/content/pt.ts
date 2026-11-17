@@ -115,8 +115,14 @@ export const pt: Dictionary = {
       'Me importo com design limpo, testes, segurança e observabilidade, e com explicar trade-offs de forma simples para colegas e stakeholders.',
       'Trabalho remoto com times internacionais e estou aberto a me mudar pela vaga certa.',
     ],
+    languagesTitle: 'Idiomas',
+    languages: [
+      { name: 'Português', level: 'Nativo', score: 5 },
+      { name: 'Inglês', level: 'Avançado · B2/C1', score: 4 },
+      { name: 'Japonês', level: 'Intermediário · N3', score: 3 },
+      { name: 'Espanhol', level: 'Básico', score: 1 },
+    ],
     facts: [
-      { term: 'Idiomas', value: 'Português (nativo), inglês (B2/C1), japonês (N3), espanhol (básico)' },
       { term: 'Formação', value: 'Bacharelado em Ciência da Computação, Estácio' },
       { term: 'Certificação', value: 'AWS Developer Associate (em andamento)' },
       { term: 'Fora do trabalho', value: 'Games, anime, treino e aprender idiomas' },

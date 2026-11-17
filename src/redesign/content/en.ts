@@ -115,8 +115,14 @@ export const en: Dictionary = {
       'I care about clean design, tests, security and observability, and about explaining trade-offs plainly to teammates and stakeholders.',
       'I work remotely with international teams and I’m open to relocating for the right role.',
     ],
+    languagesTitle: 'Languages',
+    languages: [
+      { name: 'Portuguese', level: 'Native', score: 5 },
+      { name: 'English', level: 'Advanced · B2/C1', score: 4 },
+      { name: 'Japanese', level: 'Intermediate · N3', score: 3 },
+      { name: 'Spanish', level: 'Basic', score: 1 },
+    ],
     facts: [
-      { term: 'Languages', value: 'Portuguese (native), English (B2/C1), Japanese (N3), Spanish (basic)' },
       { term: 'Education', value: 'B.Sc. in Computer Science, Estácio' },
       { term: 'Certification', value: 'AWS Developer Associate (in progress)' },
       { term: 'Off the clock', value: 'Games, anime, training and learning languages' },

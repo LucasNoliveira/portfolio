@@ -22,6 +22,13 @@ export interface CaseStudy {
   stack: TechId[];
 }
 
+/** `score` is 1 (basic) to 5 (native). */
+export interface LanguageSkill {
+  name: string;
+  level: string;
+  score: 1 | 2 | 3 | 4 | 5;
+}
+
 export interface Dictionary {
   meta: { title: string; description: string };
   ui: { skip: string; theme: string; language: string; switchTo: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
@@ -34,6 +41,9 @@ export interface Dictionary {
   work: { title: string; intro: string; jobs: Job[] };
   cases: { title: string; intro: string; items: CaseStudy[] };
   skills: { title: string; groups: { name: string; items: TechId[] }[] };
-  about: { title: string; paragraphs: string[]; facts: { term: string; value: string }[] };
+  about: {
+    title: string; paragraphs: string[]; facts: { term: string; value: string }[];
+    languagesTitle: string; languages: LanguageSkill[];
+  };
   contact: { title: string; intro: string; whatsapp: string; call: string };
 }
