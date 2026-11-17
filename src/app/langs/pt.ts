@@ -55,6 +55,29 @@ export const pt = {
   years: "anos",
 experiences: [
   {
+    company: "Vocal Silence",
+    logo: "/img/company_logos/vocal_silence_logo.jpg",
+    role: "Engenheiro Backend Pleno",
+    techStack: [
+      "Python",
+      "Django",
+      "AWS",
+      "Docker",
+      "Git",
+    ],
+    startDate: "Fev 2026",
+    endDate: "Atual",
+    description: `
+• Lidero a arquitetura e o desenvolvimento backend de aplicações com IA usando Python e Django em uma startup em estágio inicial.
+• Construí APIs seguras para parceiros, voltadas a integrações máquina a máquina, com controle de acesso JWT e assinatura HMAC das requisições para garantir autenticidade e integridade dos dados.
+• Introduzi testes automatizados de backend do zero, aumentando a confiança nos releases de APIs críticas e reduzindo o risco de regressões.
+• Integrei revisão de código com LLM ao fluxo de pull requests para apontar automaticamente problemas de qualidade, segurança e manutenibilidade.
+• Projeto e coloco em produção sistemas com Docker na AWS (ECS, Lambda, RDS, S3, SES, CloudWatch).
+• Oriento um engenheiro júnior na definição de tarefas, nos code reviews e no acompanhamento técnico do dia a dia.
+• Participo das decisões técnicas e da arquitetura do sistema, e implantei um fluxo de trabalho Kanban que melhorou a visibilidade das tarefas e as entregas.
+    `,
+  },
+  {
     company: "Accenture",
     logo: "/img/company_logos/accenture_logo.jpeg",
     role: "Analista de Engenharia de Software Personalizado",
@@ -70,7 +93,7 @@ experiences: [
       "GCP"
     ],
     startDate: "Jan 2025",
-    endDate: "Atual",
+    endDate: "Jan 2026",
     description: `
 • Desenvolvi automações inteligentes usando Pipefy para otimizar fluxos de trabalho e aumentar a eficiência operacional.
 • Melhorei continuamente scripts de automação com foco em desempenho, escalabilidade e legibilidade do código.

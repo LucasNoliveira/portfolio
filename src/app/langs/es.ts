@@ -63,6 +63,29 @@ export const es = {
   years: "años",
   experiences: [
     {
+      company: "Vocal Silence",
+      logo: "/img/company_logos/vocal_silence_logo.jpg",
+      role: "Ingeniero Backend Semi Senior",
+      techStack: [
+        "Python",
+        "Django",
+        "AWS",
+        "Docker",
+        "Git",
+      ],
+      startDate: "Feb 2026",
+      endDate: "Actualidad",
+      description: `
+• Lidero la arquitectura y el desarrollo backend de aplicaciones con IA usando Python y Django en una startup en etapa temprana.
+• Construí APIs seguras para socios, orientadas a integraciones máquina a máquina, con control de acceso JWT y firma HMAC de las solicitudes para garantizar autenticidad e integridad de los datos.
+• Introduje pruebas automatizadas de backend desde cero, aumentando la confianza en los lanzamientos de APIs críticas y reduciendo el riesgo de regresiones.
+• Integré la revisión de código con LLM en el flujo de pull requests para señalar automáticamente problemas de calidad, seguridad y mantenibilidad.
+• Diseño y llevo a producción sistemas con Docker en AWS (ECS, Lambda, RDS, S3, SES, CloudWatch).
+• Oriento a un ingeniero junior en la definición de tareas, las revisiones de código y el acompañamiento técnico diario.
+• Participo en las decisiones técnicas y en la arquitectura del sistema, e implementé un flujo de trabajo Kanban que mejoró la visibilidad de las tareas y las entregas.
+      `,
+    },
+    {
       company: "Accenture",
       logo: "/img/company_logos/accenture_logo.jpeg",
       role: "Analista de Ingeniería de Software Personalizado",
@@ -78,7 +101,7 @@ export const es = {
         "GCP",
       ],
       startDate: "Ene 2025",
-      endDate: "Actualidad",
+      endDate: "Ene 2026",
       description: `
 • Desarrollé automatizaciones inteligentes utilizando Pipefy para optimizar flujos de trabajo y mejorar la eficiencia operativa.
 • Mejoré continuamente scripts de automatización con enfoque en rendimiento, escalabilidad y legibilidad del código.

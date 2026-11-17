@@ -102,10 +102,12 @@ const ExperienceCard: FC<{ exp: any; index: number }> = ({ exp, index }) => {
         } md:w-5/12`}
       >
         <div className="flex items-center gap-3 md:gap-4">
-          <img
-            src={exp.logo}
-            className="rounded-full h-10 w-10 block md:hidden"
-          />
+          {exp.logo && (
+            <img
+              src={exp.logo}
+              className="rounded-full h-10 w-10 block md:hidden"
+            />
+          )}
           <h3 className="sm:text-lg lg:text-xl font-semibold text-gray-200 mb-1 md:mb-2">
             {exp.company}
           </h3>

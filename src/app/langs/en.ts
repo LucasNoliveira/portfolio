@@ -63,6 +63,29 @@ export const en = {
   years: "years",
   experiences: [
     {
+      company: "Vocal Silence",
+      logo: "/img/company_logos/vocal_silence_logo.jpg",
+      role: "Mid-Level Backend Engineer",
+      techStack: [
+        "Python",
+        "Django",
+        "AWS",
+        "Docker",
+        "Git",
+      ],
+      startDate: "Feb 2026",
+      endDate: "Current",
+      description: `
+• Lead backend architecture and development of AI-driven applications with Python and Django in an early-stage startup.
+• Built secure partner-facing APIs for machine-to-machine integrations, using JWT access control and HMAC request signing to guarantee authenticity and payload integrity.
+• Introduced automated backend testing from scratch, increasing confidence in critical API releases and reducing regression risk.
+• Integrated LLM-powered code review into the pull request workflow to flag quality, security and maintainability issues automatically.
+• Design and deploy production-ready systems with Docker on AWS (ECS, Lambda, RDS, S3, SES, CloudWatch).
+• Mentor a junior engineer through task definition, code reviews and day-to-day technical guidance.
+• Contribute to technical decisions and system architecture, and introduced a Kanban-based workflow that improved task visibility and delivery.
+      `,
+    },
+    {
       company: "Accenture",
       logo: "/img/company_logos/accenture_logo.jpeg",
       role: "Custom Software Engineering Analyst",
@@ -78,7 +101,7 @@ export const en = {
         "GCP"
       ],
       startDate: "Jan 2025",
-      endDate: "Current",
+      endDate: "Jan 2026",
       description: `
 • Developed smart automations using Pipefy to streamline workflows and enhance operational efficiency.
 • Continuously improved automation scripts with a focus on performance, scalability, and code readability.

@@ -63,6 +63,29 @@ export const jp = {
   years: "年",
   experiences: [
     {
+      company: "Vocal Silence",
+      logo: "/img/company_logos/vocal_silence_logo.jpg",
+      role: "ミドルレベル バックエンドエンジニア",
+      techStack: [
+        "Python",
+        "Django",
+        "AWS",
+        "Docker",
+        "Git",
+      ],
+      startDate: "2026年2月",
+      endDate: "現在",
+      description: `
+• 初期段階のスタートアップで、Python と Django を用いた AI アプリケーションのバックエンドアーキテクチャと開発を主導しています。
+• パートナー向けのセキュアな API を構築し、JWT によるアクセス制御と HMAC によるリクエスト署名で、機械間連携の真正性とデータの完全性を担保しました。
+• バックエンドの自動テストをゼロから導入し、重要な API リリースへの信頼性を高め、リグレッションのリスクを低減しました。
+• プルリクエストのフローに LLM によるコードレビューを組み込み、品質・セキュリティ・保守性の問題を自動で指摘できるようにしました。
+• AWS（ECS、Lambda、RDS、S3、SES、CloudWatch）上で Docker を用いた本番運用可能なシステムを設計・デプロイしています。
+• ジュニアエンジニアに対し、タスク定義、コードレビュー、日々の技術的な指導を行っています。
+• 技術的な意思決定とシステム設計に参加し、タスクの可視性とデリバリーを改善する Kanban ベースのワークフローを導入しました。
+      `,
+    },
+    {
       company: "Accenture",
       logo: "/img/company_logos/accenture_logo.jpeg",
       role: "カスタムソフトウェアエンジニアリングアナリスト",
@@ -78,7 +101,7 @@ export const jp = {
         "GCP",
       ],
       startDate: "2025年1月",
-      endDate: "現在",
+      endDate: "2026年1月",
       description: `
 • Pipefy を使用したスマートな自動化を開発し、ワークフローを効率化し、業務効率を向上させました。
 • パフォーマンス、スケーラビリティ、コードの可読性を重視しながら、自動化スクリプトを継続的に改善しました。
