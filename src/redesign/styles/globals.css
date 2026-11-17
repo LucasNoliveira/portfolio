@@ -59,6 +59,13 @@
 }
 .timeline[data-animate] > li:not([data-visible]) { opacity: 0; translate: 0 28px; }
 
+/* Contribution heatmap levels, from empty to busiest. */
+.gh-0 { fill: var(--rule); }
+.gh-1 { fill: color-mix(in oklab, var(--ok) 30%, var(--paper)); }
+.gh-2 { fill: color-mix(in oklab, var(--ok) 52%, var(--paper)); }
+.gh-3 { fill: color-mix(in oklab, var(--ok) 76%, var(--paper)); }
+.gh-4 { fill: var(--ok); }
+
 /* Scroll reveal: only hidden once JavaScript has taken over, so content never depends on it. */
 .reveal { transition: opacity .55s ease-out var(--delay, 0ms), translate .55s ease-out var(--delay, 0ms); }
 .reveal[data-animate]:not([data-in]) { opacity: 0; translate: 0 18px; }

@@ -57,7 +57,7 @@ export interface Dictionary {
   about: {
     title: string; paragraphs: string[]; facts: { term: string; value: string }[];
     languagesTitle: string; languages: LanguageSkill[];
-    github: { title: string; repos: string; stars: string; languages: string; lastPush: string; profile: string };
+    github: { heatmap: string; heatmapDay: string; title: string; repos: string; stars: string; languages: string; lastPush: string; profile: string };
   };
   contact: { title: string; intro: string; whatsapp: string; call: string };
 }

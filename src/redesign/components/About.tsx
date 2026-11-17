@@ -1,11 +1,13 @@
 import type { Dictionary } from '../content/types';
 import type { Locale } from '../content/locales';
 import type { GithubStats as Stats } from '../github';
+import type { Contributions } from '../github';
+import { ContributionHeatmap } from './ContributionHeatmap';
 import { GithubStats } from './GithubStats';
 import { LanguageLevels } from './LanguageLevels';
 import { Section } from './Section';
 
-export function About({ t, github, locale }: { t: Dictionary; github: Stats | null; locale: Locale }) {
+export function About({ t, github, contributions, locale }: { t: Dictionary; github: Stats | null; contributions: Contributions | null; locale: Locale }) {
   return (
     <Section id="about" title={t.about.title} split>
       <div className="grid gap-8 md:grid-cols-[1.2fr_1fr] md:gap-12">
@@ -25,6 +27,7 @@ export function About({ t, github, locale }: { t: Dictionary; github: Stats | nu
           {github && <GithubStats t={t} stats={github} locale={locale} />}
         </div>
       </div>
+      {contributions && <ContributionHeatmap t={t} data={contributions} locale={locale} />}
     </Section>
   );
 }
