@@ -42,7 +42,7 @@ export interface LanguageSkill {
 
 export interface Dictionary {
   meta: { title: string; description: string };
-  ui: { skip: string; theme: string; language: string; switchTo: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
+  ui: { skip: string; theme: string; language: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
   nav: { work: string; cases: string; services: string; skills: string; about: string; contact: string };
   hero: {
     role: string; lead: string; location: string; availability: string;

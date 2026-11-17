@@ -9,6 +9,9 @@ const TYPING = true;
 const MS_PER_CHAR = 14;
 const START_DELAY = 700;
 
+/** Width in monospace cells: CJK characters take two. */
+const cells = (text: string) => Array.from(text).reduce((sum, char) => sum + ((char.codePointAt(0) ?? 0) > 0x2e80 ? 2 : 1), 0);
+
 interface Line { text: string; node: ReactNode }
 
 export function ProfileCard({ t }: { t: Dictionary }) {
@@ -44,8 +47,8 @@ export function ProfileCard({ t }: { t: Dictionary }) {
       <pre className="overflow-x-auto px-4 py-4 font-code text-[.82rem] leading-7 sm:text-sm" tabIndex={0}>
         <code className={TYPING ? 'typing' : undefined}>
           {lines.map(({ text, node }, i) => {
-            const style = { '--n': text.length, '--start': `${start}ms`, '--dur': `${text.length * MS_PER_CHAR}ms` } as CSSProperties;
-            start += text.length * MS_PER_CHAR;
+            const style = { '--n': cells(text), '--start': `${start}ms`, '--dur': `${cells(text) * MS_PER_CHAR}ms` } as CSSProperties;
+            start += cells(text) * MS_PER_CHAR;
             return <span key={i} className="line" style={style}>{node}</span>;
           })}
         </code>

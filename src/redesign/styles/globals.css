@@ -27,6 +27,7 @@
   h2, h3 { text-wrap: balance; line-height: 1.1; }
   h3 { font-weight: 600; }
   p { text-wrap: pretty; }
+  :lang(ja) { line-break: strict; word-break: auto-phrase; }
   img, svg { display: block; max-width: 100%; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 }

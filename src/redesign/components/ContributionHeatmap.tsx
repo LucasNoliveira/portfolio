@@ -31,7 +31,7 @@ export function ContributionHeatmap({ t, data, locale }: { t: Dictionary; data: 
               {showMonth && <text y={9} className="fill-muted font-code" fontSize={9}>{month.format(first)}</text>}
               {week.map((d, y) => (
                 <rect key={d.date} y={LABEL_H + y * STEP} width={CELL} height={CELL} rx={2} className={`gh-${d.level}`}>
-                  <title>{`${d.count} ${labels.heatmapDay} ${day.format(new Date(`${d.date}T00:00:00Z`))}`}</title>
+                  <title>{labels.heatmapDay.replace('{count}', String(d.count)).replace('{date}', day.format(new Date(`${d.date}T00:00:00Z`)))}</title>
                 </rect>
               ))}
             </g>

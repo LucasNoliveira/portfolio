@@ -2,7 +2,7 @@ import type { Dictionary } from './types';
 
 export const en: Dictionary = {
   meta: { title: 'Lucas Oliveira — Backend engineer', description: 'Backend engineer in São Paulo building AI-powered products with Python, Django, FastAPI and AWS. Open to remote roles worldwide.' },
-  ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Português', switchTo: 'Mudar para português', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source' },
+  ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Language', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source' },
   nav: { work: 'Work', cases: 'Case studies', services: 'Services', skills: 'Stack', about: 'About', contact: 'Contact' },
   hero: {
     role: 'Backend engineer building AI-powered products.',
@@ -141,7 +141,7 @@ export const en: Dictionary = {
       'I care about clean design, tests, security and observability, and about explaining trade-offs plainly to teammates and stakeholders.',
       'I work remotely with international teams and I’m open to relocating for the right role.',
     ],
-    github: { heatmap: 'contributions in the last year', heatmapDay: 'contributions on', title: 'On GitHub', repos: 'Public repositories', stars: 'Stars', languages: 'Most used', lastPush: 'Last push', profile: 'View profile' },
+    github: { heatmap: 'contributions in the last year', heatmapDay: '{count} contributions on {date}', title: 'On GitHub', repos: 'Public repositories', stars: 'Stars', languages: 'Most used', lastPush: 'Last push', profile: 'View profile' },
     languagesTitle: 'Languages',
     languages: [
       { flag: 'br', name: 'Portuguese', level: 'Native', score: 5 },
