@@ -12,6 +12,14 @@ export interface Job {
   stack: TechId[];
 }
 
+export interface ServiceItem {
+  title: string;
+  description: string;
+  stack: TechId[];
+  /** Shown wide and highlighted: the "I can take it end to end" offer. */
+  featured?: boolean;
+}
+
 export interface CaseStudy {
   companyId: CompanyId;
   company: string;
@@ -35,7 +43,7 @@ export interface LanguageSkill {
 export interface Dictionary {
   meta: { title: string; description: string };
   ui: { skip: string; theme: string; language: string; switchTo: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
-  nav: { work: string; cases: string; skills: string; about: string; contact: string };
+  nav: { work: string; cases: string; services: string; skills: string; about: string; contact: string };
   hero: {
     role: string; lead: string; location: string; availability: string;
     email: string; resume: string;
@@ -44,6 +52,7 @@ export interface Dictionary {
   };
   work: { title: string; intro: string; jobs: Job[] };
   cases: { title: string; intro: string; items: CaseStudy[] };
+  services: { title: string; intro: string; items: ServiceItem[] };
   skills: { title: string; groups: { name: string; items: TechId[] }[] };
   about: {
     title: string; paragraphs: string[]; facts: { term: string; value: string }[];

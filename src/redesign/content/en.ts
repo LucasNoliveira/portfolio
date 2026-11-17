@@ -3,7 +3,7 @@ import type { Dictionary } from './types';
 export const en: Dictionary = {
   meta: { title: 'Lucas Oliveira — Backend engineer', description: 'Backend engineer in São Paulo building AI-powered products with Python, Django, FastAPI and AWS. Open to remote roles worldwide.' },
   ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Português', switchTo: 'Mudar para português', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source' },
-  nav: { work: 'Work', cases: 'Case studies', skills: 'Stack', about: 'About', contact: 'Contact' },
+  nav: { work: 'Work', cases: 'Case studies', services: 'Services', skills: 'Stack', about: 'About', contact: 'Contact' },
   hero: {
     role: 'Backend engineer building AI-powered products.',
     lead: 'I have spent four years taking products from idea to production: secure APIs, cloud infrastructure and LLM features that teams can rely on. Based in São Paulo, working remotely with international teams.',
@@ -106,6 +106,22 @@ export const en: Dictionary = {
         problem: 'The business needed a custom POS that also talked to its CRM.',
         approach: 'Led design and delivery across Django, React and PostgreSQL, connected RD Station and shipped it on Nginx.',
         stack: ['django', 'react', 'postgresql', 'nginx'],
+      },
+    ],
+  },
+  services: {
+    title: 'What I can build',
+    intro: 'Backend first. When a project needs more, I can take it end to end.',
+    items: [
+      { title: 'APIs and backend', description: 'Secure APIs that teams and partners can depend on, with authentication, integrations and tests from the start.', stack: ['python', 'django', 'fastapi', 'graphql', 'jwt', 'postgresql'] },
+      { title: 'Cloud and deployment', description: 'Containerized services running on AWS or GCP, with environments that stay consistent from a laptop to production.', stack: ['aws', 'gcp', 'docker', 'nginx'] },
+      { title: 'AI features', description: 'LLM-powered assistants and workflows built on top of your own data and systems.', stack: ['llm', 'python'] },
+      { title: 'Automation', description: 'Scripts, webhooks and integrations that take repetitive work off people’s plates.', stack: ['python', 'graphql', 'git'] },
+      {
+        title: 'Complete platforms, end to end',
+        description: 'When it makes sense to have one person own the whole product: React frontend, backend, database, deployment and integrations. I led a point-of-sale system from the first commit to production.',
+        stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
+        featured: true,
       },
     ],
   },

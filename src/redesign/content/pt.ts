@@ -3,7 +3,7 @@ import type { Dictionary } from './types';
 export const pt: Dictionary = {
   meta: { title: 'Lucas Oliveira — Engenheiro backend', description: 'Engenheiro backend em São Paulo criando produtos com IA em Python, Django, FastAPI e AWS. Aberto a vagas remotas no exterior.' },
   ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'English', switchTo: 'Switch to English', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte' },
-  nav: { work: 'Trabalho', cases: 'Cases', skills: 'Stack', about: 'Sobre', contact: 'Contato' },
+  nav: { work: 'Trabalho', cases: 'Cases', services: 'Serviços', skills: 'Stack', about: 'Sobre', contact: 'Contato' },
   hero: {
     role: 'Engenheiro backend criando produtos com IA.',
     lead: 'Há quatro anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto com times internacionais.',
@@ -106,6 +106,22 @@ export const pt: Dictionary = {
         problem: 'O negócio precisava de um PDV sob medida que também falasse com o CRM.',
         approach: 'Liderei design e entrega com Django, React e PostgreSQL, conectei o RD Station e publiquei em Nginx.',
         stack: ['django', 'react', 'postgresql', 'nginx'],
+      },
+    ],
+  },
+  services: {
+    title: 'O que posso construir',
+    intro: 'Backend em primeiro lugar. Quando o projeto pede mais, levo ele de ponta a ponta.',
+    items: [
+      { title: 'APIs e backend', description: 'APIs seguras em que times e parceiros podem confiar, com autenticação, integrações e testes desde o início.', stack: ['python', 'django', 'fastapi', 'graphql', 'jwt', 'postgresql'] },
+      { title: 'Cloud e deploy', description: 'Serviços em contêineres na AWS ou GCP, com ambientes consistentes do notebook até a produção.', stack: ['aws', 'gcp', 'docker', 'nginx'] },
+      { title: 'Recursos com IA', description: 'Assistentes e fluxos com LLMs construídos sobre os seus dados e sistemas.', stack: ['llm', 'python'] },
+      { title: 'Automação', description: 'Scripts, webhooks e integrações que tiram o trabalho repetitivo das pessoas.', stack: ['python', 'graphql', 'git'] },
+      {
+        title: 'Plataformas completas, de ponta a ponta',
+        description: 'Quando faz sentido uma pessoa cuidar do produto inteiro: frontend em React, backend, banco de dados, deploy e integrações. Liderei um sistema de PDV do primeiro commit à produção.',
+        stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
+        featured: true,
       },
     ],
   },
