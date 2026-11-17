@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { Dictionary } from '../content/types';
 import { SITE } from '../config';
-import { EmailLink } from './EmailLink';
+import { ContactMenu } from './ContactMenu';
 import { ProfileCard } from './ProfileCard';
 import { TechList } from './TechList';
 
@@ -24,7 +24,7 @@ export function Hero({ t }: { t: Dictionary }) {
           <p className="mt-5 max-w-[60ch] text-muted">{hero.lead}</p>
           <p className="mt-5 font-code text-sm text-muted">{hero.availability}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <EmailLink className="btn btn-primary">{hero.email}</EmailLink>
+            <ContactMenu t={t} />
             <a className="btn" href="#cases">{t.nav.cases}</a>
             {SITE.resumeUrl && <a className="btn" href={SITE.resumeUrl} download>{hero.resume}</a>}
           </div>

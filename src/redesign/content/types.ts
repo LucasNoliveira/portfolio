@@ -35,7 +35,8 @@ export interface Dictionary {
   nav: { work: string; cases: string; skills: string; about: string; contact: string };
   hero: {
     role: string; lead: string; location: string; availability: string;
-    email: string; resume: string; stackTitle: string; stack: TechId[];
+    email: string; resume: string;
+    menu: { title: string; email: string; whatsapp: string; call: string; linkedin: string }; stackTitle: string; stack: TechId[];
     card: { role: string; location: string; timezone: string; openTo: string };
   };
   work: { title: string; intro: string; jobs: Job[] };
