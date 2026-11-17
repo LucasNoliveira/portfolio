@@ -3,6 +3,7 @@ import type { Dictionary } from '../content/types';
 import { SITE } from '../config';
 import { EmailLink } from './EmailLink';
 import { ProfileCard } from './ProfileCard';
+import { TechList } from './TechList';
 
 export function Hero({ t }: { t: Dictionary }) {
   const { hero } = t;
@@ -29,6 +30,11 @@ export function Hero({ t }: { t: Dictionary }) {
           </div>
         </div>
         <ProfileCard t={t} />
+
+        <div className="border-t border-rule pt-6 lg:col-span-2">
+          <h2 className="mb-4 text-base font-semibold text-muted">{hero.stackTitle}</h2>
+          <TechList items={hero.stack} size={26} className="[&_li]:text-base" />
+        </div>
       </div>
     </section>
   );
