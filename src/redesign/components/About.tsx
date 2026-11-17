@@ -2,8 +2,7 @@ import type { Dictionary } from '../content/types';
 import type { Locale } from '../content/locales';
 import type { GithubStats as Stats } from '../github';
 import type { Contributions } from '../github';
-import { ContributionHeatmap } from './ContributionHeatmap';
-import { GithubStats } from './GithubStats';
+import { GithubActivity } from './GithubStats';
 import { LanguageLevels } from './LanguageLevels';
 import { Section } from './Section';
 
@@ -24,10 +23,9 @@ export function About({ t, github, contributions, locale }: { t: Dictionary; git
               </div>
             ))}
           </dl>
-          {github && <GithubStats t={t} stats={github} locale={locale} />}
         </div>
       </div>
-      {contributions && <ContributionHeatmap t={t} data={contributions} locale={locale} />}
+      {(github || contributions) && <GithubActivity t={t} stats={github} contributions={contributions} locale={locale} />}
     </Section>
   );
 }
