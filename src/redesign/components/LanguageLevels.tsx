@@ -1,11 +1,13 @@
+import type { CSSProperties } from 'react';
 import type { LanguageSkill } from '../content/types';
+import { Reveal } from './Reveal';
 
 const STEPS = [1, 2, 3, 4, 5] as const;
 
 /** Language proficiency as a five-step meter. Exposed to assistive tech as a meter with a text value. */
 export function LanguageLevels({ title, languages }: { title: string; languages: LanguageSkill[] }) {
   return (
-    <div>
+    <Reveal>
       <h3 className="mb-3 text-[.95rem] font-bold">{title}</h3>
       <ul className="grid gap-3.5">
         {languages.map(({ name, level, score }) => (
@@ -24,12 +26,12 @@ export function LanguageLevels({ title, languages }: { title: string; languages:
               className="grid grid-cols-5 gap-1"
             >
               {STEPS.map((step) => (
-                <span key={step} className={`h-1.5 rounded-full ${step <= score ? 'bg-accent' : 'bg-rule'}`} />
+                <span key={step} className={`h-1.5 rounded-full ${step <= score ? 'bg-accent seg' : 'bg-rule'}`} style={{ '--i': step } as CSSProperties} />
               ))}
             </div>
           </li>
         ))}
       </ul>
-    </div>
+    </Reveal>
   );
 }
