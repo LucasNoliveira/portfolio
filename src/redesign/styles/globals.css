@@ -59,6 +59,18 @@
 }
 .timeline[data-animate] > li:not([data-visible]) { opacity: 0; translate: 0 28px; }
 
+/* Scroll reveal: only hidden once JavaScript has taken over, so content never depends on it. */
+.reveal { transition: opacity .55s ease-out var(--delay, 0ms), translate .55s ease-out var(--delay, 0ms); }
+.reveal[data-animate]:not([data-in]) { opacity: 0; translate: 0 18px; }
+
+/* Language meter fills left to right, one step after another. */
+.seg { transform-origin: left; transition: transform .45s ease-out calc(var(--i) * 80ms + 250ms); }
+.reveal[data-animate]:not([data-in]) .seg { transform: scaleX(0); }
+
+/* Hero entrance: one short sequence on load. */
+@keyframes rise { from { opacity: 0; translate: 0 14px; } }
+.rise { animation: rise .6s ease-out backwards; animation-delay: calc(var(--i, 0) * 80ms); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }

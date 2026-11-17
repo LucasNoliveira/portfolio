@@ -1,14 +1,15 @@
 import type { Dictionary } from '../content/types';
 import { TECH } from '../tech/catalog';
 import { TechIcon } from './Icon';
+import { Reveal } from './Reveal';
 import { Section } from './Section';
 
 export function Skills({ t }: { t: Dictionary }) {
   return (
-    <Section id="skills" title={t.skills.title} split>
+    <Section id="skills" title={t.skills.title} split revealBody={false}>
       <div className="grid gap-9">
-        {t.skills.groups.map((group) => (
-          <div key={group.name}>
+        {t.skills.groups.map((group, i) => (
+          <Reveal key={group.name} delay={i * 60}>
             <h3 className="mb-3.5 text-base font-semibold text-muted">{group.name}</h3>
             <ul className="grid grid-cols-[repeat(auto-fill,minmax(110px,1fr))] gap-3">
               {group.items.map((id) => (
@@ -18,7 +19,7 @@ export function Skills({ t }: { t: Dictionary }) {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         ))}
       </div>
     </Section>

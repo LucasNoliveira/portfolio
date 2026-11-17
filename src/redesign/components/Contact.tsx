@@ -11,7 +11,7 @@ const HINT = 'col-start-2 font-code text-sm text-muted [overflow-wrap:anywhere] 
 export function Contact({ t }: { t: Dictionary }) {
   const links = [
     { icon: 'whatsapp', color: '#25D366', label: 'WhatsApp', hint: t.contact.whatsapp, href: SITE.whatsapp },
-    { icon: 'linkedin', color: '#0A66C2', label: 'LinkedIn', hint: 'in/lucasnevesoliveira', href: SITE.linkedin },
+    { icon: 'linkedin', color: '#0A66C2', label: 'LinkedIn', hint: 'linkedin.com', href: SITE.linkedin },
     { icon: 'github', color: 'currentColor', label: 'GitHub', hint: 'LucasNoliveira', href: SITE.github },
     { icon: 'calendly', color: '#006BFF', label: 'Calendly', hint: t.contact.call, href: SITE.calendly },
   ];

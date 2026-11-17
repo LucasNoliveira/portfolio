@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import type { Dictionary } from '../content/types';
 import { SITE } from '../config';
@@ -12,7 +13,7 @@ export function Hero({ t }: { t: Dictionary }) {
     <section id="top" className="py-12 md:py-20">
       <div className="wrap grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div>
-          <div className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+          <div className="rise mb-6 flex flex-wrap items-center gap-x-5 gap-y-3">
             <Image
               src="/img/new/me.jpg"
               alt={SITE.name}
@@ -23,16 +24,16 @@ export function Hero({ t }: { t: Dictionary }) {
             />
             <AvailabilityBadge>{hero.availability}</AvailabilityBadge>
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">{SITE.name}</h1>
-          <p className="mt-3 text-xl font-medium text-muted md:text-2xl">{hero.role}</p>
-          <p className="mt-5 max-w-[60ch] text-muted">{hero.lead}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <h1 style={{ '--i': 1 } as CSSProperties} className="rise text-4xl font-semibold tracking-tight md:text-6xl">{SITE.name}</h1>
+          <p style={{ '--i': 2 } as CSSProperties} className="rise mt-3 text-xl font-medium text-muted md:text-2xl">{hero.role}</p>
+          <p style={{ '--i': 3 } as CSSProperties} className="rise mt-5 max-w-[60ch] text-muted">{hero.lead}</p>
+          <div style={{ '--i': 4 } as CSSProperties} className="rise mt-6 flex flex-wrap gap-3">
             <ContactMenu t={t} />
             <a className="btn" href="#cases">{t.nav.cases}</a>
             {SITE.resumeUrl && <a className="btn" href={SITE.resumeUrl} download>{hero.resume}</a>}
           </div>
         </div>
-        <ProfileCard t={t} />
+        <div style={{ '--i': 3 } as CSSProperties} className="rise"><ProfileCard t={t} /></div>
 
         <div className="border-t border-rule pt-6 lg:col-span-2">
           <h2 className="mb-4 text-base font-semibold text-muted">{hero.stackTitle}</h2>
