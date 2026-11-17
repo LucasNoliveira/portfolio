@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { LanguageSkill } from '../content/types';
+import { Flag } from './Flag';
 import { Reveal } from './Reveal';
 
 const STEPS = [1, 2, 3, 4, 5] as const;
@@ -10,10 +11,10 @@ export function LanguageLevels({ title, languages }: { title: string; languages:
     <Reveal>
       <h3 className="mb-3 text-[.95rem] font-bold">{title}</h3>
       <ul className="grid gap-3.5">
-        {languages.map(({ name, level, score }) => (
+        {languages.map(({ flag, name, level, score }) => (
           <li key={name}>
-            <div className="mb-1.5 flex items-baseline justify-between gap-3">
-              <span className="font-medium">{name}</span>
+            <div className="mb-1.5 flex items-center justify-between gap-3">
+              <span className="flex items-center gap-2.5 font-medium"><Flag code={flag} />{name}</span>
               <span className="font-code text-xs text-muted">{level}</span>
             </div>
             <div

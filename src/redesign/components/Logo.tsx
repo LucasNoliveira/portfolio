@@ -15,7 +15,7 @@ export function Logo({ id, size }: { id: CompanyId; size: number }) {
       alt=""
       width={size}
       height={size}
-      className="flex-none rounded-[10px] border border-rule bg-white object-cover"
+      className="flex-none rounded-full border border-rule bg-white object-cover"
       style={{ width: size, height: size }}
     />
   );

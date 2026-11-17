@@ -23,7 +23,10 @@ export interface CaseStudy {
 }
 
 /** `score` is 1 (basic) to 5 (native). */
+export type FlagCode = 'br' | 'us' | 'jp' | 'es';
+
 export interface LanguageSkill {
+  flag: FlagCode;
   name: string;
   level: string;
   score: 1 | 2 | 3 | 4 | 5;
