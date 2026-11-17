@@ -5,17 +5,16 @@ import { TechIcon } from './Icon';
 interface TechListProps {
   items: TechId[];
   size?: number;
-  /** Puts each logo on a white chip so brand colors stay legible on colored backgrounds. */
-  chip?: boolean;
   className?: string;
 }
 
-export function TechList({ items, size = 20, chip = false, className = '' }: TechListProps) {
+/** Package-badge style chips: logo + monospace name. */
+export function TechList({ items, size = 16, className = '' }: TechListProps) {
   return (
-    <ul className={`flex flex-wrap gap-x-5 gap-y-2 ${className}`}>
+    <ul className={`flex flex-wrap gap-2 ${className}`}>
       {items.map((id) => (
-        <li key={id} className="inline-flex items-center gap-2 text-[.93rem] font-medium">
-          <TechIcon id={id} size={size} className={chip ? 'box-content rounded-md bg-white p-[3px]' : undefined} />
+        <li key={id} className="inline-flex items-center gap-1.5 rounded-md border border-rule bg-paper-2 px-2 py-1 font-code text-[.78rem]">
+          <TechIcon id={id} size={size} />
           <span>{TECH[id].label}</span>
         </li>
       ))}

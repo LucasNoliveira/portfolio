@@ -2,7 +2,7 @@ import type { Dictionary } from './types';
 
 export const en: Dictionary = {
   meta: { title: 'Lucas Oliveira — Backend engineer', description: 'Backend engineer in São Paulo building AI-powered products with Python, Django, FastAPI and AWS. Open to remote roles worldwide.' },
-  ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Português', switchTo: 'Mudar para português', top: 'Back to top', current: 'Current', problem: 'Problem.', approach: 'What I did.' },
+  ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Português', switchTo: 'Mudar para português', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source' },
   nav: { work: 'Work', cases: 'Case studies', skills: 'Stack', about: 'About', contact: 'Contact' },
   hero: {
     role: 'Backend engineer building AI-powered products.',
@@ -13,6 +13,7 @@ export const en: Dictionary = {
     resume: 'Résumé',
     stackTitle: 'What I reach for every day',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
+    card: { role: 'Backend engineer', location: 'São Paulo, Brazil', timezone: 'UTC-3', openTo: 'remote roles, worldwide' },
   },
   work: {
     title: 'Where I’ve worked',

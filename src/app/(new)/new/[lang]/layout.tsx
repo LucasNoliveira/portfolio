@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { dictionaries } from '@/redesign/content';
 import { HTML_LANG, isLocale, LOCALES } from '@/redesign/content/locales';
-import { bricolage } from '@/redesign/fonts';
+import { geistMono, geistSans } from '@/redesign/fonts';
 import '@/redesign/styles/globals.css';
 
 interface LayoutProps {
@@ -24,7 +24,7 @@ export default function NewSiteLayout({ children, params }: LayoutProps) {
   const lang = isLocale(params.lang) ? params.lang : 'en';
   return (
     <html lang={HTML_LANG[lang]} suppressHydrationWarning>
-      <body className={`${bricolage.variable} min-h-dvh font-bricolage text-[1.0625rem] [font-stretch:100%]`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} min-h-dvh font-dev text-base`}>
         <a href="#main" className="absolute -left-[999px] top-2 z-50 rounded-md bg-brand px-4 py-2 text-on-brand focus:left-2">
           {dictionaries[lang].ui.skip}
         </a>

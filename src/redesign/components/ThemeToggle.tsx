@@ -10,7 +10,7 @@ export function ThemeToggle({ label }: { label: string }) {
       onClick={toggle}
       aria-label={label}
       aria-pressed={theme === 'dark'}
-      className="grid h-[38px] min-w-[38px] cursor-pointer place-items-center rounded-full border border-rule hover:bg-paper-2"
+      className="grid h-9 min-w-9 cursor-pointer place-items-center rounded-md border border-rule hover:bg-paper-2"
     >
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
         {theme === 'dark' ? (

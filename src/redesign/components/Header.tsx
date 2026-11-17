@@ -10,10 +10,10 @@ export function Header({ t, locale }: { t: Dictionary; locale: Locale }) {
   return (
     <header className="sticky top-0 z-20 border-b border-rule bg-[color-mix(in_oklab,var(--paper)_90%,transparent)] backdrop-blur-md">
       <div className="wrap flex h-[60px] items-center gap-2">
-        <a href="#top" className="mr-auto text-[1.15rem] font-bold no-underline [font-stretch:85%]">Lucas Oliveira</a>
-        <nav aria-label="Primary" className="mr-4 hidden gap-6 md:flex">
+        <a href="#top" className="mr-auto font-code text-sm font-medium no-underline">Lucas Oliveira</a>
+        <nav aria-label="Primary" className="mr-4 hidden gap-5 md:flex">
           {SECTIONS.map((id) => (
-            <a key={id} href={`#${id}`} className="text-[.95rem] text-muted no-underline hover:text-ink hover:underline hover:underline-offset-[5px]">
+            <a key={id} href={`#${id}`} className="text-sm text-muted no-underline hover:text-ink">
               {t.nav[id]}
             </a>
           ))}
@@ -23,7 +23,7 @@ export function Header({ t, locale }: { t: Dictionary; locale: Locale }) {
           hrefLang={other}
           lang={other}
           aria-label={t.ui.switchTo}
-          className="grid h-[38px] place-items-center rounded-full border border-rule px-3.5 text-sm no-underline hover:bg-paper-2"
+          className="grid h-9 place-items-center rounded-md border border-rule px-3 font-code text-xs no-underline hover:bg-paper-2"
         >
           {t.ui.language}
         </Link>

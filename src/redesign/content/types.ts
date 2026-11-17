@@ -24,11 +24,12 @@ export interface CaseStudy {
 
 export interface Dictionary {
   meta: { title: string; description: string };
-  ui: { skip: string; theme: string; language: string; switchTo: string; top: string; current: string; problem: string; approach: string };
+  ui: { skip: string; theme: string; language: string; switchTo: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
   nav: { work: string; cases: string; skills: string; about: string; contact: string };
   hero: {
     role: string; lead: string; location: string; availability: string;
     email: string; resume: string; stackTitle: string; stack: TechId[];
+    card: { role: string; location: string; timezone: string; openTo: string };
   };
   work: { title: string; intro: string; jobs: Job[] };
   cases: { title: string; intro: string; items: CaseStudy[] };

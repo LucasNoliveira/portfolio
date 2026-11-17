@@ -5,8 +5,8 @@ import { Icon } from './Icon';
 import { Section } from './Section';
 
 const ROW = 'grid grid-cols-[28px_1fr] items-center gap-x-4 gap-y-1 px-0.5 py-4 no-underline sm:grid-cols-[28px_auto_1fr]';
-const LABEL = 'text-[1.35rem] font-semibold tracking-tight group-hover:underline group-hover:decoration-brand group-hover:decoration-4 group-hover:underline-offset-[5px]';
-const HINT = 'col-start-2 text-[.95rem] text-muted [overflow-wrap:anywhere] sm:col-start-auto sm:text-right';
+const LABEL = 'text-lg font-medium group-hover:underline group-hover:underline-offset-4';
+const HINT = 'col-start-2 font-code text-sm text-muted [overflow-wrap:anywhere] sm:col-start-auto sm:text-right';
 
 export function Contact({ t }: { t: Dictionary }) {
   const links = [

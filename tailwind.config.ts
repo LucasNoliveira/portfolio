@@ -31,7 +31,8 @@ const config: Config = {
         'on-deep': 'var(--on-deep)',
       },
       fontFamily: {
-        bricolage: ['var(--font-bricolage)', 'system-ui', 'sans-serif'],
+        dev: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        code: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
       },
     },
   },

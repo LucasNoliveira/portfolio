@@ -1,11 +1,16 @@
 import localFont from 'next/font/local';
 
-/** Bricolage Grotesque (SIL OFL), self-hosted variable font with weight and width axes. */
-export const bricolage = localFont({
-  src: './fonts/bricolage-grotesque-wdth.woff2',
-  weight: '200 800',
-  style: 'normal',
+/** Geist Sans and Geist Mono (SIL OFL), self-hosted variable fonts. */
+export const geistSans = localFont({
+  src: './fonts/geist-sans.woff2',
+  weight: '100 900',
   display: 'swap',
-  variable: '--font-bricolage',
-  declarations: [{ prop: 'font-stretch', value: '75% 100%' }],
+  variable: '--font-sans',
+});
+
+export const geistMono = localFont({
+  src: './fonts/geist-mono.woff2',
+  weight: '100 900',
+  display: 'swap',
+  variable: '--font-mono',
 });
