@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  --paper: light-dark(#f9fafb, #111827);
+  --paper-2: light-dark(#f0f2f6, #1b2536);
+  --ink: light-dark(#1f2937, #e5e7eb);
+  --muted: light-dark(#4b5563, #9ca3af);
+  --rule: color-mix(in oklab, var(--ink) 16%, transparent);
+  --accent: light-dark(#2563eb, #60a5fa);
+  --deep: light-dark(#1e293b, #1f2a3d);
+  --on-deep: #e8edf5;
+  --brand: #2563eb;
+  --on-brand: #ffffff;
+  --c-django: light-dark(#0c4b33, #44b78b);
+  --gutter: clamp(1.1rem, 4.5vw, 2.5rem);
+}
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+  body { background: var(--paper); color: var(--ink); overflow-x: clip; line-height: 1.6; }
+  h2, h3 { text-wrap: balance; line-height: 1.1; }
+  h3 { font-weight: 650; }
+  p { text-wrap: pretty; }
+  img, svg { display: block; max-width: 100%; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+}
+
+@layer components {
+  .wrap { width: min(1180px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+  .btn { @apply inline-flex items-center rounded-full border-[1.5px] border-ink px-5 py-3 font-semibold no-underline transition-colors hover:bg-ink hover:text-paper; }
+  .btn-primary { @apply border-brand bg-brand text-on-brand hover:border-ink; }
+}
+
+/* The only decorative motion: the name slides in once on load. */
+@keyframes name-in { from { transform: translateY(105%); } }
+.name-in { animation: name-in .9s cubic-bezier(.2, .8, .2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

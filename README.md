@@ -38,3 +38,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 =======
 # portfolio-page
 >>>>>>> 22409d8af7d709ab47c95c7b70f551d0d7c0ae39
+
+## Two versions of the site
+
+- `/` is the original site (`src/app/(legacy)` + `src/app/components`), unchanged.
+- `/new` is the redesign (`src/app/(new)` + `src/redesign`), in English or Portuguese. `/new` picks the language from the browser's `Accept-Language`; `/new/en` and `/new/pt` are explicit. It is marked `noindex` until it replaces the old site.
+
+Redesign layout: `content/` (typed dictionaries), `components/` (one per section), `tech/` (logo catalog), `hooks/`, `config.ts` (contact links, résumé URL).
