@@ -67,6 +67,11 @@
 .seg { transform-origin: left; transition: transform .45s ease-out calc(var(--i) * 80ms + 250ms); }
 .reveal[data-animate]:not([data-in]) .seg { transform: scaleX(0); }
 
+/* Typing effect (profile.json card). Remove this block and TYPING in ProfileCard.tsx to drop it. */
+.typing .line { display: block; white-space: pre; }
+.typing .line { overflow: hidden; width: calc(var(--n) * 1ch); animation: type var(--dur) steps(var(--n)) var(--start) backwards; }
+@keyframes type { from { width: 0; } }
+
 /* Hero entrance: one short sequence on load. */
 @keyframes rise { from { opacity: 0; translate: 0 14px; } }
 .rise { animation: rise .6s ease-out backwards; animation-delay: calc(var(--i, 0) * 80ms); }
