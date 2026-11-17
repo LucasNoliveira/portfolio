@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Dictionary } from '../content/types';
 import { SITE } from '../config';
+import { AvailabilityBadge } from './AvailabilityBadge';
 import { ContactMenu } from './ContactMenu';
 import { ProfileCard } from './ProfileCard';
 import { TechList } from './TechList';
@@ -11,18 +12,20 @@ export function Hero({ t }: { t: Dictionary }) {
     <section id="top" className="py-12 md:py-20">
       <div className="wrap grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div>
-          <Image
-            src="/img/new/me.jpg"
-            alt={SITE.name}
-            width={400}
-            height={400}
-            priority
-            className="mb-6 size-24 rounded-full border border-rule object-cover"
-          />
+          <div className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <Image
+              src="/img/new/me.jpg"
+              alt={SITE.name}
+              width={400}
+              height={400}
+              priority
+              className="size-24 rounded-full border border-rule object-cover"
+            />
+            <AvailabilityBadge>{hero.availability}</AvailabilityBadge>
+          </div>
           <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">{SITE.name}</h1>
           <p className="mt-3 text-xl font-medium text-muted md:text-2xl">{hero.role}</p>
           <p className="mt-5 max-w-[60ch] text-muted">{hero.lead}</p>
-          <p className="mt-5 font-code text-sm text-muted">{hero.availability}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <ContactMenu t={t} />
             <a className="btn" href="#cases">{t.nav.cases}</a>

@@ -29,6 +29,7 @@ const config: Config = {
         'on-brand': 'var(--on-brand)',
         deep: 'var(--deep)',
         'on-deep': 'var(--on-deep)',
+        ok: 'var(--ok)',
       },
       fontFamily: {
         dev: ['var(--font-sans)', 'system-ui', 'sans-serif'],
