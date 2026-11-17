@@ -124,8 +124,6 @@ export const pt: Dictionary = {
     ],
     facts: [
       { term: 'Formação', value: 'Bacharelado em Ciência da Computação, Estácio' },
-      { term: 'Certificação', value: 'AWS Developer Associate (em andamento)' },
-      { term: 'Fora do trabalho', value: 'Games, anime, treino e aprender idiomas' },
     ],
   },
   contact: {

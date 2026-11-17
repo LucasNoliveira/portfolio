@@ -124,8 +124,6 @@ export const en: Dictionary = {
     ],
     facts: [
       { term: 'Education', value: 'B.Sc. in Computer Science, Estácio' },
-      { term: 'Certification', value: 'AWS Developer Associate (in progress)' },
-      { term: 'Off the clock', value: 'Games, anime, training and learning languages' },
     ],
   },
   contact: {
