@@ -37,6 +37,28 @@
   .btn-primary { @apply border-brand bg-brand text-on-brand hover:border-ink; }
 }
 
+/* Timeline (work experience): vertical line through the logos that fills with scroll progress. */
+.timeline { position: relative; --progress: 1; }
+.timeline::before,
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  translate: -50% 0;
+  border-radius: 2px;
+  mask-image: linear-gradient(to bottom, #000 85%, transparent);
+}
+.timeline::before { background: var(--rule); }
+.timeline::after { background: var(--accent); transform-origin: top; transform: scaleY(var(--progress)); }
+
+.timeline[data-animate] > li {
+  transition: opacity .6s ease-out var(--delay, 0ms), translate .6s ease-out var(--delay, 0ms);
+}
+.timeline[data-animate] > li:not([data-visible]) { opacity: 0; translate: 0 28px; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }

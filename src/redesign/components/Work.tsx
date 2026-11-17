@@ -2,16 +2,20 @@ import type { Dictionary } from '../content/types';
 import { Logo } from './Logo';
 import { Section } from './Section';
 import { TechList } from './TechList';
+import { Timeline } from './Timeline';
 
 export function Work({ t }: { t: Dictionary }) {
   return (
     <Section id="work" title={t.work.title} intro={t.work.intro} split>
-      <ol className="divide-y divide-rule border-b border-rule lg:border-t-0">
+      <Timeline>
         {t.work.jobs.map((job) => (
-          <li key={job.companyId} className="grid gap-x-8 gap-y-3 py-6 md:grid-cols-[220px_minmax(0,1fr)]">
+          <li key={job.companyId} className="group grid gap-x-8 gap-y-3 py-6 first:pt-0 md:grid-cols-[220px_minmax(0,1fr)]">
             <div className="flex items-start gap-3">
-              <Logo id={job.companyId} size={40} />
-              <div>
+              {/* The logo is the node on the timeline; it lights up once its entry is reached. */}
+              <span className="relative z-10 rounded-xl bg-paper p-1 ring-1 ring-rule transition-shadow duration-500 group-data-[visible=true]:ring-2 group-data-[visible=true]:ring-accent">
+                <Logo id={job.companyId} size={40} />
+              </span>
+              <div className="pt-1">
                 <h3 className="leading-tight">{job.company}</h3>
                 <p className="mt-0.5 font-code text-xs text-muted">{job.period}</p>
               </div>
@@ -28,7 +32,7 @@ export function Work({ t }: { t: Dictionary }) {
             </div>
           </li>
         ))}
-      </ol>
+      </Timeline>
     </Section>
   );
 }
