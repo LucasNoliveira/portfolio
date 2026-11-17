@@ -64,6 +64,15 @@ export const pt: Dictionary = {
         highlights: ['Liderei um sistema de PDV do primeiro commit à produção, com integração ao RD Station CRM, em Nginx e VPS.'],
         stack: ['django', 'react', 'postgresql', 'nginx'],
       },
+      {
+        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'Analista de TI / desenvolvedor de automação',
+        period: 'Mar 2022 – Out 2023',
+        highlights: [
+          'Criei scripts em Python e PowerShell para automatizar instalação, configuração e gerenciamento de computadores, reduzindo o setup de mais de uma hora para 15 minutos ou menos.',
+          'Dei suporte aos usuários e à rotina de TI: manutenção de sistemas, e-mail, impressoras, redes e bancos MySQL em Linux, Windows e macOS.',
+        ],
+        stack: ['python', 'git'],
+      },
     ],
   },
   cases: {
