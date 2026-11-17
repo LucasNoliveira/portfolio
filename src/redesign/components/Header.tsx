@@ -3,7 +3,7 @@ import type { Locale } from '../content/locales';
 import type { Dictionary } from '../content/types';
 import { ThemeToggle } from './ThemeToggle';
 
-const SECTIONS = ['work', 'cases', 'skills', 'about', 'contact'] as const;
+const SECTIONS = ['work', 'cases', 'services', 'skills', 'about', 'contact'] as const;
 
 export function Header({ t, locale }: { t: Dictionary; locale: Locale }) {
   const other: Locale = locale === 'pt' ? 'en' : 'pt';

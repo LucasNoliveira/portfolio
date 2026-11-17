@@ -7,6 +7,7 @@ import { Contact } from '@/redesign/components/Contact';
 import { Footer } from '@/redesign/components/Footer';
 import { Header } from '@/redesign/components/Header';
 import { Hero } from '@/redesign/components/Hero';
+import { Services } from '@/redesign/components/Services';
 import { Skills } from '@/redesign/components/Skills';
 import { Work } from '@/redesign/components/Work';
 
@@ -26,6 +27,7 @@ export default function NewSitePage({ params }: { params: { lang: string } }) {
         <Hero t={t} />
         <Work t={t} />
         <Cases t={t} />
+        <Services t={t} />
         <Skills t={t} />
         <About t={t} />
         <Contact t={t} />
