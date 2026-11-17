@@ -2,7 +2,6 @@ import type { Contributions } from '../github';
 import type { Dictionary } from '../content/types';
 import type { Locale } from '../content/locales';
 import { HTML_LANG } from '../content/locales';
-import { Reveal } from './Reveal';
 
 const CELL = 10;
 const GAP = 3;
@@ -19,10 +18,10 @@ export function ContributionHeatmap({ t, data, locale }: { t: Dictionary; data: 
   const height = LABEL_H + 7 * STEP - GAP;
 
   return (
-    <Reveal className="mt-10 border-t border-rule pt-6">
-      <p className="mb-3 text-[.95rem]">
+    <figure className="mt-4">
+      <figcaption className="mb-2 text-sm">
         <b className="font-code">{data.total}</b> <span className="text-muted">{labels.heatmap}</span>
-      </p>
+      </figcaption>
       <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${data.total} ${labels.heatmap}`} className="block h-auto w-full">
         {data.weeks.map((week, x) => {
           const first = new Date(`${week[0].date}T00:00:00Z`);
@@ -39,6 +38,6 @@ export function ContributionHeatmap({ t, data, locale }: { t: Dictionary; data: 
           );
         })}
       </svg>
-    </Reveal>
+    </figure>
   );
 }
