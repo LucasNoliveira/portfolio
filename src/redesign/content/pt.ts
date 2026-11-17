@@ -2,7 +2,7 @@ import type { Dictionary } from './types';
 
 export const pt: Dictionary = {
   meta: { title: 'Lucas Oliveira — Engenheiro backend', description: 'Engenheiro backend em São Paulo criando produtos com IA em Python, Django, FastAPI e AWS. Aberto a vagas remotas no exterior.' },
-  ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'English', switchTo: 'Switch to English', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte' },
+  ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'Idioma', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte' },
   nav: { work: 'Trabalho', cases: 'Cases', services: 'Serviços', skills: 'Stack', about: 'Sobre', contact: 'Contato' },
   hero: {
     role: 'Engenheiro backend criando produtos com IA.',
@@ -141,7 +141,7 @@ export const pt: Dictionary = {
       'Me importo com design limpo, testes, segurança e observabilidade, e com explicar trade-offs de forma simples para colegas e stakeholders.',
       'Trabalho remoto com times internacionais e estou aberto a me mudar pela vaga certa.',
     ],
-    github: { heatmap: 'contribuições no último ano', heatmapDay: 'contribuições em', title: 'No GitHub', repos: 'Repositórios públicos', stars: 'Estrelas', languages: 'Mais usadas', lastPush: 'Último push', profile: 'Ver perfil' },
+    github: { heatmap: 'contribuições no último ano', heatmapDay: '{count} contribuições em {date}', title: 'No GitHub', repos: 'Repositórios públicos', stars: 'Estrelas', languages: 'Mais usadas', lastPush: 'Último push', profile: 'Ver perfil' },
     languagesTitle: 'Idiomas',
     languages: [
       { flag: 'br', name: 'Português', level: 'Nativo', score: 5 },

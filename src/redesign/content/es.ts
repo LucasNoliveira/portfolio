@@ -1,0 +1,162 @@
+import type { Dictionary } from './types';
+
+export const es: Dictionary = {
+  meta: { title: 'Lucas Oliveira — Ingeniero backend', description: 'Ingeniero backend en São Paulo que crea productos con IA usando Python, Django, FastAPI y AWS. Abierto a puestos remotos en todo el mundo.' },
+  ui: { skip: 'Ir al contenido', theme: 'Cambiar el tema de color', language: 'Idioma', top: 'Volver arriba', current: 'Actual', problem: 'Problema', approach: 'Qué hice', result: 'Resultado', source: 'Ver código fuente' },
+  nav: { work: 'Experiencia', cases: 'Casos de estudio', services: 'Servicios', skills: 'Stack', about: 'Sobre mí', contact: 'Contacto' },
+  hero: {
+    role: 'Ingeniero backend que crea productos con IA.',
+    lead: 'Llevo cuatro años llevando productos de la idea a producción: APIs seguras, infraestructura en la nube y funciones con LLM en las que los equipos pueden confiar. Vivo en São Paulo y trabajo en remoto con equipos internacionales.',
+    location: 'São Paulo, Brasil (UTC−3)',
+    availability: 'Abierto a puestos remotos en todo el mundo',
+    email: 'Contáctame',
+    menu: { title: '¿Cómo prefieres contactarme?', email: 'Correo', whatsapp: 'Mensaje rápido por WhatsApp', call: 'Reserva una llamada de 30 minutos', linkedin: 'Envía un mensaje por LinkedIn' },
+    resume: 'Currículum',
+    stackTitle: 'Lo que uso todos los días',
+    stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
+    card: { role: 'Ingeniero backend', location: 'São Paulo, Brasil', timezone: 'UTC-3', openTo: 'puestos remotos, en todo el mundo' },
+  },
+  work: {
+    title: 'Dónde he trabajado',
+    intro: 'Una startup, una consultora global y algunos proyectos como contratista, siempre en el backend.',
+    jobs: [
+      {
+        companyId: 'vocal', company: 'Vocal Silence', role: 'Ingeniero backend semi senior',
+        period: 'Feb 2026 – actualidad', current: true,
+        highlights: [
+          'Lidero la arquitectura backend de aplicaciones de IA construidas con Python y Django.',
+          'Diseñé APIs para socios protegidas con JWT y firma HMAC de las solicitudes.',
+          'Escribí desde cero la suite de pruebas del backend y añadí revisión de código con LLM en los pull requests.',
+          'Opero cargas de trabajo en AWS (ECS, Lambda, RDS, S3, SES, CloudWatch) y hago mentoría a un ingeniero junior.',
+        ],
+        stack: ['python', 'django', 'aws', 'docker', 'pytest', 'llm'],
+      },
+      {
+        companyId: 'accenture', company: 'Accenture', role: 'Ingeniero de software',
+        period: 'Ene 2025 – Ene 2026',
+        highlights: [
+          'Entregué proyectos para Fundação Renova/Samarco, TIM y Easy HR: Cloud Functions, webhooks GraphQL, RPA y automatización.',
+          'Evaluado como Top Performance en todos los ciclos de revisión.',
+        ],
+        stack: ['python', 'gcp', 'graphql', 'angular', 'podman'],
+      },
+      {
+        companyId: 'indra', company: 'Indra Energia', role: 'Ingeniero backend (contratista)',
+        period: 'Sep 2024 – Ene 2025',
+        highlights: [
+          'Construí servicios FastAPI asíncronos con caché y reduje el tiempo de respuesta un 30%.',
+          'Containericé los entornos: 40% menos problemas de configuración y 20% menos incidentes tras los despliegues.',
+        ],
+        stack: ['python', 'fastapi', 'docker'],
+      },
+      {
+        companyId: 'mont', company: 'Mont Capital Asset', role: 'Ingeniero backend',
+        period: 'Abr – Ago 2024',
+        highlights: [
+          'Entregué un asistente de soporte basado en OpenAI que aumentó la eficiencia del equipo entre un 30% y un 40%.',
+          'Integré datos financieros mediante SOAP/REST y WebSockets; los despliegues en AWS fueron un 30% más rápidos.',
+        ],
+        stack: ['python', 'llm', 'websockets', 'aws'],
+      },
+      {
+        companyId: 'vitta', company: 'Vitta Group', role: 'Desarrollador full-stack (contratista)',
+        period: 'Oct 2023 – Dic 2024',
+        highlights: ['Lideré un sistema de punto de venta desde el primer commit hasta producción, con integraciones con RD Station CRM, sobre Nginx y un VPS.'],
+        stack: ['django', 'react', 'postgresql', 'nginx'],
+      },
+      {
+        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'Analista de TI / desarrollador de automatización',
+        period: 'Mar 2022 – Oct 2023',
+        highlights: [
+          'Escribí scripts en Python y PowerShell para automatizar la instalación, configuración y gestión de equipos, reduciendo la preparación de más de una hora a 15 minutos o menos.',
+          'Di soporte a usuarios y a la operación diaria de TI: mantenimiento de sistemas, correo, impresoras, redes y bases de datos MySQL en Linux, Windows y macOS.',
+        ],
+        stack: ['python', 'git'],
+      },
+    ],
+  },
+  cases: {
+    title: 'Casos de estudio',
+    intro: 'Cuatro problemas, lo que hice y qué cambió.',
+    items: [
+      {
+        companyId: 'indra', company: 'Indra Energia', title: 'APIs más rápidas sin reescribir todo',
+        result: { value: '−30%', label: 'tiempo de respuesta de la API' },
+        problem: 'Las respuestas lentas y los entornos frágiles frenaban los lanzamientos.',
+        approach: 'Moví las rutas críticas a FastAPI asíncrono, añadí caché y estandaricé todos los entornos con Docker. Los problemas de configuración bajaron un 40% y los incidentes tras despliegues, un 20%.',
+        stack: ['fastapi', 'python', 'docker'],
+      },
+      {
+        companyId: 'mont', company: 'Mont Capital Asset', title: 'Un asistente de IA para el equipo de soporte',
+        result: { value: '+30–40%', label: 'eficiencia del soporte' },
+        problem: 'Soporte dedicaba horas a preguntas financieras repetitivas.',
+        approach: 'Construí un asistente con OpenAI sobre los datos financieros (SOAP/REST, WebSockets) y reduje un 30% el tiempo de despliegue en AWS.',
+        stack: ['llm', 'websockets', 'aws'],
+      },
+      {
+        companyId: 'vocal', company: 'Vocal Silence', title: 'APIs en las que los socios pueden confiar',
+        result: { value: '−50%', label: 'tamaño de la imagen Docker' },
+        problem: 'Los socios necesitaban acceso seguro y el código no tenía red de seguridad.',
+        approach: 'Firmé cada solicitud con JWT y HMAC, escribí las pruebas desde cero, añadí revisión de PRs con LLM y adelgacé las imágenes desplegadas en AWS.',
+        stack: ['django', 'jwt', 'pytest', 'aws'],
+      },
+      {
+        companyId: 'vitta', company: 'Vitta Group', title: 'Un punto de venta construido desde cero',
+        result: { value: '0 → 1', label: 'en producción' },
+        problem: 'El negocio necesitaba un punto de venta a medida que también se comunicara con su CRM.',
+        approach: 'Lideré el diseño y la entrega con Django, React y PostgreSQL, conecté RD Station y lo publiqué en Nginx.',
+        stack: ['django', 'react', 'postgresql', 'nginx'],
+      },
+    ],
+  },
+  services: {
+    title: 'Qué puedo construir',
+    intro: 'Primero el backend. Cuando un proyecto necesita más, puedo llevarlo de punta a punta.',
+    items: [
+      { title: 'APIs y backend', description: 'APIs seguras en las que equipos y socios pueden confiar, con autenticación, integraciones y pruebas desde el inicio.', stack: ['python', 'django', 'fastapi', 'graphql', 'jwt', 'postgresql'] },
+      { title: 'Nube y despliegue', description: 'Servicios en contenedores sobre AWS o GCP, con entornos consistentes desde el portátil hasta producción.', stack: ['aws', 'gcp', 'docker', 'nginx'] },
+      { title: 'Funciones con IA', description: 'Asistentes y flujos de trabajo con LLM construidos sobre tus propios datos y sistemas.', stack: ['llm', 'python'] },
+      { title: 'Automatización', description: 'Scripts, webhooks e integraciones que quitan de encima el trabajo repetitivo.', stack: ['python', 'graphql', 'git'] },
+      {
+        title: 'Plataformas completas, de punta a punta',
+        description: 'Cuando conviene que una sola persona se encargue de todo el producto: frontend en React, backend, base de datos, despliegue e integraciones. Lideré un sistema de punto de venta desde el primer commit hasta producción.',
+        stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
+        featured: true,
+      },
+    ],
+  },
+  skills: {
+    title: 'Stack',
+    groups: [
+      { name: 'Backend', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'websockets'] },
+      { name: 'Nube e infraestructura', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
+      { name: 'IA y calidad', items: ['llm', 'pytest', 'jwt', 'git'] },
+      { name: 'Frontend, cuando hace falta', items: ['react', 'angular'] },
+    ],
+  },
+  about: {
+    title: 'Sobre mí',
+    paragraphs: [
+      'Me gusta convertir ideas de producto sueltas en servicios que se mantienen en pie. Mi foco es Python, infraestructura en la nube y funciones basadas en modelos de lenguaje.',
+      'Me importan el diseño limpio, las pruebas, la seguridad y la observabilidad, y explicar los trade-offs con claridad a compañeros y stakeholders.',
+      'Trabajo en remoto con equipos internacionales y estoy abierto a mudarme por el puesto adecuado.',
+    ],
+    github: { heatmap: 'contribuciones en el último año', heatmapDay: '{count} contribuciones el {date}', title: 'En GitHub', repos: 'Repositorios públicos', stars: 'Estrellas', languages: 'Más usados', lastPush: 'Último push', profile: 'Ver perfil' },
+    languagesTitle: 'Idiomas',
+    languages: [
+      { flag: 'br', name: 'Portugués', level: 'Nativo', score: 5 },
+      { flag: 'us', name: 'Inglés', level: 'Avanzado · B2/C1', score: 4 },
+      { flag: 'jp', name: 'Japonés', level: 'Intermedio · N3', score: 3 },
+      { flag: 'es', name: 'Español', level: 'Básico', score: 1 },
+    ],
+    facts: [
+      { term: 'Formación', value: 'Licenciatura en Ciencias de la Computación, Estácio' },
+    ],
+  },
+  contact: {
+    title: 'Hablemos',
+    intro: 'Estoy abierto a puestos remotos de backend y productos con IA pagados en USD, EUR o GBP. Suelo responder en un día.',
+    whatsapp: 'Escríbeme por WhatsApp',
+    call: 'Reserva una llamada de 30 minutos',
+  },
+};

@@ -1,0 +1,162 @@
+import type { Dictionary } from './types';
+
+export const ja: Dictionary = {
+  meta: { title: 'Lucas Oliveira — バックエンドエンジニア', description: 'サンパウロ在住のバックエンドエンジニア。Python、Django、FastAPI、AWSでAIプロダクトを開発しています。世界中のリモートポジションに対応可能です。' },
+  ui: { skip: '本文へスキップ', theme: 'カラーテーマを切り替える', language: '言語', top: 'トップへ戻る', current: '現在', problem: '課題', approach: '対応', result: '成果', source: 'ソースコードを見る' },
+  nav: { work: '職歴', cases: '事例', services: 'サービス', skills: 'スタック', about: '自己紹介', contact: '連絡先' },
+  hero: {
+    role: 'AIプロダクトを開発するバックエンドエンジニア。',
+    lead: '4年間、アイデアから本番運用までプロダクトを届けてきました。安全なAPI、クラウドインフラ、チームが信頼できるLLM機能が得意です。サンパウロを拠点に、海外のチームとリモートで働いています。',
+    location: 'ブラジル・サンパウロ（UTC−3）',
+    availability: '世界中のリモートポジションに対応可能',
+    email: '連絡する',
+    menu: { title: 'ご連絡方法をお選びください', email: 'メール', whatsapp: 'WhatsAppですぐにメッセージ', call: '30分の面談を予約', linkedin: 'LinkedInでメッセージ' },
+    resume: '職務経歴書',
+    stackTitle: '毎日使っている技術',
+    stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
+    card: { role: 'バックエンドエンジニア', location: 'ブラジル・サンパウロ', timezone: 'UTC-3', openTo: 'リモート（世界中）' },
+  },
+  work: {
+    title: '職歴',
+    intro: 'スタートアップ、大手コンサルティング会社、そして数件の業務委託。一貫してバックエンド側で働いてきました。',
+    jobs: [
+      {
+        companyId: 'vocal', company: 'Vocal Silence', role: 'バックエンドエンジニア（ミドルレベル）',
+        period: '2026年2月 – 現在', current: true,
+        highlights: [
+          'PythonとDjangoで構築するAIアプリケーションのバックエンドアーキテクチャを主導。',
+          'JWTとHMACによるリクエスト署名で保護された、パートナー向けAPIを設計。',
+          'バックエンドのテストスイートをゼロから整備し、プルリクエストにLLMによるコードレビューを導入。',
+          'AWS（ECS、Lambda、RDS、S3、SES、CloudWatch）でワークロードを運用し、ジュニアエンジニアをメンタリング。',
+        ],
+        stack: ['python', 'django', 'aws', 'docker', 'pytest', 'llm'],
+      },
+      {
+        companyId: 'accenture', company: 'Accenture', role: 'ソフトウェアエンジニア',
+        period: '2025年1月 – 2026年1月',
+        highlights: [
+          'Fundação Renova/Samarco、TIM、Easy HR向けに、Cloud Functions、GraphQL Webhook、RPA、自動化を提供。',
+          'すべての評価サイクルでTop Performanceの評価を獲得。',
+        ],
+        stack: ['python', 'gcp', 'graphql', 'angular', 'podman'],
+      },
+      {
+        companyId: 'indra', company: 'Indra Energia', role: 'バックエンドエンジニア（業務委託）',
+        period: '2024年9月 – 2025年1月',
+        highlights: [
+          '非同期FastAPIサービスとキャッシュを構築し、応答時間を30%短縮。',
+          '環境をコンテナ化し、セットアップ関連の問題を40%、デプロイ後のインシデントを20%削減。',
+        ],
+        stack: ['python', 'fastapi', 'docker'],
+      },
+      {
+        companyId: 'mont', company: 'Mont Capital Asset', role: 'バックエンドエンジニア',
+        period: '2024年4月 – 8月',
+        highlights: [
+          'OpenAIベースのサポートアシスタントを開発し、チームの効率を30〜40%向上。',
+          'SOAP/RESTとWebSocketで金融データを統合し、AWSへのデプロイを30%高速化。',
+        ],
+        stack: ['python', 'llm', 'websockets', 'aws'],
+      },
+      {
+        companyId: 'vitta', company: 'Vitta Group', role: 'フルスタック開発者（業務委託）',
+        period: '2023年10月 – 2024年12月',
+        highlights: ['POSシステムを最初のコミットから本番稼働までリード。RD Station CRMとの連携を実装し、NginxとVPSで運用。'],
+        stack: ['django', 'react', 'postgresql', 'nginx'],
+      },
+      {
+        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'ITアナリスト／自動化開発者',
+        period: '2022年3月 – 2023年10月',
+        highlights: [
+          'PythonとPowerShellのスクリプトでPCのインストール・設定・管理を自動化し、セットアップ時間を1時間超から15分以下に短縮。',
+          'ユーザーサポートと日常のIT業務を担当：システム保守、メール、プリンター、ネットワーク、MySQLデータベース（Linux、Windows、macOS）。',
+        ],
+        stack: ['python', 'git'],
+      },
+    ],
+  },
+  cases: {
+    title: '事例',
+    intro: '4つの課題と、私の対応、そして変わったこと。',
+    items: [
+      {
+        companyId: 'indra', company: 'Indra Energia', title: '全面的な書き直しなしでAPIを高速化',
+        result: { value: '−30%', label: 'APIの応答時間' },
+        problem: '応答の遅さと不安定な環境が、リリースの足かせになっていました。',
+        approach: 'ホットパスを非同期FastAPIに移行し、キャッシュを追加し、すべての環境をDockerで標準化。セットアップの問題は40%、デプロイ後のインシデントは20%減少しました。',
+        stack: ['fastapi', 'python', 'docker'],
+      },
+      {
+        companyId: 'mont', company: 'Mont Capital Asset', title: 'サポートチームのためのAIアシスタント',
+        result: { value: '+30–40%', label: 'サポート効率' },
+        problem: 'サポートチームが、繰り返し届く金融の質問に何時間も費やしていました。',
+        approach: '金融データ（SOAP/REST、WebSocket）の上にOpenAIアシスタントを構築し、AWSでのデプロイ時間を30%短縮しました。',
+        stack: ['llm', 'websockets', 'aws'],
+      },
+      {
+        companyId: 'vocal', company: 'Vocal Silence', title: 'パートナーが信頼できるAPI',
+        result: { value: '−50%', label: 'Dockerイメージのサイズ' },
+        problem: 'パートナーには安全なアクセスが必要でしたが、コードベースにはセーフティネットがありませんでした。',
+        approach: 'すべてのリクエストをJWTとHMACで署名し、テストをゼロから書き、LLMによるPRレビューを導入し、AWSにデプロイするイメージを軽量化しました。',
+        stack: ['django', 'jwt', 'pytest', 'aws'],
+      },
+      {
+        companyId: 'vitta', company: 'Vitta Group', title: 'ゼロから作ったPOSシステム',
+        result: { value: '0 → 1', label: '本番稼働' },
+        problem: '事業には、CRMとも連携する独自のPOSが必要でした。',
+        approach: 'Django、React、PostgreSQLで設計から納品までをリードし、RD Stationを連携してNginxで公開しました。',
+        stack: ['django', 'react', 'postgresql', 'nginx'],
+      },
+    ],
+  },
+  services: {
+    title: 'お手伝いできること',
+    intro: 'まずはバックエンド。必要に応じて、プロジェクトを最初から最後まで担当できます。',
+    items: [
+      { title: 'APIとバックエンド', description: 'チームやパートナーが頼れる安全なAPI。認証、連携、テストを最初から備えます。', stack: ['python', 'django', 'fastapi', 'graphql', 'jwt', 'postgresql'] },
+      { title: 'クラウドとデプロイ', description: 'AWSまたはGCP上で動くコンテナ化されたサービス。ノートPCから本番まで、一貫した環境を保ちます。', stack: ['aws', 'gcp', 'docker', 'nginx'] },
+      { title: 'AI機能', description: 'お客様のデータとシステムの上に構築する、LLMを活用したアシスタントとワークフロー。', stack: ['llm', 'python'] },
+      { title: '自動化', description: '人の繰り返し作業を減らす、スクリプト、Webhook、システム連携。', stack: ['python', 'graphql', 'git'] },
+      {
+        title: 'プラットフォームを最初から最後まで',
+        description: '一人がプロダクト全体を担当するのが適している場合に、Reactのフロントエンド、バックエンド、データベース、デプロイ、連携まで対応します。POSシステムを最初のコミットから本番稼働までリードした経験があります。',
+        stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
+        featured: true,
+      },
+    ],
+  },
+  skills: {
+    title: 'スタック',
+    groups: [
+      { name: 'バックエンド', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'websockets'] },
+      { name: 'クラウドとインフラ', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
+      { name: 'AIと品質', items: ['llm', 'pytest', 'jwt', 'git'] },
+      { name: 'フロントエンド（必要なとき）', items: ['react', 'angular'] },
+    ],
+  },
+  about: {
+    title: '自己紹介',
+    paragraphs: [
+      '漠然としたプロダクトのアイデアを、安定して動き続けるサービスに変えるのが好きです。得意分野はPython、クラウドインフラ、言語モデルを使った機能です。',
+      'クリーンな設計、テスト、セキュリティ、可観測性を大切にし、トレードオフをチームメイトやステークホルダーにわかりやすく説明することを心がけています。',
+      '海外のチームとリモートで働いており、条件が合えば移住も歓迎します。',
+    ],
+    github: { heatmap: '過去1年間のコントリビューション', heatmapDay: '{date}：{count}件のコントリビューション', title: 'GitHub', repos: '公開リポジトリ', stars: 'スター', languages: 'よく使う言語', lastPush: '最終プッシュ', profile: 'プロフィールを見る' },
+    languagesTitle: '言語',
+    languages: [
+      { flag: 'br', name: 'ポルトガル語', level: 'ネイティブ', score: 5 },
+      { flag: 'us', name: '英語', level: '上級 · B2/C1', score: 4 },
+      { flag: 'jp', name: '日本語', level: '中級 · N3', score: 3 },
+      { flag: 'es', name: 'スペイン語', level: '初級', score: 1 },
+    ],
+    facts: [
+      { term: '学歴', value: 'コンピュータサイエンス学士、Estácio' },
+    ],
+  },
+  contact: {
+    title: 'お話ししましょう',
+    intro: 'USD、EUR、GBPで支払われる、リモートのバックエンドおよびAIプロダクトのポジションに関心があります。通常1日以内に返信します。',
+    whatsapp: 'WhatsAppでメッセージ',
+    call: '30分の面談を予約',
+  },
+};

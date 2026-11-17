@@ -33,7 +33,7 @@ export function Hero({ t }: { t: Dictionary }) {
             {SITE.resumeUrl && <a className="btn" href={SITE.resumeUrl} download>{hero.resume}</a>}
           </div>
         </div>
-        <div style={{ '--i': 3 } as CSSProperties} className="rise"><ProfileCard t={t} /></div>
+        <div style={{ '--i': 3 } as CSSProperties} className="rise min-w-0"><ProfileCard t={t} /></div>
 
         <div className="border-t border-rule pt-6 lg:col-span-2">
           <h2 className="mb-4 text-base font-semibold text-muted">{hero.stackTitle}</h2>

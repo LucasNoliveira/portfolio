@@ -1,12 +1,11 @@
-import Link from 'next/link';
 import type { Locale } from '../content/locales';
 import type { Dictionary } from '../content/types';
+import { LanguageMenu } from './LanguageMenu';
 import { ThemeToggle } from './ThemeToggle';
 
 const SECTIONS = ['work', 'cases', 'services', 'skills', 'about', 'contact'] as const;
 
 export function Header({ t, locale }: { t: Dictionary; locale: Locale }) {
-  const other: Locale = locale === 'pt' ? 'en' : 'pt';
   return (
     <header className="sticky top-0 z-20 border-b border-rule bg-[color-mix(in_oklab,var(--paper)_90%,transparent)] backdrop-blur-md">
       <div className="wrap flex h-[60px] items-center gap-2">
@@ -18,15 +17,7 @@ export function Header({ t, locale }: { t: Dictionary; locale: Locale }) {
             </a>
           ))}
         </nav>
-        <Link
-          href={`/new/${other}`}
-          hrefLang={other}
-          lang={other}
-          aria-label={t.ui.switchTo}
-          className="grid h-[38px] place-items-center rounded-full border border-rule px-3.5 font-code text-xs no-underline hover:bg-paper-2"
-        >
-          {t.ui.language}
-        </Link>
+        <LanguageMenu locale={locale} label={t.ui.language} />
         <ThemeToggle label={t.ui.theme} />
       </div>
     </header>

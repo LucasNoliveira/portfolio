@@ -32,7 +32,7 @@ const config: Config = {
         ok: 'var(--ok)',
       },
       fontFamily: {
-        dev: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        dev: ['var(--font-sans)', 'system-ui', '"Hiragino Sans"', '"Yu Gothic UI"', 'Meiryo', 'sans-serif'],
         code: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
       },
     },
