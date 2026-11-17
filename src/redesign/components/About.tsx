@@ -1,8 +1,11 @@
 import type { Dictionary } from '../content/types';
+import type { Locale } from '../content/locales';
+import type { GithubStats as Stats } from '../github';
+import { GithubStats } from './GithubStats';
 import { LanguageLevels } from './LanguageLevels';
 import { Section } from './Section';
 
-export function About({ t }: { t: Dictionary }) {
+export function About({ t, github, locale }: { t: Dictionary; github: Stats | null; locale: Locale }) {
   return (
     <Section id="about" title={t.about.title} split>
       <div className="grid gap-8 md:grid-cols-[1.2fr_1fr] md:gap-12">
@@ -19,6 +22,7 @@ export function About({ t }: { t: Dictionary }) {
               </div>
             ))}
           </dl>
+          {github && <GithubStats t={t} stats={github} locale={locale} />}
         </div>
       </div>
     </Section>

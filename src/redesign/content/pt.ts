@@ -141,6 +141,7 @@ export const pt: Dictionary = {
       'Me importo com design limpo, testes, segurança e observabilidade, e com explicar trade-offs de forma simples para colegas e stakeholders.',
       'Trabalho remoto com times internacionais e estou aberto a me mudar pela vaga certa.',
     ],
+    github: { title: 'No GitHub', repos: 'Repositórios públicos', stars: 'Estrelas', languages: 'Mais usadas', lastPush: 'Último push', profile: 'Ver perfil' },
     languagesTitle: 'Idiomas',
     languages: [
       { flag: 'br', name: 'Português', level: 'Nativo', score: 5 },
