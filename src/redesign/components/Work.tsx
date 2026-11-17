@@ -5,8 +5,8 @@ import { TechList } from './TechList';
 
 export function Work({ t }: { t: Dictionary }) {
   return (
-    <Section id="work" title={t.work.title} intro={t.work.intro}>
-      <ol className="divide-y divide-rule border-y border-rule">
+    <Section id="work" title={t.work.title} intro={t.work.intro} split>
+      <ol className="divide-y divide-rule border-b border-rule lg:border-t-0">
         {t.work.jobs.map((job) => (
           <li key={job.companyId} className="grid gap-x-8 gap-y-3 py-6 md:grid-cols-[220px_minmax(0,1fr)]">
             <div className="flex items-start gap-3">
