@@ -64,6 +64,15 @@ export const en: Dictionary = {
         highlights: ['Led a point-of-sale system from first commit to production, with RD Station CRM integrations, on Nginx and a VPS.'],
         stack: ['django', 'react', 'postgresql', 'nginx'],
       },
+      {
+        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'IT analyst / automation developer',
+        period: 'Mar 2022 – Oct 2023',
+        highlights: [
+          'Wrote Python and PowerShell scripts to automate installation, configuration and management of computers, cutting setup from over an hour to 15 minutes or less.',
+          'Supported users and day-to-day IT: systems maintenance, email, printers, networks and MySQL databases across Linux, Windows and macOS.',
+        ],
+        stack: ['python', 'git'],
+      },
     ],
   },
   cases: {

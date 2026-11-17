@@ -12,7 +12,7 @@ export function Work({ t }: { t: Dictionary }) {
           <li key={job.companyId} className="group grid gap-x-8 gap-y-3 py-6 first:pt-0 md:grid-cols-[220px_minmax(0,1fr)]">
             <div className="flex items-start gap-3">
               {/* The logo is the node on the timeline; it lights up once its entry is reached. */}
-              <span className="relative z-10 rounded-full bg-paper p-1 ring-1 ring-rule transition-shadow duration-500 group-data-[visible=true]:ring-2 group-data-[visible=true]:ring-accent">
+              <span className="relative z-10 flex-none rounded-full bg-paper p-1 ring-1 ring-rule transition-shadow duration-500 group-data-[visible=true]:ring-2 group-data-[visible=true]:ring-accent">
                 <Logo id={job.companyId} size={40} />
               </span>
               <div className="pt-1">

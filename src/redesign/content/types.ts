@@ -1,6 +1,6 @@
 import type { TechId } from '../tech/types';
 
-export type CompanyId = 'vocal' | 'accenture' | 'indra' | 'mont' | 'vitta';
+export type CompanyId = 'vocal' | 'accenture' | 'indra' | 'mont' | 'vitta' | 'rotary';
 
 export interface Job {
   companyId: CompanyId;
