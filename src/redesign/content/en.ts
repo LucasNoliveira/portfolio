@@ -118,10 +118,10 @@ export const en: Dictionary = {
     ],
     languagesTitle: 'Languages',
     languages: [
-      { name: 'Portuguese', level: 'Native', score: 5 },
-      { name: 'English', level: 'Advanced · B2/C1', score: 4 },
-      { name: 'Japanese', level: 'Intermediate · N3', score: 3 },
-      { name: 'Spanish', level: 'Basic', score: 1 },
+      { flag: 'br', name: 'Portuguese', level: 'Native', score: 5 },
+      { flag: 'us', name: 'English', level: 'Advanced · B2/C1', score: 4 },
+      { flag: 'jp', name: 'Japanese', level: 'Intermediate · N3', score: 3 },
+      { flag: 'es', name: 'Spanish', level: 'Basic', score: 1 },
     ],
     facts: [
       { term: 'Education', value: 'B.Sc. in Computer Science, Estácio' },
