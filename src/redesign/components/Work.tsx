@@ -19,7 +19,7 @@ export function Work({ t }: { t: Dictionary }) {
             <div>
               <p className="flex flex-wrap items-center gap-2 font-medium">
                 {job.role}
-                {job.current && <span className="rounded border border-accent px-1.5 py-px font-code text-[.7rem] text-accent">{t.ui.current}</span>}
+                {job.current && <span className="rounded-full bg-brand px-2.5 py-0.5 text-[.8rem] font-bold text-on-brand">{t.ui.current}</span>}
               </p>
               <ul className="mt-2 grid list-disc gap-1.5 pl-5 text-[.95rem] text-muted marker:text-accent">
                 {job.highlights.map((point) => <li key={point} className="max-w-[68ch]">{point}</li>)}

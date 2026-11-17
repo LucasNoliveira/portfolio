@@ -23,7 +23,7 @@ export function Header({ t, locale }: { t: Dictionary; locale: Locale }) {
           hrefLang={other}
           lang={other}
           aria-label={t.ui.switchTo}
-          className="grid h-9 place-items-center rounded-md border border-rule px-3 font-code text-xs no-underline hover:bg-paper-2"
+          className="grid h-[38px] place-items-center rounded-full border border-rule px-3.5 font-code text-xs no-underline hover:bg-paper-2"
         >
           {t.ui.language}
         </Link>
