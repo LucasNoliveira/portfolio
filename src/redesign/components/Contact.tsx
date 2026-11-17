@@ -5,7 +5,7 @@ import { Icon } from './Icon';
 import { Section } from './Section';
 
 const ROW = 'grid grid-cols-[28px_1fr] items-center gap-x-4 gap-y-1 px-0.5 py-4 no-underline sm:grid-cols-[28px_auto_1fr]';
-const LABEL = 'text-lg font-medium group-hover:underline group-hover:underline-offset-4';
+const LABEL = 'text-[1.35rem] font-semibold tracking-tight group-hover:underline group-hover:decoration-brand group-hover:decoration-4 group-hover:underline-offset-[5px]';
 const HINT = 'col-start-2 font-code text-sm text-muted [overflow-wrap:anywhere] sm:col-start-auto sm:text-right';
 
 export function Contact({ t }: { t: Dictionary }) {
@@ -16,7 +16,7 @@ export function Contact({ t }: { t: Dictionary }) {
     { icon: 'calendly', color: '#006BFF', label: 'Calendly', hint: t.contact.call, href: SITE.calendly },
   ];
   return (
-    <Section id="contact" title={t.contact.title} intro={t.contact.intro}>
+    <Section id="contact" title={t.contact.title} intro={t.contact.intro} split>
       <ul className="divide-y divide-rule">
         <li><ContactEmailRow className={`group ${ROW}`} labelClass={LABEL} hintClass={HINT} /></li>
         {links.map((link) => (
