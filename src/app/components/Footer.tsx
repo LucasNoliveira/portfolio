@@ -1,6 +1,6 @@
 'use client';
 import { FC } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaTwitter } from 'react-icons/fa';
 import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -61,14 +61,6 @@ const Footer: FC = () => {
                                 target='blank_'
                             >
                                 <FaGithub className="h-5 w-5 md:h-6 md:w-6" />
-                            </a>
-                            <a
-                                href="https://instagram.com/luc.as_oliveira_"
-                                aria-label="Instagram"
-                                className="text-gray-400 hover:text-pink-500 transition-colors duration-300"
-                                target='blank_'
-                            >
-                                <FaInstagram className="h-5 w-5 md:h-6 md:w-6" />
                             </a>
                         </div>
                     </div>
