@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { NEW_SITE_INDEXABLE, SITE, SITE_URL } from './config';
+import { SITE, SITE_URL } from './config';
 import { dictionaries } from './content';
 import { HTML_LANG, LOCALES, type Locale } from './content/locales';
 
@@ -19,11 +19,11 @@ interface PageOptions {
 }
 
 export function pageMetadata(lang: Locale, subpath: string, title: string, description: string, options: PageOptions = {}): Metadata {
-  const url = `/new/${lang}${subpath}`;
+  const url = `/${lang}${subpath}`;
   const image = { url: `/og/og-${lang}.png`, width: 1200, height: 630, alt: `${SITE.name} — ${JOB_TITLE[lang]}` };
   const languages = options.languages ?? LOCALES;
-  const alternates = Object.fromEntries(languages.map((l) => [HTML_LANG[l], `/new/${l}${subpath}`]));
-  if (languages.includes('en')) alternates['x-default'] = `/new/en${subpath}`;
+  const alternates = Object.fromEntries(languages.map((l) => [HTML_LANG[l], `/${l}${subpath}`]));
+  if (languages.includes('en')) alternates['x-default'] = `/en${subpath}`;
   return {
     metadataBase: new URL(SITE_URL),
     title,
@@ -33,7 +33,7 @@ export function pageMetadata(lang: Locale, subpath: string, title: string, descr
       languages: alternates,
       ...(options.rss ? { types: { 'application/rss+xml': options.rss } } : {}),
     },
-    robots: NEW_SITE_INDEXABLE ? { index: true, follow: true } : { index: false, follow: false },
+    robots: { index: true, follow: true },
     openGraph: {
       type: options.article ? 'article' : 'website',
       siteName: SITE.name,
@@ -57,7 +57,7 @@ export function personJsonLd(lang: Locale) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: SITE.name,
-    url: `${SITE_URL}/new/${lang}`,
+    url: `${SITE_URL}/${lang}`,
     jobTitle: JOB_TITLE[lang],
     description: t.meta.description,
     image: `${SITE_URL}/img/new/me.jpg`,
@@ -77,8 +77,8 @@ export function blogPostingJsonLd(lang: Locale, post: { slug: string; title: str
     datePublished: post.date,
     inLanguage: HTML_LANG[lang],
     keywords: post.tags.join(', '),
-    url: `${SITE_URL}/new/${lang}/blog/${post.slug}`,
+    url: `${SITE_URL}/${lang}/blog/${post.slug}`,
     image: `${SITE_URL}/og/og-${lang}.png`,
-    author: { '@type': 'Person', name: SITE.name, url: `${SITE_URL}/new/${lang}` },
+    author: { '@type': 'Person', name: SITE.name, url: `${SITE_URL}/${lang}` },
   };
 }

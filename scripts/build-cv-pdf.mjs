@@ -27,7 +27,7 @@ const browser = await chromium.launch();
 try {
   for (const locale of LOCALES) {
     const page = await browser.newPage();
-    await page.goto(`${BASE_URL}/new/${locale}/cv`, { waitUntil: 'networkidle' });
+    await page.goto(`${BASE_URL}/${locale}/cv`, { waitUntil: 'networkidle' });
     await page.waitForSelector('.cv-contact a[href^="mailto:"]'); // the e-mail address appears after hydration
     await page.emulateMedia({ media: 'print' });
     const file = path.join(OUT_DIR, `lucas-oliveira-cv-${locale}.pdf`);

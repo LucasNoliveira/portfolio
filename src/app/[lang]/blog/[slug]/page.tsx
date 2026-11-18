@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { lang: string; slu
   return pageMetadata(lang, `/blog/${post.slug}`, `${post.title} — Lucas Oliveira`, post.description, {
     languages: getTranslations(post.slug),
     article: { publishedTime: post.date },
-    rss: `/new/${lang}/blog/feed.xml`,
+    rss: `/${lang}/blog/feed.xml`,
   });
 }
 
@@ -36,15 +36,15 @@ export default async function PostPage({ params }: { params: { lang: string; slu
   const others = translations.filter((l) => l !== lang);
   // Language menu: the translation if there is one, otherwise the blog index of that language.
   const languageHrefs = Object.fromEntries(
-    LOCALES.map((l) => [l, translations.includes(l as 'en' | 'pt') ? `/new/${l}/blog/${post.slug}` : `/new/${l}/blog`]),
+    LOCALES.map((l) => [l, translations.includes(l as 'en' | 'pt') ? `/${l}/blog/${post.slug}` : `/${l}/blog`]),
   );
 
   return (
     <>
-      <Header t={t} locale={lang} hasBlog homePath={`/new/${lang}`} languageHrefs={languageHrefs} />
+      <Header t={t} locale={lang} hasBlog homePath={`/${lang}`} languageHrefs={languageHrefs} />
       <main id="main" className="wrap py-12 md:py-16">
         <article className="mx-auto max-w-[70ch]">
-          <p className="text-sm"><a href={`/new/${lang}/blog`}>← {t.blog.back}</a></p>
+          <p className="text-sm"><a href={`/${lang}/blog`}>← {t.blog.back}</a></p>
           <header className="mt-6">
             <PostMetaLine post={post} t={t} locale={lang} />
             <h1 className="mt-2 text-3xl font-semibold leading-tight tracking-tight md:text-4xl">{post.title}</h1>
@@ -61,7 +61,7 @@ export default async function PostPage({ params }: { params: { lang: string; slu
           {others.length > 0 && (
             <p className="mt-12 border-t border-rule pt-6 text-sm">
               {others.map((other) => (
-                <a key={other} href={`/new/${other}/blog/${post.slug}`} hrefLang={other} lang={other}>
+                <a key={other} href={`/${other}/blog/${post.slug}`} hrefLang={other} lang={other}>
                   {t.blog.alsoIn.replace('{language}', LOCALE_NAMES[other])}
                 </a>
               ))}

@@ -17,7 +17,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const lang = isLocale(params.lang) ? params.lang : 'en';
   const { blog } = dictionaries[lang];
-  return pageMetadata(lang, '/blog', `${blog.title} — Lucas Oliveira`, blog.intro, { rss: `/new/${lang === 'pt' ? 'pt' : 'en'}/blog/feed.xml` });
+  return pageMetadata(lang, '/blog', `${blog.title} — Lucas Oliveira`, blog.intro, { rss: `/${lang === 'pt' ? 'pt' : 'en'}/blog/feed.xml` });
 }
 
 export default function BlogIndex({ params }: { params: { lang: string } }) {
@@ -27,7 +27,7 @@ export default function BlogIndex({ params }: { params: { lang: string } }) {
   const posts = getPostsFor(lang);
   return (
     <>
-      <Header t={t} locale={lang} hasBlog homePath={`/new/${lang}`} />
+      <Header t={t} locale={lang} hasBlog homePath={`/${lang}`} />
       <main id="main" className="wrap py-12 md:py-16">
         <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{t.blog.title}</h1>
         <p className="mt-2 max-w-[60ch] text-muted">{t.blog.intro}</p>
@@ -36,7 +36,7 @@ export default function BlogIndex({ params }: { params: { lang: string } }) {
           {posts.length > 0 ? <PostList posts={posts} t={t} locale={lang} /> : <p className="text-muted">{t.blog.empty}</p>}
         </div>
         <p className="mt-10 text-sm">
-          <a href={`/new/${lang === 'pt' ? 'pt' : 'en'}/blog/feed.xml`}>{t.blog.feed}</a>
+          <a href={`/${lang === 'pt' ? 'pt' : 'en'}/blog/feed.xml`}>{t.blog.feed}</a>
         </p>
       </main>
       <Footer t={t} />

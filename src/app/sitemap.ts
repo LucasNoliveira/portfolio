@@ -1,16 +1,15 @@
 import type { MetadataRoute } from 'next';
-import { NEW_SITE_INDEXABLE, SITE_URL } from '@/redesign/config';
+import { SITE_URL } from '@/redesign/config';
 import { getAllPosts } from '@/redesign/blog';
 import { HTML_LANG, LOCALES } from '@/redesign/content/locales';
 
-/** Lists the redesign (every language, home and résumé) once it is allowed to be indexed. */
+/** Home, résumé and blog in every language, plus each post in the languages it is written in. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  if (!NEW_SITE_INDEXABLE) return [];
   const pages = ['', '/cv', '/blog'].flatMap((subpath) =>
     LOCALES.map((lang) => ({
-      url: `${SITE_URL}/new/${lang}${subpath}`,
+      url: `${SITE_URL}/${lang}${subpath}`,
       alternates: {
-        languages: Object.fromEntries(LOCALES.map((l) => [HTML_LANG[l], `${SITE_URL}/new/${l}${subpath}`])),
+        languages: Object.fromEntries(LOCALES.map((l) => [HTML_LANG[l], `${SITE_URL}/${l}${subpath}`])),
       },
     })),
   );
@@ -19,8 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = slugs.map((slug) => {
     const langs = getAllPosts().filter((post) => post.slug === slug).map((post) => post.lang);
     return langs.map((lang) => ({
-      url: `${SITE_URL}/new/${lang}/blog/${slug}`,
-      alternates: { languages: Object.fromEntries(langs.map((l) => [HTML_LANG[l], `${SITE_URL}/new/${l}/blog/${slug}`])) },
+      url: `${SITE_URL}/${lang}/blog/${slug}`,
+      alternates: { languages: Object.fromEntries(langs.map((l) => [HTML_LANG[l], `${SITE_URL}/${l}/blog/${slug}`])) },
     }));
   }).flat();
   return [...pages, ...posts];

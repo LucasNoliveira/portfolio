@@ -24,7 +24,7 @@ export default function CvPage({ params }: { params: { lang: string } }) {
   const t = dictionaries[params.lang];
   return (
     <>
-      <CvToolbar t={t} backHref={`/new/${params.lang}`} pdfHref={cvPdfPath(params.lang)} />
+      <CvToolbar t={t} backHref={`/${params.lang}`} pdfHref={cvPdfPath(params.lang)} />
       <main id="main" className="cv-page">
         <CvDocument t={t} />
       </main>

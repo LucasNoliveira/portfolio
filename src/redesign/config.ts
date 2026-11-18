@@ -11,7 +11,7 @@ export const SITE = {
 } as const;
 
 /** Page with the résumé in HTML, and the PDF generated from it (see scripts/build-cv-pdf.mjs). */
-export const cvPagePath = (locale: string) => `/new/${locale}/cv`;
+export const cvPagePath = (locale: string) => `/${locale}/cv`;
 export const cvPdfPath = (locale: string) => `/cv/lucas-oliveira-cv-${locale}.pdf`;
 
 /**
@@ -22,9 +22,3 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ??
   (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000')
 ).replace(/\/$/, '');
-
-/**
- * The redesign stays out of search results until it replaces the old site.
- * To launch it, set NEW_SITE_INDEXABLE=1 (the same variable is read in next.config.mjs).
- */
-export const NEW_SITE_INDEXABLE = process.env.NEW_SITE_INDEXABLE === '1';

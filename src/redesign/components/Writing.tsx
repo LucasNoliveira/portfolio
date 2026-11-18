@@ -11,7 +11,7 @@ export function Writing({ t, locale, posts }: { t: Dictionary; locale: Locale; p
     <Section id="writing" title={t.blog.latest} intro={t.blog.latestIntro} split revealBody={false}>
       <PostList posts={posts.slice(0, 3)} t={t} locale={locale} />
       <p className="mt-8 text-sm">
-        <a href={`/new/${locale}/blog`}>{t.blog.all}</a>
+        <a href={`/${locale}/blog`}>{t.blog.all}</a>
       </p>
     </Section>
   );
