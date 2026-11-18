@@ -17,8 +17,6 @@ import { Skills } from '@/redesign/components/Skills';
 import { Work } from '@/redesign/components/Work';
 import { pageMetadata, personJsonLd } from '@/redesign/seo';
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }

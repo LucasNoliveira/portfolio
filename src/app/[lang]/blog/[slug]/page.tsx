@@ -8,8 +8,6 @@ import { dictionaries } from '@/redesign/content';
 import { isLocale, LOCALE_NAMES, LOCALES, type Locale } from '@/redesign/content/locales';
 import { blogPostingJsonLd, pageMetadata } from '@/redesign/seo';
 
-export const dynamicParams = false;
-
 /** Post pages exist only in the languages the post is written in. */
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ lang: post.lang, slug: post.slug }));
