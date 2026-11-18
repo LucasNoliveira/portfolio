@@ -1,6 +1,16 @@
 import type { TechId } from '../tech/types';
 
-export type CompanyId = 'vocal' | 'accenture' | 'indra' | 'mont' | 'vitta' | 'rotary';
+export type CompanyId = 'vocal' | 'accenture' | 'indra' | 'mont' | 'vitta' | 'riobranco' | 'independent';
+
+/** One client inside a grouped entry (for example, several project-based contracts under one self-employed role). */
+export interface Engagement {
+  companyId: CompanyId;
+  company: string;
+  /** Employment type shown as a small tag, e.g. "Contract (PJ)". */
+  kind: string;
+  highlights: string[];
+  stack: TechId[];
+}
 
 export interface Job {
   companyId: CompanyId;
@@ -8,8 +18,13 @@ export interface Job {
   role: string;
   period: string;
   current?: boolean;
+  /** Small tag next to the role, e.g. "Internship". */
+  kind?: string;
+  /** One line introducing a grouped entry. */
+  summary?: string;
   highlights: string[];
   stack: TechId[];
+  engagements?: Engagement[];
 }
 
 export interface ServiceItem {
