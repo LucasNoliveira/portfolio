@@ -170,5 +170,7 @@ export const en: Dictionary = {
     intro: 'I’m open to remote backend and AI-product roles paid in USD, EUR or GBP. I usually reply within a day.',
     whatsapp: 'Message on WhatsApp',
     call: 'Book a 30-minute intro call',
+    resume: 'Résumé',
   },
+  cv: { back: 'Back to site', download: 'Download PDF', print: 'Print', summary: 'Summary', experience: 'Experience', skills: 'Skills', education: 'Education', languages: 'Languages' },
 };

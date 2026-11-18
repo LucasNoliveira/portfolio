@@ -11,6 +11,10 @@ const CUSTOM_ICONS: Record<string, IconShape> = {
   websockets: { viewBox: '0 0 24 24', shapes: [
     { tag: 'path', attrs: { d: 'M4 8h13l-3-3M20 16H7l3 3', ...stroke } },
   ] },
+  resume: { viewBox: '0 0 24 24', shapes: [
+    { tag: 'path', attrs: { d: 'M7 3h7l5 5v13H7z', ...stroke } },
+    { tag: 'path', attrs: { d: 'M14 3v5h5M10 13h6M10 17h6', ...stroke } },
+  ] },
   jwt: { viewBox: '0 0 24 24', shapes: [
     { tag: 'rect', attrs: { x: '5', y: '10', width: '14', height: '10', rx: '2', ...stroke } },
     { tag: 'path', attrs: { d: 'M8 10V7a4 4 0 018 0v3', ...stroke } },

@@ -26,13 +26,13 @@ export default async function NewSitePage({ params }: { params: { lang: string }
     <>
       <Header t={t} locale={params.lang} />
       <main id="main">
-        <Hero t={t} />
+        <Hero t={t} locale={params.lang} />
         <Work t={t} />
         <Cases t={t} />
         <Services t={t} />
         <Skills t={t} />
         <About t={t} github={github} contributions={contributions} locale={params.lang} />
-        <Contact t={t} />
+        <Contact t={t} locale={params.lang} />
       </main>
       <Footer t={t} />
     </>

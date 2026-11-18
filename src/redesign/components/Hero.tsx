@@ -1,13 +1,15 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Dictionary } from '../content/types';
-import { SITE } from '../config';
+import { cvPagePath, SITE } from '../config';
+import type { Locale } from '../content/locales';
 import { AvailabilityBadge } from './AvailabilityBadge';
 import { ContactMenu } from './ContactMenu';
 import { ProfileCard } from './ProfileCard';
 import { TechList } from './TechList';
 
-export function Hero({ t }: { t: Dictionary }) {
+export function Hero({ t, locale }: { t: Dictionary; locale: Locale }) {
   const { hero } = t;
   return (
     <section id="top" className="py-12 md:py-20">
@@ -30,7 +32,7 @@ export function Hero({ t }: { t: Dictionary }) {
           <div style={{ '--i': 4 } as CSSProperties} className="rise mt-6 flex flex-wrap gap-3">
             <ContactMenu t={t} />
             <a className="btn" href="#cases">{t.nav.cases}</a>
-            {SITE.resumeUrl && <a className="btn" href={SITE.resumeUrl} download>{hero.resume}</a>}
+            <Link className="btn" href={cvPagePath(locale)}>{hero.resume}</Link>
           </div>
         </div>
         <div style={{ '--i': 3 } as CSSProperties} className="rise min-w-0"><ProfileCard t={t} /></div>

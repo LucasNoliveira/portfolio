@@ -50,6 +50,8 @@ const nextConfig = {
       { source: '/:path*', headers: baseHeaders },
       { source: '/new', headers: csp },
       { source: '/new/:path*', headers: csp },
+      // The new résumé PDFs stay out of search results while the redesign is a work in progress.
+      { source: '/cv/lucas-oliveira-cv-:lang(en|pt|es|ja).pdf', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
     ];
   },
 };

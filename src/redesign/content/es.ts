@@ -170,5 +170,7 @@ export const es: Dictionary = {
     intro: 'Estoy abierto a puestos remotos de backend y productos con IA pagados en USD, EUR o GBP. Suelo responder en un día.',
     whatsapp: 'Escríbeme por WhatsApp',
     call: 'Reserva una llamada de 30 minutos',
+    resume: 'Currículum',
   },
+  cv: { back: 'Volver al sitio', download: 'Descargar PDF', print: 'Imprimir', summary: 'Resumen', experience: 'Experiencia', skills: 'Habilidades', education: 'Formación', languages: 'Idiomas' },
 };

@@ -8,6 +8,8 @@ export const SITE = {
   github: 'https://github.com/LucasNoliveira',
   repo: 'https://github.com/LucasNoliveira/portfolio',
   calendly: 'https://calendly.com/lucasnoliveira126',
-  /** Set to a PDF path (e.g. '/cv/lucas-oliveira.pdf') once the updated résumé exists; the button is hidden while null. */
-  resumeUrl: null as string | null,
 } as const;
+
+/** Page with the résumé in HTML, and the PDF generated from it (see scripts/build-cv-pdf.mjs). */
+export const cvPagePath = (locale: string) => `/new/${locale}/cv`;
+export const cvPdfPath = (locale: string) => `/cv/lucas-oliveira-cv-${locale}.pdf`;
