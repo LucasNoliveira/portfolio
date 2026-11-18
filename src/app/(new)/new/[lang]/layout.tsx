@@ -18,7 +18,7 @@ export default function NewSiteLayout({ children, params }: LayoutProps) {
   const lang = isLocale(params.lang) ? params.lang : 'en';
   return (
     <html lang={HTML_LANG[lang]} suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} min-h-dvh font-dev text-base`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} flex min-h-dvh flex-col font-dev text-base`}>
         <a href="#main" className="absolute -left-[999px] top-2 z-50 rounded-md bg-brand px-4 py-2 text-on-brand focus:left-2">
           {dictionaries[lang].ui.skip}
         </a>
