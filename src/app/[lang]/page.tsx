@@ -21,33 +21,35 @@ export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
-  const lang = isLocale(params.lang) ? params.lang : 'en';
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang: langParam } = await params;
+  const lang = isLocale(langParam) ? langParam : 'en';
   const { meta } = dictionaries[lang];
   return pageMetadata(lang, '', meta.title, meta.description);
 }
 
-export default async function NewSitePage({ params }: { params: { lang: string } }) {
-  if (!isLocale(params.lang)) notFound();
-  const t = dictionaries[params.lang];
-  const posts = getPostsFor(params.lang);
+export default async function NewSitePage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = dictionaries[lang];
+  const posts = getPostsFor(lang);
   const [github, contributions] = await Promise.all([getGithubStats(), getContributions()]);
   return (
     <>
-      <Header t={t} locale={params.lang} hasBlog={posts.length > 0} />
+      <Header t={t} locale={lang} hasBlog={posts.length > 0} />
       <main id="main">
-        <Hero t={t} locale={params.lang} />
+        <Hero t={t} locale={lang} />
         <Work t={t} />
         <Cases t={t} />
         <Recommendations t={t} />
         <Services t={t} />
         <Skills t={t} />
-        <Writing t={t} locale={params.lang} posts={posts} />
-        <About t={t} github={github} contributions={contributions} locale={params.lang} />
-        <Contact t={t} locale={params.lang} />
+        <Writing t={t} locale={lang} posts={posts} />
+        <About t={t} github={github} contributions={contributions} locale={lang} />
+        <Contact t={t} locale={lang} />
       </main>
       <Footer t={t} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd(params.lang)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd(lang)) }} />
     </>
   );
 }

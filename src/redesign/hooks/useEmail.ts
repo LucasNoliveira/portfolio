@@ -1,11 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { SITE } from '../config';
 
-/** The address is assembled after mount, so it never appears verbatim in the server HTML. */
+const subscribe = () => () => {};
+const read = () => SITE.emailParts.join('@');
+const readOnServer = () => null;
+
+/** The address is assembled in the browser, so it never appears verbatim in the server HTML. */
 export function useEmail(): string | null {
-  const [email, setEmail] = useState<string | null>(null);
-  useEffect(() => setEmail(SITE.emailParts.join('@')), []);
-  return email;
+  return useSyncExternalStore(subscribe, read, readOnServer);
 }

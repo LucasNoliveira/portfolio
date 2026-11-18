@@ -12,15 +12,16 @@ export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
-  const lang = isLocale(params.lang) ? params.lang : 'en';
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang: langParam } = await params;
+  const lang = isLocale(langParam) ? langParam : 'en';
   const { blog } = dictionaries[lang];
   return pageMetadata(lang, '/blog', `${blog.title} — Lucas Oliveira`, blog.intro, { rss: `/${lang === 'pt' ? 'pt' : 'en'}/blog/feed.xml` });
 }
 
-export default function BlogIndex({ params }: { params: { lang: string } }) {
-  if (!isLocale(params.lang)) notFound();
-  const lang = params.lang;
+export default async function BlogIndex({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
   const t = dictionaries[lang];
   const posts = getPostsFor(lang);
   return (

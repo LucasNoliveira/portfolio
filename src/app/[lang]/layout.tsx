@@ -7,15 +7,16 @@ import '@/redesign/styles/globals.css';
 
 interface LayoutProps {
   children: ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export default function NewSiteLayout({ children, params }: LayoutProps) {
-  const lang = isLocale(params.lang) ? params.lang : 'en';
+export default async function NewSiteLayout({ children, params }: LayoutProps) {
+  const { lang: langParam } = await params;
+  const lang = isLocale(langParam) ? langParam : 'en';
   return (
     <html lang={HTML_LANG[lang]} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} flex min-h-dvh flex-col font-dev text-base`}>
