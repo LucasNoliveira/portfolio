@@ -1,20 +1,20 @@
 import type { Dictionary } from './types';
 
 export const pt: Dictionary = {
-  meta: { title: 'Lucas Oliveira — Engenheiro backend', description: 'Engenheiro backend em São Paulo criando produtos com IA em Python, Django, FastAPI e AWS. Aberto a novas oportunidades.' },
+  meta: { title: 'Lucas Oliveira — Engenheiro backend', description: 'Engenheiro backend em São Paulo criando produtos com IA em Python, Django, FastAPI e AWS.' },
   ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'Idioma', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte' },
   nav: { work: 'Trabalho', cases: 'Cases', services: 'Serviços', skills: 'Stack', about: 'Sobre', contact: 'Contato', blog: 'Blog' },
   hero: {
     role: 'Engenheiro backend criando produtos com IA.',
     lead: 'Há 4 anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto.',
     location: 'São Paulo, Brasil (UTC−3)',
-    availability: 'Aberto a novas oportunidades',
+    place: 'São Paulo, Brasil · UTC−3 · Remoto',
     email: 'Fale comigo',
     menu: { title: 'Como prefere falar comigo?', email: 'E-mail', whatsapp: 'Mensagem rápida no WhatsApp', call: 'Agendar uma conversa de 30 minutos', linkedin: 'Enviar mensagem no LinkedIn' },
     resume: 'Currículo',
     stackTitle: 'O que uso todos os dias',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
-    card: { role: 'Engenheiro backend', location: 'São Paulo, Brasil', timezone: 'UTC-3', openTo: 'vagas remotas' },
+    card: { role: 'Engenheiro backend', location: 'São Paulo, Brasil', timezone: 'UTC-3', workMode: 'remoto' },
   },
   work: {
     title: 'Onde já trabalhei',

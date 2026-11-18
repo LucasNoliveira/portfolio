@@ -1,20 +1,20 @@
 import type { Dictionary } from './types';
 
 export const en: Dictionary = {
-  meta: { title: 'Lucas Oliveira — Backend engineer', description: 'Backend engineer in São Paulo building AI-powered products with Python, Django, FastAPI and AWS. Open to remote roles worldwide.' },
+  meta: { title: 'Lucas Oliveira — Backend engineer', description: 'Backend engineer in São Paulo building AI-powered products with Python, Django, FastAPI and AWS.' },
   ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Language', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source' },
   nav: { work: 'Work', cases: 'Case studies', services: 'Services', skills: 'Stack', about: 'About', contact: 'Contact', blog: 'Blog' },
   hero: {
     role: 'Backend engineer building AI-powered products.',
     lead: 'I have spent 4 years taking products from idea to production: secure APIs, cloud infrastructure and LLM features that teams can rely on. Based in São Paulo, working remotely with international teams.',
     location: 'São Paulo, Brazil (UTC−3)',
-    availability: 'Open to remote roles worldwide',
+    place: 'São Paulo, Brazil · UTC−3 · Remote',
     email: 'Contact me',
     menu: { title: 'How would you like to reach me?', email: 'Email', whatsapp: 'Quick message on WhatsApp', call: 'Book a 30-minute intro call', linkedin: 'Send a message on LinkedIn' },
     resume: 'Resume',
     stackTitle: 'What I reach for every day',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
-    card: { role: 'Backend engineer', location: 'São Paulo, Brazil', timezone: 'UTC-3', openTo: 'remote roles, worldwide' },
+    card: { role: 'Backend engineer', location: 'São Paulo, Brazil', timezone: 'UTC-3', workMode: 'remote' },
   },
   work: {
     title: 'Where I’ve worked',
