@@ -10,7 +10,7 @@ export const SITE = {
   calendly: 'https://calendly.com/lucasnoliveira126',
 } as const;
 
-/** Page with the résumé in HTML, and the PDF generated from it (see scripts/build-cv-pdf.mjs). */
+/** Page with the resume in HTML, and the PDF generated from it (see scripts/build-cv-pdf.mjs). */
 export const cvPagePath = (locale: string) => `/${locale}/cv`;
 export const cvPdfPath = (locale: string) => `/cv/lucas-oliveira-cv-${locale}.pdf`;
 

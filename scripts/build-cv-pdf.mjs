@@ -1,11 +1,11 @@
 /**
- * Generates one A4 PDF per language from the résumé page, into public/cv/.
+ * Generates one A4 PDF per language from the resume page, into public/cv/.
  *
  *   npm run build && npx next start -p 3000     (in one terminal)
  *   npm i --no-save playwright && npx playwright install chromium     (once)
  *   node scripts/build-cv-pdf.mjs [baseUrl]     (in another)
  *
- * The résumé content lives in src/redesign/content/*.ts, so the PDFs are regenerated from the same text as the site.
+ * The resume content lives in src/redesign/content/*.ts, so the PDFs are regenerated from the same text as the site.
  */
 import { mkdir } from 'node:fs/promises';
 import path from 'node:path';

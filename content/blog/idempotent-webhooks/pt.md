@@ -33,7 +33,7 @@ class WebhookEvent(models.Model):
         ]
 ```
 
-A constraint única é a ferramenta certa aqui. Checar com `exists()` e depois inserir é uma condição de corrida: duas entregas simultâneas podem passar pela checagem ao mesmo tempo.
+A constraint única é a ferramenta certa aqui. Checar com `exists()` e depois inserir é uma condição de corrida: 2 entregas simultâneas podem passar pela checagem ao mesmo tempo.
 
 ## Confirme rápido, trabalhe depois
 
@@ -73,7 +73,7 @@ def crm_webhook(request):
     return HttpResponse(status=202)
 ```
 
-Dois detalhes importam. O `IntegrityError` é capturado **fora** do bloco `atomic()`, para o insert que falhou ser desfeito sem sujeira. E a task é enfileirada com `on_commit`, para o worker nunca procurar uma linha que ainda não foi confirmada.
+2 detalhes importam. O `IntegrityError` é capturado **fora** do bloco `atomic()`, para o insert que falhou ser desfeito sem sujeira. E a task é enfileirada com `on_commit`, para o worker nunca procurar uma linha que ainda não foi confirmada.
 
 Uma duplicata recebe `200`, não um erro: do ponto de vista do provedor a entrega deu certo, e um erro só causaria mais reenvios.
 
@@ -130,4 +130,4 @@ def test_duplicate_delivery_is_ignored(client):
 - **Eventos travados.** Se a fila perder uma task, a linha fica sem processar. Um job periódico que reenfileira eventos mais antigos que alguns minutos fecha essa brecha.
 - **Retenção.** Linhas antigas podem ser apagadas depois que a janela de reenvio do provedor passar.
 
-Guardar o evento antes de qualquer outra coisa dá três benefícios de uma vez: eliminação de duplicatas, uma trilha de auditoria e a possibilidade de reprocessar uma entrega que falhou.
+Guardar o evento antes de qualquer outra coisa dá 3 benefícios de uma vez: eliminação de duplicatas, uma trilha de auditoria e a possibilidade de reprocessar uma entrega que falhou.

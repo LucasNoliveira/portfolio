@@ -18,7 +18,7 @@ pnpm dev            # http://localhost:3000
 - `src/app/[lang]` — routes: home, `/cv`, `/blog`, `/blog/[slug]`, RSS feed.
 - `src/redesign` — `content/` (typed dictionaries, one per language), `components/` (one per section), `tech/` (logo catalog), `config.ts` (contact links, site URL), `seo.ts`, `blog.ts`, `github.ts`.
 - `content/blog` — blog posts (see below).
-- `public/cv`, `public/og` — résumé PDFs and link-preview images.
+- `public/cv`, `public/og` — resume PDFs and link-preview images.
 
 ## Environment variables
 
@@ -27,14 +27,14 @@ pnpm dev            # http://localhost:3000
 | `NEXT_PUBLIC_SITE_URL` | Real domain, for example `https://your-domain.dev`: canonical links, previews, sitemap and feed. Falls back to Vercel's production URL. |
 | `GITHUB_STATS_TOKEN` | Optional. Enables the GitHub contribution heatmap. Server-side only: never prefix it with `NEXT_PUBLIC_`. |
 
-## Résumé
+## Resume
 
-The résumé is a page built from the same text as the site, so there is only one place to edit:
+The resume is a page built from the same text as the site, so there is only one place to edit:
 
 - Online: `/{en|pt|es|ja}/cv` (printable, A4 print styles).
 - PDF: `public/cv/lucas-oliveira-cv-{lang}.pdf`, generated from that page.
 
-After changing anything in `src/redesign/content/*.ts` that appears in the résumé, regenerate the PDFs:
+After changing anything in `src/redesign/content/*.ts` that appears in the resume, regenerate the PDFs:
 
 ```bash
 npm run build && npx next start -p 3000        # terminal 1
@@ -42,7 +42,7 @@ npm i --no-save playwright && npx playwright install chromium   # once
 npm run cv:pdf                                  # terminal 2 (optional argument: base URL)
 ```
 
-`public/cv/Lucas_Oliveira_CV_FullStack_2025.pdf` is the old résumé, kept so existing links keep working.
+`public/cv/Lucas_Oliveira_CV_FullStack_2025.pdf` is the old resume, kept so existing links keep working.
 
 ## SEO
 

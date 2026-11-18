@@ -9,7 +9,7 @@ interface CvToolbarProps {
   pdfHref: string;
 }
 
-/** Actions around the résumé. Hidden when printing and in the generated PDF. */
+/** Actions around the resume. Hidden when printing and in the generated PDF. */
 export function CvToolbar({ t, backHref, pdfHref }: CvToolbarProps) {
   return (
     <div className="no-print sticky top-0 z-20 border-b border-rule bg-[color-mix(in_oklab,var(--paper)_92%,transparent)] backdrop-blur-md">

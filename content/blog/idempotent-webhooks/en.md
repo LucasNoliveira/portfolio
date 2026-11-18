@@ -33,7 +33,7 @@ class WebhookEvent(models.Model):
         ]
 ```
 
-A unique constraint is the right tool here. Checking with `exists()` and then inserting is a race: two deliveries arriving together can both pass the check.
+A unique constraint is the right tool here. Checking with `exists()` and then inserting is a race: 2 deliveries arriving together can both pass the check.
 
 ## Acknowledge fast, work later
 
@@ -73,7 +73,7 @@ def crm_webhook(request):
     return HttpResponse(status=202)
 ```
 
-Two details matter. The `IntegrityError` is caught **outside** the `atomic()` block, so the failed insert rolls back cleanly. And the task is queued with `on_commit`, so a worker never looks for a row that is not committed yet.
+2 details matter. The `IntegrityError` is caught **outside** the `atomic()` block, so the failed insert rolls back cleanly. And the task is queued with `on_commit`, so a worker never looks for a row that is not committed yet.
 
 A duplicate gets a `200`, not an error: from the provider's point of view the delivery succeeded, and an error would only trigger more retries.
 
@@ -130,4 +130,4 @@ def test_duplicate_delivery_is_ignored(client):
 - **Stuck events.** If the queue loses a task, a row stays unprocessed. A periodic job that re-queues events older than a few minutes closes that gap.
 - **Retention.** Old rows can be deleted once the provider's retry window has passed.
 
-Storing the event before touching anything else gives you three things at once: de-duplication, an audit trail and a way to replay a failed delivery.
+Storing the event before touching anything else gives you 3 things at once: de-duplication, an audit trail and a way to replay a failed delivery.

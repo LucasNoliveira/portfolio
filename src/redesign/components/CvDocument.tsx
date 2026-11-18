@@ -9,7 +9,7 @@ function Heading({ children }: { children: string }) {
   return <h2 className="cv-h2">{children}</h2>;
 }
 
-/** The résumé as a document: one column, plain text, selectable and readable by screen readers and ATS. */
+/** The resume as a document: one column, plain text, selectable and readable by screen readers and ATS. */
 export function CvDocument({ t }: { t: Dictionary }) {
   const { hero, work, skills, about, cv } = t;
   const url = (value: string) => value.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
