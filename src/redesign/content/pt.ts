@@ -1,20 +1,20 @@
 import type { Dictionary } from './types';
 
 export const pt: Dictionary = {
-  meta: { title: 'Lucas Oliveira — Engenheiro backend', description: 'Engenheiro backend em São Paulo criando produtos com IA em Python, Django, FastAPI e AWS. Aberto a vagas remotas no exterior.' },
+  meta: { title: 'Lucas Oliveira — Engenheiro backend', description: 'Engenheiro backend em São Paulo criando produtos com IA em Python, Django, FastAPI e AWS. Aberto a novas oportunidades.' },
   ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'Idioma', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte' },
   nav: { work: 'Trabalho', cases: 'Cases', services: 'Serviços', skills: 'Stack', about: 'Sobre', contact: 'Contato', blog: 'Blog' },
   hero: {
     role: 'Engenheiro backend criando produtos com IA.',
-    lead: 'Há 4 anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto com times internacionais.',
+    lead: 'Há 4 anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto.',
     location: 'São Paulo, Brasil (UTC−3)',
-    availability: 'Aberto a vagas remotas no exterior',
+    availability: 'Aberto a novas oportunidades',
     email: 'Fale comigo',
     menu: { title: 'Como prefere falar comigo?', email: 'E-mail', whatsapp: 'Mensagem rápida no WhatsApp', call: 'Agendar uma conversa de 30 minutos', linkedin: 'Enviar mensagem no LinkedIn' },
     resume: 'Currículo',
     stackTitle: 'O que uso todos os dias',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
-    card: { role: 'Engenheiro backend', location: 'São Paulo, Brasil', timezone: 'UTC-3', openTo: 'vagas remotas no exterior' },
+    card: { role: 'Engenheiro backend', location: 'São Paulo, Brasil', timezone: 'UTC-3', openTo: 'vagas remotas' },
   },
   work: {
     title: 'Onde já trabalhei',
@@ -175,7 +175,7 @@ export const pt: Dictionary = {
     paragraphs: [
       'Gosto de transformar ideias soltas de produto em serviços que ficam no ar. Meu foco é Python, infraestrutura em nuvem e recursos baseados em modelos de linguagem.',
       'Me importo com design limpo, testes, segurança e observabilidade, e com explicar trade-offs de forma simples para colegas e stakeholders.',
-      'Trabalho remoto com times internacionais e estou aberto a me mudar pela vaga certa.',
+      'Trabalho remoto e estou aberto a me mudar pela vaga certa.',
     ],
     github: { heatmap: 'contribuições no último ano', heatmapDay: '{count} contribuições em {date}', title: 'No GitHub', repos: 'Repositórios públicos', stars: 'Estrelas', languages: 'Mais usadas', lastPush: 'Último push', profile: 'Ver perfil' },
     languagesTitle: 'Idiomas',
@@ -191,7 +191,7 @@ export const pt: Dictionary = {
   },
   contact: {
     title: 'Vamos conversar',
-    intro: 'Estou aberto a vagas remotas de backend e produtos de IA pagas em USD, EUR ou GBP. Costumo responder em até um dia.',
+    intro: 'Estou aberto a vagas remotas de backend e produtos de IA. Costumo responder em até um dia.',
     whatsapp: 'Chamar no WhatsApp',
     call: 'Agendar uma conversa de 30 minutos',
     resume: 'Currículo',
