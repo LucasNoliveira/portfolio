@@ -11,18 +11,20 @@ export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
-  const lang = isLocale(params.lang) ? params.lang : 'en';
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang: langParam } = await params;
+  const lang = isLocale(langParam) ? langParam : 'en';
   const t = dictionaries[lang];
   return pageMetadata(lang, '/cv', `${SITE.name} — ${t.hero.resume}`, t.meta.description);
 }
 
-export default function CvPage({ params }: { params: { lang: string } }) {
-  if (!isLocale(params.lang)) notFound();
-  const t = dictionaries[params.lang];
+export default async function CvPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = dictionaries[lang];
   return (
     <>
-      <CvToolbar t={t} backHref={`/${params.lang}`} pdfHref={cvPdfPath(params.lang)} />
+      <CvToolbar t={t} backHref={`/${lang}`} pdfHref={cvPdfPath(lang)} />
       <main id="main" className="cv-page">
         <CvDocument t={t} />
       </main>

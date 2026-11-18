@@ -13,8 +13,9 @@ export function generateStaticParams() {
 const escape = (value: string) =>
   value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-export function GET(_request: Request, { params }: { params: { lang: string } }) {
-  const lang = (POST_LANGS as readonly string[]).includes(params.lang) ? (params.lang as Locale) : 'en';
+export async function GET(_request: Request, { params }: { params: Promise<{ lang: string }> }) {
+  const { lang: langParam } = await params;
+  const lang = (POST_LANGS as readonly string[]).includes(langParam) ? (langParam as Locale) : 'en';
   const { blog } = dictionaries[lang];
   const posts = getPostsFor(lang);
   const items = posts

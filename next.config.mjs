@@ -1,5 +1,3 @@
-import path from 'path';
-
 const isDev = process.env.NODE_ENV !== 'production';
 
 /** Security headers for every route. */
@@ -31,16 +29,6 @@ const baseHeaders = [
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
-
-  webpack(config, { isServer }) {
-    config.resolve.alias['@'] = path.resolve('src');
-
-    if (!isServer) {
-      config.resolve.fallback = { fs: false };
-    }
-
-    return config;
-  },
 
   async headers() {
     return [{ source: '/:path*', headers: baseHeaders }];

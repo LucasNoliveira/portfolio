@@ -2,7 +2,7 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from './locales';
 
 /**
  * Picks the best supported locale from an Accept-Language header.
- * Pure and dependency-free so it can run in the Edge middleware.
+ * Pure and dependency-free so it can run in the proxy.
  */
 export function negotiateLocale(header: string | null): Locale {
   if (!header) return DEFAULT_LOCALE;

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useSyncExternalStore } from 'react';
 import { readStore, writeStore } from './storage';
 
 export type Theme = 'light' | 'dark';
@@ -14,15 +14,31 @@ function subscribeToSystem(onChange: () => void) {
 }
 const readSystem = (): Theme => (matchMedia(QUERY).matches ? 'dark' : 'light');
 
+/** The visitor's explicit choice. Kept in memory too, so the toggle still works when storage is blocked. */
+let override: Theme | null = null;
+const listeners = new Set<() => void>();
+
+function subscribeToChoice(onChange: () => void) {
+  listeners.add(onChange);
+  const onStorage = (event: StorageEvent) => {
+    if (event.key === KEY) onChange();
+  };
+  addEventListener('storage', onStorage);
+  return () => {
+    listeners.delete(onChange);
+    removeEventListener('storage', onStorage);
+  };
+}
+const readChoice = (): Theme | null => {
+  if (override) return override;
+  const saved = readStore(KEY);
+  return saved === 'light' || saved === 'dark' ? saved : null;
+};
+
 /** Follows the OS until the visitor picks a theme explicitly. */
 export function useTheme(): [Theme, () => void] {
   const system = useSyncExternalStore(subscribeToSystem, readSystem, () => 'light' as Theme);
-  const [chosen, setChosen] = useState<Theme | null>(null);
-
-  useEffect(() => {
-    const saved = readStore(KEY);
-    if (saved === 'light' || saved === 'dark') setChosen(saved);
-  }, []);
+  const chosen = useSyncExternalStore(subscribeToChoice, readChoice, () => null);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -33,8 +49,9 @@ export function useTheme(): [Theme, () => void] {
   const theme = chosen ?? system;
   const toggle = useCallback(() => {
     const next: Theme = theme === 'dark' ? 'light' : 'dark';
+    override = next;
     writeStore(KEY, next);
-    setChosen(next);
+    listeners.forEach((listener) => listener());
   }, [theme]);
 
   return [theme, toggle];

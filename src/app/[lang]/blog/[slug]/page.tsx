@@ -13,10 +13,11 @@ export function generateStaticParams() {
   return getAllPosts().map((post) => ({ lang: post.lang, slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { lang: string; slug: string } }): Promise<Metadata> {
-  const post = await getPost(params.slug, params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
+  const { lang: langParam, slug } = await params;
+  const post = await getPost(slug, langParam);
   if (!post) return {};
-  const lang = params.lang as Locale;
+  const lang = langParam as Locale;
   return pageMetadata(lang, `/blog/${post.slug}`, `${post.title} — Lucas Oliveira`, post.description, {
     languages: getTranslations(post.slug),
     article: { publishedTime: post.date },
@@ -24,10 +25,10 @@ export async function generateMetadata({ params }: { params: { lang: string; slu
   });
 }
 
-export default async function PostPage({ params }: { params: { lang: string; slug: string } }) {
-  if (!isLocale(params.lang) || !(POST_LANGS as readonly string[]).includes(params.lang)) notFound();
-  const lang = params.lang;
-  const post = await getPost(params.slug, lang);
+export default async function PostPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
+  const { lang, slug } = await params;
+  if (!isLocale(lang) || !(POST_LANGS as readonly string[]).includes(lang)) notFound();
+  const post = await getPost(slug, lang);
   if (!post) notFound();
   const t = dictionaries[lang];
   const translations = getTranslations(post.slug);
