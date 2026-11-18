@@ -55,6 +55,12 @@
 .timeline::before { background: var(--rule); }
 .timeline::after { background: var(--accent); transform-origin: top; transform: scaleY(var(--progress)); }
 
+/* On narrow screens the content spans the full width, so the line would run through the text. */
+@media (max-width: 767px) {
+  .timeline::before,
+  .timeline::after { display: none; }
+}
+
 .timeline[data-animate] > li {
   transition: opacity .6s ease-out var(--delay, 0ms), translate .6s ease-out var(--delay, 0ms);
 }
