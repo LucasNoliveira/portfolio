@@ -11,30 +11,40 @@ const JOB_TITLE: Record<Locale, string> = {
   ja: 'バックエンドエンジニア',
 };
 
-/** `/new/en`, `/new/en/cv`, ... for each language, plus x-default. */
-const languageAlternates = (subpath: string) => ({
-  ...Object.fromEntries(LOCALES.map((l) => [HTML_LANG[l], `/new/${l}${subpath}`])),
-  'x-default': `/new/en${subpath}`,
-});
+interface PageOptions {
+  /** Languages in which this page exists; defaults to all of them. Blog posts exist only where translated. */
+  languages?: readonly Locale[];
+  article?: { publishedTime: string };
+  rss?: string;
+}
 
-export function pageMetadata(lang: Locale, subpath: '' | '/cv', title: string, description: string): Metadata {
+export function pageMetadata(lang: Locale, subpath: string, title: string, description: string, options: PageOptions = {}): Metadata {
   const url = `/new/${lang}${subpath}`;
   const image = { url: `/og/og-${lang}.png`, width: 1200, height: 630, alt: `${SITE.name} — ${JOB_TITLE[lang]}` };
+  const languages = options.languages ?? LOCALES;
+  const alternates = Object.fromEntries(languages.map((l) => [HTML_LANG[l], `/new/${l}${subpath}`]));
+  if (languages.includes('en')) alternates['x-default'] = `/new/en${subpath}`;
   return {
     metadataBase: new URL(SITE_URL),
     title,
     description,
-    alternates: { canonical: url, languages: languageAlternates(subpath) },
+    alternates: {
+      canonical: url,
+      languages: alternates,
+      ...(options.rss ? { types: { 'application/rss+xml': options.rss } } : {}),
+    },
     robots: NEW_SITE_INDEXABLE ? { index: true, follow: true } : { index: false, follow: false },
     openGraph: {
-      type: subpath ? 'article' : 'website',
+      type: options.article ? 'article' : 'website',
       siteName: SITE.name,
       title,
       description,
       url,
       locale: OG_LOCALE[lang],
-      alternateLocale: LOCALES.filter((l) => l !== lang).map((l) => OG_LOCALE[l]),
       images: [image],
+      ...(options.article ? { publishedTime: options.article.publishedTime, authors: [SITE.name] } : {
+        alternateLocale: LOCALES.filter((l) => l !== lang).map((l) => OG_LOCALE[l]),
+      }),
     },
     twitter: { card: 'summary_large_image', title, description, images: [image.url] },
   };
@@ -55,5 +65,20 @@ export function personJsonLd(lang: Locale) {
     sameAs: [SITE.linkedin, SITE.github],
     knowsLanguage: ['pt-BR', 'en', 'es', 'ja'],
     knowsAbout: ['Python', 'Django', 'FastAPI', 'REST APIs', 'AWS', 'PostgreSQL', 'LLM integration'],
+  };
+}
+
+export function blogPostingJsonLd(lang: Locale, post: { slug: string; title: string; description: string; date: string; tags: string[] }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    inLanguage: HTML_LANG[lang],
+    keywords: post.tags.join(', '),
+    url: `${SITE_URL}/new/${lang}/blog/${post.slug}`,
+    image: `${SITE_URL}/og/og-${lang}.png`,
+    author: { '@type': 'Person', name: SITE.name, url: `${SITE_URL}/new/${lang}` },
   };
 }

@@ -116,8 +116,8 @@
 
 @page { size: A4; margin: 13mm 14mm; }
 @media print {
-  html, body { background: #fff !important; }
-  .no-print { display: none !important; }
+  html, body { background: #fff; }
+  .no-print { display: none; }
   .cv-page { padding: 0; }
   .cv { width: 100%; padding: 0; border: 0; border-radius: 0; box-shadow: none; font-size: 9.6pt; line-height: 1.45; }
   .cv-name { font-size: 22pt; }
@@ -144,5 +144,28 @@
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
+  *, *::before, *::after { animation: none; transition: none !important; }
 }
+
+/* Blog posts: Markdown rendered at build time (src/redesign/blog.ts). */
+.post { font-size: 1.05rem; line-height: 1.75; overflow-wrap: anywhere; }
+.post > * + * { margin-top: 1.1em; }
+.post h2 { margin-top: 2em; font-size: 1.5rem; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; scroll-margin-top: 5rem; }
+.post h3 { margin-top: 1.6em; font-size: 1.2rem; font-weight: 600; scroll-margin-top: 5rem; }
+.post a { text-decoration: underline; text-underline-offset: 3px; }
+.post ul, .post ol { padding-left: 1.4rem; }
+.post ul { list-style: disc; }
+.post ol { list-style: decimal; }
+.post li + li { margin-top: .4em; }
+.post li::marker { color: var(--accent); }
+.post blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--muted); }
+.post code { font-family: var(--font-mono), monospace; font-size: .88em; }
+.post :not(pre) > code { background: var(--paper-2); border-radius: 6px; padding: .12em .38em; }
+.post pre { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper-2); padding: 1rem 1.1rem; font-size: .88rem; line-height: 1.65; }
+.post pre code { padding: 0; background: none; font-size: inherit; }
+.post .shiki, .post .shiki span { color: light-dark(var(--shiki-light), var(--shiki-dark)); }
+.post .shiki { background: var(--paper-2); }
+.post table { display: block; overflow-x: auto; border-collapse: collapse; font-size: .95rem; }
+.post th, .post td { border: 1px solid var(--rule); padding: .4rem .7rem; text-align: left; }
+.post img { max-width: 100%; height: auto; border-radius: 8px; }
+.post hr { border: 0; border-top: 1px solid var(--rule); }

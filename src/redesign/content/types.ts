@@ -67,7 +67,7 @@ export interface Recommendation {
 export interface Dictionary {
   meta: { title: string; description: string };
   ui: { skip: string; theme: string; language: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
-  nav: { work: string; cases: string; services: string; skills: string; about: string; contact: string };
+  nav: { work: string; cases: string; services: string; skills: string; about: string; contact: string; blog: string };
   hero: {
     role: string; lead: string; location: string; availability: string;
     email: string; resume: string;
@@ -76,6 +76,15 @@ export interface Dictionary {
   };
   work: { title: string; intro: string; jobs: Job[] };
   cases: { title: string; intro: string; items: CaseStudy[] };
+  blog: {
+    title: string; intro: string; empty: string;
+    /** Contains {n}. */
+    minRead: string;
+    back: string; englishOnly: string;
+    /** Contains {language}. */
+    alsoIn: string;
+    feed: string; latest: string; latestIntro: string; all: string;
+  };
   recommendations: { title: string; intro: string; viewAll: string; items: Recommendation[] };
   services: { title: string; intro: string; items: ServiceItem[] };
   skills: { title: string; groups: { name: string; items: TechId[] }[] };
