@@ -46,7 +46,7 @@ export default async function PostPage({ params }: { params: Promise<{ lang: str
           <p className="text-sm"><a href={`/${lang}/blog`} className="hover:underline hover:underline-offset-4">← {t.blog.back}</a></p>
           <header className="mt-6">
             <PostMetaLine post={post} t={t} locale={lang} />
-            <h1 className="mt-2 text-3xl font-semibold leading-tight tracking-tight md:text-4xl">{post.title}</h1>
+            <h1 className="mt-2 text-3xl font-semibold leading-tight tracking-tight md:text-4xl md:leading-10">{post.title}</h1>
             <p className="mt-3 text-lg text-muted">{post.description}</p>
             {post.tags.length > 0 && (
               <ul className="mt-4 flex flex-wrap gap-2" aria-label="Tags">

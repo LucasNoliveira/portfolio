@@ -44,7 +44,7 @@ export function ProfileCard({ t }: { t: Dictionary }) {
   return (
     <figure className="overflow-hidden rounded-lg border border-[#30363d] bg-[#0d1117] text-[#c9d1d9] shadow-sm">
       <figcaption className="border-b border-[#30363d] px-4 py-2.5 font-code text-xs text-[#8b949e]">profile.json</figcaption>
-      <pre className="overflow-x-auto px-4 py-4 font-code text-[.82rem] leading-7 sm:text-sm" tabIndex={0}>
+      <pre className="overflow-x-auto px-4 py-4 font-code text-[.82rem] leading-7 sm:text-sm sm:leading-5" tabIndex={0}>
         <code className={TYPING ? 'typing' : undefined}>
           {lines.map(({ text, node }, i) => {
             const style = { '--n': cells(text), '--start': `${start}ms`, '--dur': `${cells(text) * MS_PER_CHAR}ms` } as CSSProperties;

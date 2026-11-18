@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* Design tokens: the colors live in :root below and adapt to light/dark, Tailwind just points at them. */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-brand: var(--brand);
+  --color-on-brand: var(--on-brand);
+  --color-deep: var(--deep);
+  --color-on-deep: var(--on-deep);
+  --color-ok: var(--ok);
+  --font-dev: var(--font-sans), system-ui, 'Hiragino Sans', 'Yu Gothic UI', Meiryo, sans-serif;
+  --font-code: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
 
 :root {
   color-scheme: light dark;
@@ -23,7 +38,7 @@
 
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
-  body { background: var(--paper); color: var(--ink); overflow-x: clip; line-height: 1.6; }
+  body { background: var(--paper); color: var(--ink); overflow-x: clip; }
   h2, h3 { text-wrap: balance; line-height: 1.1; }
   h3 { font-weight: 600; }
   p { text-wrap: pretty; }
