@@ -1,5 +1,5 @@
 ---
-title: Making webhook handlers idempotent in Django
+title: Making webhook handlers idempotent in Django [test post]
 description: Providers retry webhooks, so your handler will see the same event twice. A unique constraint, a short transaction and a background task make that harmless.
 date: 2026-11-18
 tags: [django, webhooks, python]

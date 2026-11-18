@@ -1,5 +1,5 @@
 ---
-title: Como tornar handlers de webhook idempotentes no Django
+title: Como tornar handlers de webhook idempotentes no Django [post teste]
 description: Provedores reenviam webhooks, então seu handler vai receber o mesmo evento duas vezes. Uma constraint única, uma transação curta e uma task em background resolvem isso.
 date: 2026-11-18
 tags: [django, webhooks, python]
