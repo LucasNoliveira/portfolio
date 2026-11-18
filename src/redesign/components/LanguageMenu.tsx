@@ -5,7 +5,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { LOCALES, LOCALE_NAMES, type Locale } from '../content/locales';
 
 /** Language switcher: a small disclosure listing every language in its own name. */
-export function LanguageMenu({ locale, label }: { locale: Locale; label: string }) {
+export function LanguageMenu({ locale, label, hrefs }: { locale: Locale; label: string; hrefs?: Partial<Record<Locale, string>> }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -57,7 +57,7 @@ export function LanguageMenu({ locale, label }: { locale: Locale; label: string 
           {LOCALES.map((code) => (
             <li key={code}>
               <Link
-                href={`/new/${code}`}
+                href={hrefs?.[code] ?? `/new/${code}`}
                 hrefLang={code}
                 lang={code}
                 aria-current={code === locale ? 'true' : undefined}

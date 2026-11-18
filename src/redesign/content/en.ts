@@ -3,7 +3,7 @@ import type { Dictionary } from './types';
 export const en: Dictionary = {
   meta: { title: 'Lucas Oliveira — Backend engineer', description: 'Backend engineer in São Paulo building AI-powered products with Python, Django, FastAPI and AWS. Open to remote roles worldwide.' },
   ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Language', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source' },
-  nav: { work: 'Work', cases: 'Case studies', services: 'Services', skills: 'Stack', about: 'About', contact: 'Contact' },
+  nav: { work: 'Work', cases: 'Case studies', services: 'Services', skills: 'Stack', about: 'About', contact: 'Contact', blog: 'Blog' },
   hero: {
     role: 'Backend engineer building AI-powered products.',
     lead: 'I have spent four years taking products from idea to production: secure APIs, cloud infrastructure and LLM features that teams can rely on. Based in São Paulo, working remotely with international teams.',
@@ -120,6 +120,19 @@ export const en: Dictionary = {
         stack: ['django', 'react', 'postgresql', 'nginx'],
       },
     ],
+  },
+  blog: {
+    title: 'Blog',
+    intro: 'Notes on backend engineering: Python, Django, APIs and cloud.',
+    empty: 'The first posts are on their way.',
+    minRead: '{n} min read',
+    back: 'All posts',
+    englishOnly: 'Posts are written in English.',
+    alsoIn: 'Also available in {language}',
+    feed: 'RSS feed',
+    latest: 'Latest writing',
+    latestIntro: 'Technical posts on backend engineering.',
+    all: 'All posts',
   },
   recommendations: {
     title: 'What teammates say',

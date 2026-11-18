@@ -69,3 +69,7 @@ The old site keeps using `public/cv/Lucas_Oliveira_CV_FullStack_2025.pdf`.
 - Link previews are `public/og/og-<lang>.png` (1200×630). Regenerate them with `npm run og:images` after changing the headline in `scripts/build-og.mjs`.
 - Set `NEXT_PUBLIC_SITE_URL` (for example `https://your-domain.dev`) so canonical links, previews and the sitemap use the real domain.
 - The redesign is `noindex` and the sitemap is empty until the launch: set `NEW_SITE_INDEXABLE=1` in the production environment, redeploy, then submit `/sitemap.xml` in Search Console.
+
+## Blog (new site)
+
+Posts are Markdown files in `content/blog/<slug>/<lang>.md` (`en`, optionally `pt`), rendered to static pages at build time with highlighted code. Spanish and Japanese visitors see the English posts. Front matter, drafts and the slug rules are in `content/blog/README.md`. The Blog link in the header and the "Latest writing" section on the home page appear once there is at least one published post. Each language has an RSS feed at `/new/<lang>/blog/feed.xml`.

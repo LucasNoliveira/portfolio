@@ -3,7 +3,7 @@ import type { Dictionary } from './types';
 export const es: Dictionary = {
   meta: { title: 'Lucas Oliveira — Ingeniero backend', description: 'Ingeniero backend en São Paulo que crea productos con IA usando Python, Django, FastAPI y AWS. Abierto a puestos remotos en todo el mundo.' },
   ui: { skip: 'Ir al contenido', theme: 'Cambiar el tema de color', language: 'Idioma', top: 'Volver arriba', current: 'Actual', problem: 'Problema', approach: 'Qué hice', result: 'Resultado', source: 'Ver código fuente' },
-  nav: { work: 'Experiencia', cases: 'Casos de estudio', services: 'Servicios', skills: 'Stack', about: 'Sobre mí', contact: 'Contacto' },
+  nav: { work: 'Experiencia', cases: 'Casos de estudio', services: 'Servicios', skills: 'Stack', about: 'Sobre mí', contact: 'Contacto', blog: 'Blog' },
   hero: {
     role: 'Ingeniero backend que crea productos con IA.',
     lead: 'Llevo cuatro años llevando productos de la idea a producción: APIs seguras, infraestructura en la nube y funciones con LLM en las que los equipos pueden confiar. Vivo en São Paulo y trabajo en remoto con equipos internacionales.',
@@ -120,6 +120,19 @@ export const es: Dictionary = {
         stack: ['django', 'react', 'postgresql', 'nginx'],
       },
     ],
+  },
+  blog: {
+    title: 'Blog',
+    intro: 'Notas sobre ingeniería de backend: Python, Django, APIs y nube.',
+    empty: 'Los primeros artículos están en camino.',
+    minRead: '{n} min de lectura',
+    back: 'Todos los artículos',
+    englishOnly: 'Los artículos están escritos en inglés.',
+    alsoIn: 'También disponible en {language}',
+    feed: 'Feed RSS',
+    latest: 'Últimos textos',
+    latestIntro: 'Artículos técnicos sobre ingeniería de backend.',
+    all: 'Todos los artículos',
   },
   recommendations: {
     title: 'Lo que dicen sus compañeros',

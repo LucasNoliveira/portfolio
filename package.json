@@ -17,8 +17,10 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@heroicons/react": "^2.1.5",
+    "@shikijs/rehype": "^1.29.2",
     "autoprefixer": "^10.4.20",
     "framer-motion": "^11.3.28",
+    "gray-matter": "^4.0.3",
     "next": "14.2.35",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
@@ -28,7 +30,13 @@
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.30.2",
     "react-world-flags": "^1.6.0",
-    "slick-carousel": "^1.8.1"
+    "rehype-slug": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "slick-carousel": "^1.8.1",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@types/node": "^20",

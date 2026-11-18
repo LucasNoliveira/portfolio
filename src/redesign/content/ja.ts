@@ -3,7 +3,7 @@ import type { Dictionary } from './types';
 export const ja: Dictionary = {
   meta: { title: 'Lucas Oliveira — バックエンドエンジニア', description: 'サンパウロ在住のバックエンドエンジニア。Python、Django、FastAPI、AWSでAIプロダクトを開発しています。世界中のリモートポジションに対応可能です。' },
   ui: { skip: '本文へスキップ', theme: 'カラーテーマを切り替える', language: '言語', top: 'トップへ戻る', current: '現在', problem: '課題', approach: '対応', result: '成果', source: 'ソースコードを見る' },
-  nav: { work: '職歴', cases: '事例', services: 'サービス', skills: 'スタック', about: '自己紹介', contact: '連絡先' },
+  nav: { work: '職歴', cases: '事例', services: 'サービス', skills: 'スタック', about: '自己紹介', contact: '連絡先', blog: 'ブログ' },
   hero: {
     role: 'AIプロダクトを開発するバックエンドエンジニア。',
     lead: '4年間、アイデアから本番運用までプロダクトを届けてきました。安全なAPI、クラウドインフラ、チームが信頼できるLLM機能が得意です。サンパウロを拠点に、海外のチームとリモートで働いています。',
@@ -120,6 +120,19 @@ export const ja: Dictionary = {
         stack: ['django', 'react', 'postgresql', 'nginx'],
       },
     ],
+  },
+  blog: {
+    title: 'ブログ',
+    intro: 'バックエンド開発（Python、Django、API、クラウド）に関するノート。',
+    empty: '最初の記事を準備中です。',
+    minRead: '読了目安 {n}分',
+    back: '記事一覧',
+    englishOnly: '記事は英語で書かれています。',
+    alsoIn: '{language}でも読めます',
+    feed: 'RSSフィード',
+    latest: '最新の記事',
+    latestIntro: 'バックエンド開発に関する技術記事。',
+    all: '記事一覧',
   },
   recommendations: {
     title: '同僚からの声',
