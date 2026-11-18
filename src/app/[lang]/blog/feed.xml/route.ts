@@ -19,10 +19,10 @@ export function GET(_request: Request, { params }: { params: { lang: string } })
   const posts = getPostsFor(lang);
   const items = posts
     .map((post) => {
-      const url = `${SITE_URL}/new/${post.lang}/blog/${post.slug}`;
+      const url = `${SITE_URL}/${post.lang}/blog/${post.slug}`;
       return `<item><title>${escape(post.title)}</title><link>${url}</link><guid isPermaLink="true">${url}</guid><pubDate>${new Date(`${post.date}T12:00:00Z`).toUTCString()}</pubDate><description>${escape(post.description)}</description></item>`;
     })
     .join('');
-  const xml = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${escape(`${SITE.name} — ${blog.title}`)}</title><link>${SITE_URL}/new/${lang}/blog</link><description>${escape(blog.intro)}</description><language>${lang}</language>${items}</channel></rss>`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${escape(`${SITE.name} — ${blog.title}`)}</title><link>${SITE_URL}/${lang}/blog</link><description>${escape(blog.intro)}</description><language>${lang}</language>${items}</channel></rss>`;
   return new Response(xml, { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' } });
 }

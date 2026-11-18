@@ -57,7 +57,7 @@ export function LanguageMenu({ locale, label, hrefs }: { locale: Locale; label: 
           {LOCALES.map((code) => (
             <li key={code}>
               <Link
-                href={hrefs?.[code] ?? `/new/${code}`}
+                href={hrefs?.[code] ?? `/${code}`}
                 hrefLang={code}
                 lang={code}
                 aria-current={code === locale ? 'true' : undefined}

@@ -28,7 +28,7 @@ export function Header({ t, locale, hasBlog = false, homePath = '', languageHref
             </a>
           ))}
           {hasBlog && (
-            <a href={`/new/${locale}/blog`} className="text-sm text-muted no-underline hover:text-ink">
+            <a href={`/${locale}/blog`} className="text-sm text-muted no-underline hover:text-ink">
               {t.nav.blog}
             </a>
           )}

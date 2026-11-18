@@ -4,7 +4,7 @@ import { formatPostDate, type PostMeta } from '../blog';
 import { Reveal } from './Reveal';
 
 /** Where a post lives for a visitor of this site language (Spanish and Japanese read the English posts). */
-export const postHref = (post: PostMeta) => `/new/${post.lang}/blog/${post.slug}`;
+export const postHref = (post: PostMeta) => `/${post.lang}/blog/${post.slug}`;
 
 export function PostMetaLine({ post, t, locale }: { post: PostMeta; t: Dictionary; locale: Locale }) {
   return (
