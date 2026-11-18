@@ -5,6 +5,7 @@ import { CvToolbar } from '@/redesign/components/CvToolbar';
 import { cvPdfPath, SITE } from '@/redesign/config';
 import { dictionaries } from '@/redesign/content';
 import { isLocale, LOCALES } from '@/redesign/content/locales';
+import { pageMetadata } from '@/redesign/seo';
 
 export const dynamicParams = false;
 
@@ -13,8 +14,9 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
-  const t = dictionaries[isLocale(params.lang) ? params.lang : 'en'];
-  return { title: `${SITE.name} — ${t.hero.resume}`, description: t.meta.description };
+  const lang = isLocale(params.lang) ? params.lang : 'en';
+  const t = dictionaries[lang];
+  return pageMetadata(lang, '/cv', `${SITE.name} — ${t.hero.resume}`, t.meta.description);
 }
 
 export default function CvPage({ params }: { params: { lang: string } }) {
