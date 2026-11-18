@@ -6,8 +6,6 @@ import { cvPagePath, SITE } from '../config';
 import type { Locale } from '../content/locales';
 import { AvailabilityBadge } from './AvailabilityBadge';
 import { ContactMenu } from './ContactMenu';
-import { CopyEmailButton } from './CopyEmailButton';
-import { Icon } from './Icon';
 import { ProfileCard } from './ProfileCard';
 import { TechList } from './TechList';
 
@@ -36,13 +34,6 @@ export function Hero({ t, locale }: { t: Dictionary; locale: Locale }) {
             <ContactMenu t={t} />
             <a className="btn" href="#cases">{t.nav.cases}</a>
             <Link className="btn" href={cvPagePath(locale)}>{hero.resume}</Link>
-          </div>
-          <div style={{ '--i': 5 } as CSSProperties} className="rise mt-3 flex flex-wrap gap-3">
-            <a className="btn btn-sm" href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
-              <Icon id="linkedin" size={18} color="#0A66C2" />
-              LinkedIn
-            </a>
-            <CopyEmailButton label={hero.copyEmail} doneLabel={hero.copied} />
           </div>
         </div>
         <div style={{ '--i': 3 } as CSSProperties} className="rise min-w-0"><ProfileCard t={t} /></div>

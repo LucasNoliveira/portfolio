@@ -37,7 +37,6 @@
 @layer components {
   .wrap { width: min(1180px, 100% - 2 * var(--gutter)); margin-inline: auto; }
   .btn { @apply inline-flex items-center rounded-full border-[1.5px] border-ink px-5 py-3 font-semibold no-underline transition-colors hover:bg-ink hover:text-paper; }
-  .btn-sm { @apply gap-2 px-4 py-2 text-sm; }
   .btn-primary { @apply border-brand bg-brand text-on-brand hover:border-ink; }
 }
 
