@@ -36,7 +36,7 @@ export default function BlogIndex({ params }: { params: { lang: string } }) {
           {posts.length > 0 ? <PostList posts={posts} t={t} locale={lang} /> : <p className="text-muted">{t.blog.empty}</p>}
         </div>
         <p className="mt-10 text-sm">
-          <a href={`/${lang === 'pt' ? 'pt' : 'en'}/blog/feed.xml`}>{t.blog.feed}</a>
+          <a href={`/${lang === 'pt' ? 'pt' : 'en'}/blog/feed.xml`} className="hover:underline hover:underline-offset-4">{t.blog.feed}</a>
         </p>
       </main>
       <Footer t={t} />
