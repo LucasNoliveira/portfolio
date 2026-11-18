@@ -70,7 +70,7 @@ export interface Dictionary {
   nav: { work: string; cases: string; services: string; skills: string; about: string; contact: string; blog: string };
   hero: {
     role: string; lead: string; location: string; availability: string;
-    email: string; resume: string;
+    email: string; resume: string; copyEmail: string; copied: string;
     menu: { title: string; email: string; whatsapp: string; call: string; linkedin: string }; stackTitle: string; stack: TechId[];
     card: { role: string; location: string; timezone: string; openTo: string };
   };
