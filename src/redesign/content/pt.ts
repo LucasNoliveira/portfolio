@@ -41,31 +41,43 @@ export const pt: Dictionary = {
         stack: ['python', 'gcp', 'graphql', 'angular', 'podman'],
       },
       {
-        companyId: 'indra', company: 'Indra Energia', role: 'Engenheiro backend (PJ)',
-        period: 'Set 2024 – Jan 2025',
-        highlights: [
-          'Criei serviços FastAPI assíncronos com cache e reduzi o tempo de resposta em 30%.',
-          'Containerizei os ambientes: 40% menos problemas de setup e 20% menos incidentes após deploys.',
+        companyId: 'independent', company: 'Autônomo', role: 'Engenheiro de software contratado',
+        period: 'Out 2023 – Jan 2025 · 1 ano e 4 meses',
+        summary: 'Projetos de backend e full-stack para três clientes.',
+        highlights: [],
+        stack: [],
+        engagements: [
+          {
+            companyId: 'vitta', company: 'Vitta Group Franchising', kind: 'PJ (contrato)',
+            highlights: [
+            'Desenvolvi e mantive serviços de backend em Python (Django) e Node.js, com APIs RESTful para sistemas internos e voltados a clientes.',
+            'Projetei e administrei bancos PostgreSQL e criei integrações do RD Station CRM com plataformas de telemarketing.',
+            'Liderei um sistema de PDV em Django, React e PostgreSQL, publicado em Nginx e em um VPS Linux.',
+          ],
+            stack: ['django', 'react', 'postgresql', 'nginx'],
+          },
+          {
+            companyId: 'indra', company: 'Indra Energia', kind: 'PJ (contrato)',
+            highlights: [
+            'Desenvolvi serviços de backend para sistemas de trading de energia e varejo.',
+            'Otimizei serviços FastAPI com padrões assíncronos e cache, reduzindo o tempo de resposta em cerca de 30%.',
+            'Migrei serviços legados para Docker: cerca de 40% menos problemas de ambiente e 20% menos incidentes após deploys.',
+          ],
+            stack: ['python', 'fastapi', 'docker'],
+          },
+          {
+            companyId: 'mont', company: 'Mont Capital Asset', kind: 'Por projeto (CLT)',
+            highlights: [
+            'Projetei um assistente de suporte com IA usando as APIs da OpenAI, aumentando a eficiência do suporte em cerca de 30–40%.',
+            'Integrei provedores de dados financeiros via SOAP e REST e criei recursos em tempo real com WebSockets.',
+            'Publiquei soluções na AWS (EC2, S3, RDS) com Docker e entreguei mais de 10 funcionalidades de backend em um time ágil.',
+          ],
+            stack: ['python', 'llm', 'websockets', 'aws'],
+          },
         ],
-        stack: ['python', 'fastapi', 'docker'],
       },
       {
-        companyId: 'mont', company: 'Mont Capital Asset', role: 'Engenheiro backend',
-        period: 'Abr – Ago 2024',
-        highlights: [
-          'Entreguei um assistente de suporte com OpenAI que aumentou a eficiência do time em 30–40%.',
-          'Integrei dados financeiros via SOAP/REST e WebSockets; os deploys na AWS ficaram 30% mais rápidos.',
-        ],
-        stack: ['python', 'llm', 'websockets', 'aws'],
-      },
-      {
-        companyId: 'vitta', company: 'Vitta Group', role: 'Desenvolvedor full-stack (PJ)',
-        period: 'Out 2023 – Dez 2024',
-        highlights: ['Liderei um sistema de PDV do primeiro commit à produção, com integração ao RD Station CRM, em Nginx e VPS.'],
-        stack: ['django', 'react', 'postgresql', 'nginx'],
-      },
-      {
-        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'Analista de TI / desenvolvedor de automação',
+        companyId: 'riobranco', company: 'Colégio Rio Branco', role: 'Analista de TI / desenvolvedor de automação', kind: 'Estágio',
         period: 'Mar 2022 – Out 2023',
         highlights: [
           'Criei scripts em Python e PowerShell para automatizar instalação, configuração e gerenciamento de computadores, reduzindo o setup de mais de uma hora para 15 minutos ou menos.',

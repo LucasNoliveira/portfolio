@@ -41,31 +41,43 @@ export const en: Dictionary = {
         stack: ['python', 'gcp', 'graphql', 'angular', 'podman'],
       },
       {
-        companyId: 'indra', company: 'Indra Energia', role: 'Backend engineer (contract)',
-        period: 'Sep 2024 – Jan 2025',
-        highlights: [
-          'Built async FastAPI services with caching and cut response time by 30%.',
-          'Containerized the environments: 40% fewer setup issues and 20% fewer incidents after deploys.',
+        companyId: 'independent', company: 'Self-employed', role: 'Contract software engineer',
+        period: 'Oct 2023 – Jan 2025 · 1 yr 4 mos',
+        summary: 'Project-based backend and full-stack engagements for three clients.',
+        highlights: [],
+        stack: [],
+        engagements: [
+          {
+            companyId: 'vitta', company: 'Vitta Group Franchising', kind: 'Contract (PJ)',
+            highlights: [
+            'Built and maintained backend services in Python (Django) and Node.js, with RESTful APIs for internal and client-facing systems.',
+            'Designed and managed PostgreSQL databases and built RD Station CRM integrations with telemarketing platforms.',
+            'Led a point-of-sale system in Django, React and PostgreSQL, deployed on Nginx and a Linux VPS.',
+          ],
+            stack: ['django', 'react', 'postgresql', 'nginx'],
+          },
+          {
+            companyId: 'indra', company: 'Indra Energia', kind: 'Contract (PJ)',
+            highlights: [
+            'Developed backend services for energy trading and retail systems.',
+            'Optimized FastAPI services with async patterns and caching, cutting response time by about 30%.',
+            'Migrated legacy services to Docker: about 40% fewer environment issues and 20% fewer incidents after deploys.',
+          ],
+            stack: ['python', 'fastapi', 'docker'],
+          },
+          {
+            companyId: 'mont', company: 'Mont Capital Asset', kind: 'Project-based (CLT)',
+            highlights: [
+            'Designed an AI-powered support assistant on the OpenAI APIs, raising support efficiency by about 30–40%.',
+            'Integrated financial data providers over SOAP and REST and built real-time features with WebSockets.',
+            'Deployed on AWS (EC2, S3, RDS) with Docker and delivered 10+ backend features in an agile team.',
+          ],
+            stack: ['python', 'llm', 'websockets', 'aws'],
+          },
         ],
-        stack: ['python', 'fastapi', 'docker'],
       },
       {
-        companyId: 'mont', company: 'Mont Capital Asset', role: 'Backend engineer',
-        period: 'Apr – Aug 2024',
-        highlights: [
-          'Shipped an OpenAI-based support assistant that raised team efficiency by 30–40%.',
-          'Integrated financial data over SOAP/REST and WebSockets; deployments on AWS got 30% faster.',
-        ],
-        stack: ['python', 'llm', 'websockets', 'aws'],
-      },
-      {
-        companyId: 'vitta', company: 'Vitta Group', role: 'Full-stack developer (contract)',
-        period: 'Oct 2023 – Dec 2024',
-        highlights: ['Led a point-of-sale system from first commit to production, with RD Station CRM integrations, on Nginx and a VPS.'],
-        stack: ['django', 'react', 'postgresql', 'nginx'],
-      },
-      {
-        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'IT analyst / automation developer',
+        companyId: 'riobranco', company: 'Colégio Rio Branco', role: 'IT analyst / automation developer', kind: 'Internship',
         period: 'Mar 2022 – Oct 2023',
         highlights: [
           'Wrote Python and PowerShell scripts to automate installation, configuration and management of computers, cutting setup from over an hour to 15 minutes or less.',
