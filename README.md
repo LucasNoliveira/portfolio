@@ -4,8 +4,10 @@ Personal site and blog, in English, Portuguese, Spanish and Japanese. Next.js 14
 
 ## Run it
 
+The project uses [pnpm](https://pnpm.io) (`pnpm-lock.yaml` is the only lockfile; with Node's Corepack, `corepack enable` picks the right version).
+
 ```bash
-pnpm install        # or npm install
+pnpm install
 pnpm dev            # http://localhost:3000
 ```
 
@@ -37,9 +39,9 @@ The resume is a page built from the same text as the site, so there is only one 
 After changing anything in `src/redesign/content/*.ts` that appears in the resume, regenerate the PDFs:
 
 ```bash
-npm run build && npx next start -p 3000        # terminal 1
-npm i --no-save playwright && npx playwright install chromium   # once
-npm run cv:pdf                                  # terminal 2 (optional argument: base URL)
+pnpm build && pnpm exec next start -p 3000      # terminal 1
+pnpm add -D playwright && pnpm exec playwright install chromium   # once
+pnpm cv:pdf                                     # terminal 2 (optional argument: base URL)
 ```
 
 `public/cv/Lucas_Oliveira_CV_FullStack_2025.pdf` is the old resume, kept so existing links keep working.
@@ -48,7 +50,7 @@ npm run cv:pdf                                  # terminal 2 (optional argument:
 
 - Every page sets a canonical URL, `hreflang` for the four languages (plus `x-default`), Open Graph and Twitter tags; the home page adds `Person` structured data and each post `BlogPosting` (`src/redesign/seo.ts`).
 - `/sitemap.xml` and `/robots.txt` are generated.
-- Link previews are `public/og/og-<lang>.png` (1200×630). Regenerate them with `npm run og:images` after changing the headline in `scripts/build-og.mjs`.
+- Link previews are `public/og/og-<lang>.png` (1200×630). Regenerate them with `pnpm og:images` (needs Playwright, see the Resume section) after changing the headline in `scripts/build-og.mjs`.
 - After the domain is set, submit `/sitemap.xml` in Google Search Console.
 
 ## Blog
