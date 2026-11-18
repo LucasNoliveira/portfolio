@@ -41,11 +41,23 @@ export function CvDocument({ t }: { t: Dictionary }) {
                 <h3>{job.company}</h3>
                 <span className="cv-period">{job.period}</span>
               </div>
-              <p className="cv-job-role">{job.role}</p>
-              <ul>
-                {job.highlights.map((point) => <li key={point}>{point}</li>)}
-              </ul>
-              <p className="cv-stack">{labels(job.stack)}</p>
+              <p className="cv-job-role">{job.role}{job.kind ? ` · ${job.kind}` : ''}</p>
+              {job.summary && <p className="cv-summary">{job.summary}</p>}
+              {job.highlights.length > 0 && (
+                <ul>
+                  {job.highlights.map((point) => <li key={point}>{point}</li>)}
+                </ul>
+              )}
+              {job.stack.length > 0 && <p className="cv-stack">{labels(job.stack)}</p>}
+              {job.engagements?.map((engagement) => (
+                <div key={engagement.companyId} className="cv-engagement">
+                  <h4>{engagement.company} <span className="cv-kind">{engagement.kind}</span></h4>
+                  <ul>
+                    {engagement.highlights.map((point) => <li key={point}>{point}</li>)}
+                  </ul>
+                  <p className="cv-stack">{labels(engagement.stack)}</p>
+                </div>
+              ))}
             </li>
           ))}
         </ol>
