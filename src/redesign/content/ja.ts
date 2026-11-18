@@ -121,6 +121,17 @@ export const ja: Dictionary = {
       },
     ],
   },
+  recommendations: {
+    title: '同僚からの声',
+    intro: 'LinkedInの推薦文を、ポルトガル語から翻訳したものです。',
+    viewAll: 'LinkedInで全文を読む',
+    items: [
+      { name: 'Odival Neto', headline: 'シニアソフトウェアエンジニア · Python、Swift、API、クラウド', relation: '同じチーム · 2026年1月', quote: '同じソフトウェア開発チームで、難易度の高いプロジェクトにともに取り組む機会に恵まれました。さまざまなソリューションにおいて、確かな技術力を発揮していました。' },
+      { name: 'André Garcia Carmona', headline: 'Python、SQL、ETL、AWS、GCP · データサイエンス', relation: '同じチーム · 2025年6月', quote: 'Lucasとは複数のソフトウェア開発プロジェクトでご一緒し、彼が非常に優れたプロフェッショナルであると断言できます。深い技術的知識を持ち、課題に対して常に効率的で革新的な解決策を探します。技術力に加えて、協調性とチームで働く力にも秀でています。' },
+      { name: 'Agamenon Sousa Pereira', headline: 'エネルギー経営・経済学MBA', relation: 'Indra Energia（別チーム） · 2025年6月', quote: 'Indra Energiaで、連携したプロジェクトを通じてソフトウェア開発をともに行いました。Lucasは自分の責任に誠実で、周囲をまとめる力に優れています。どのチームに加わっても、きっと力になる人です。' },
+      { name: 'Caique Rocha', headline: 'ソフトウェアエンジニア · Python、JavaScript、API、AI', relation: 'Colégio Rio Branco の同じチーム · 2025年6月', quote: 'Colégio Rio BrancoのITチームで、ITアナリストとして働くLucasとご一緒しました。ともに働いた期間を通じて、深い技術的知識と、成果物の品質と効率への強い責任感を示してくれました。' },
+    ],
+  },
   services: {
     title: 'お手伝いできること',
     intro: 'まずはバックエンド。必要に応じて、プロジェクトを最初から最後まで担当できます。',

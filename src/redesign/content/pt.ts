@@ -121,6 +121,17 @@ export const pt: Dictionary = {
       },
     ],
   },
+  recommendations: {
+    title: 'O que colegas dizem',
+    intro: 'Recomendações do LinkedIn.',
+    viewAll: 'Ver todas no LinkedIn',
+    items: [
+      { name: 'Odival Neto', headline: 'Senior Software Engineer · Python, Swift, APIs, Cloud', relation: 'Mesma equipe · jan. 2026', quote: 'Tive a honra de trabalhar com Lucas na mesma equipe de desenvolvimento de software, onde atuamos em projetos de complexidade alta e ele demonstrou bons conhecimentos técnicos em diversas soluções.' },
+      { name: 'André Garcia Carmona', headline: 'Python, SQL, ETL, AWS, GCP · Ciência de Dados', relation: 'Mesma equipe · jun. 2025', quote: 'Tive o prazer de trabalhar com Lucas Oliveira em diversos projetos de desenvolvimento de software, e posso afirmar que ele é um profissional excepcional. Lucas possui um profundo conhecimento técnico, sempre buscando soluções eficientes e inovadoras para os desafios que surgem. Além de suas habilidades técnicas, Lucas se destaca pelo espírito colaborativo e pela capacidade de trabalhar em equipe.' },
+      { name: 'Agamenon Sousa Pereira', headline: 'MBA Gestão e Economia de Energia', relation: 'Indra Energia, equipes diferentes · jun. 2025', quote: 'Tive a honra de trabalhar com o Lucas na Indra Energia, onde atuávamos no desenvolvimento de software através de projetos integrados. Lucas é comprometido com suas responsabilidades e altamente integrador. Certamente, ele agrega em qualquer equipe que atuar.' },
+      { name: 'Caique Rocha', headline: 'Software Engineer · Python, JavaScript, APIs, IA', relation: 'Mesma equipe no Colégio Rio Branco · jun. 2025', quote: 'Tive o prazer de trabalhar com o Lucas em nossa equipe de TI, no colégio Rio Branco, onde ele atuou como IT Analyst. Durante o tempo em que atuamos juntos, ele demonstrou profundo conhecimento técnico, além de muito comprometimento com a qualidade e a eficiência das entregas.' },
+    ],
+  },
   services: {
     title: 'O que posso construir',
     intro: 'Backend em primeiro lugar. Quando o projeto pede mais, levo ele de ponta a ponta.',

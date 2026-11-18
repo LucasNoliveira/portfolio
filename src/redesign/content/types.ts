@@ -55,6 +55,15 @@ export interface LanguageSkill {
   score: 1 | 2 | 3 | 4 | 5;
 }
 
+export interface Recommendation {
+  name: string;
+  /** The author's own headline on LinkedIn, shortened. */
+  headline: string;
+  /** How they worked together, and when. */
+  relation: string;
+  quote: string;
+}
+
 export interface Dictionary {
   meta: { title: string; description: string };
   ui: { skip: string; theme: string; language: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
@@ -67,6 +76,7 @@ export interface Dictionary {
   };
   work: { title: string; intro: string; jobs: Job[] };
   cases: { title: string; intro: string; items: CaseStudy[] };
+  recommendations: { title: string; intro: string; viewAll: string; items: Recommendation[] };
   services: { title: string; intro: string; items: ServiceItem[] };
   skills: { title: string; groups: { name: string; items: TechId[] }[] };
   about: {

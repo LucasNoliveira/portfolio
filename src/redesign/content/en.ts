@@ -121,6 +121,17 @@ export const en: Dictionary = {
       },
     ],
   },
+  recommendations: {
+    title: 'What teammates say',
+    intro: 'Recommendations from LinkedIn, translated from Portuguese.',
+    viewAll: 'Read them all on LinkedIn',
+    items: [
+      { name: 'Odival Neto', headline: 'Senior Software Engineer · Python, Swift, APIs, Cloud', relation: 'Same team · Jan 2026', quote: 'I had the honor of working with Lucas on the same software development team, on highly complex projects, and he showed solid technical knowledge across a wide range of solutions.' },
+      { name: 'André Garcia Carmona', headline: 'Python, SQL, ETL, AWS, GCP · Data Science', relation: 'Same team · Jun 2025', quote: 'I had the pleasure of working with Lucas Oliveira on several software development projects, and I can say he is an exceptional professional. Lucas has deep technical knowledge and always looks for efficient, innovative solutions to the challenges that come up. Beyond his technical skills, he stands out for his collaborative spirit and his ability to work in a team.' },
+      { name: 'Agamenon Sousa Pereira', headline: 'MBA in Energy Management and Economics', relation: 'Indra Energia, different teams · Jun 2025', quote: 'I had the honor of working with Lucas at Indra Energia, where we developed software through integrated projects. Lucas is committed to his responsibilities and highly integrative. He will certainly add value to any team he joins.' },
+      { name: 'Caique Rocha', headline: 'Software Engineer · Python, JavaScript, APIs, AI', relation: 'Same team at Colégio Rio Branco · Jun 2025', quote: 'I had the pleasure of working with Lucas on our IT team at Colégio Rio Branco, where he worked as an IT analyst. During our time together he showed deep technical knowledge and a strong commitment to the quality and efficiency of his deliveries.' },
+    ],
+  },
   services: {
     title: 'What I can build',
     intro: 'Backend first. When a project needs more, I can take it end to end.',
