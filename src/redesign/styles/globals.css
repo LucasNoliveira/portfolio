@@ -98,6 +98,10 @@
 .cv-job-role { font-weight: 500; }
 .cv-job ul { margin-top: .3rem; padding-left: 1.1rem; list-style: disc; display: grid; gap: .2rem; }
 .cv-job li::marker { color: var(--accent); }
+.cv-summary { margin-top: .2rem; color: var(--muted); }
+.cv-engagement { margin-top: .6rem; padding-left: .75rem; border-left: 2px solid var(--accent); break-inside: avoid; }
+.cv-engagement h4 { font-size: .95rem; font-weight: 600; }
+.cv-kind { font-weight: 400; font-size: .8rem; color: var(--muted); margin-left: .35rem; }
 .cv-stack { margin-top: .35rem; font-size: .82rem; color: var(--muted); }
 .cv-skills { display: grid; gap: .3rem; }
 .cv-skills div { display: grid; gap: 0 .75rem; grid-template-columns: minmax(8rem, 12rem) 1fr; }
