@@ -41,7 +41,7 @@ export function Recommendations({ t }: { t: Dictionary }) {
         ))}
       </ul>
       <p className="mt-6 text-sm">
-        <a href={`${SITE.linkedin}details/recommendations/`}>{viewAll}</a>
+        <a href={`${SITE.linkedin}details/recommendations/`} className="hover:underline hover:underline-offset-4">{viewAll}</a>
       </p>
     </Section>
   );

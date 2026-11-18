@@ -44,7 +44,7 @@ export default async function PostPage({ params }: { params: { lang: string; slu
       <Header t={t} locale={lang} hasBlog homePath={`/${lang}`} languageHrefs={languageHrefs} />
       <main id="main" className="wrap py-12 md:py-16">
         <article className="mx-auto max-w-[70ch]">
-          <p className="text-sm"><a href={`/${lang}/blog`}>← {t.blog.back}</a></p>
+          <p className="text-sm"><a href={`/${lang}/blog`} className="hover:underline hover:underline-offset-4">← {t.blog.back}</a></p>
           <header className="mt-6">
             <PostMetaLine post={post} t={t} locale={lang} />
             <h1 className="mt-2 text-3xl font-semibold leading-tight tracking-tight md:text-4xl">{post.title}</h1>
