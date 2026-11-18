@@ -121,6 +121,17 @@ export const es: Dictionary = {
       },
     ],
   },
+  recommendations: {
+    title: 'Lo que dicen sus compañeros',
+    intro: 'Recomendaciones de LinkedIn, traducidas del portugués.',
+    viewAll: 'Leerlas todas en LinkedIn',
+    items: [
+      { name: 'Odival Neto', headline: 'Senior Software Engineer · Python, Swift, APIs, Cloud', relation: 'Mismo equipo · ene. 2026', quote: 'Tuve el honor de trabajar con Lucas en el mismo equipo de desarrollo de software, en proyectos de alta complejidad, y demostró buenos conocimientos técnicos en diversas soluciones.' },
+      { name: 'André Garcia Carmona', headline: 'Python, SQL, ETL, AWS, GCP · Ciencia de Datos', relation: 'Mismo equipo · jun. 2025', quote: 'Tuve el placer de trabajar con Lucas Oliveira en varios proyectos de desarrollo de software y puedo afirmar que es un profesional excepcional. Lucas tiene un profundo conocimiento técnico y siempre busca soluciones eficientes e innovadoras para los desafíos que surgen. Además de sus habilidades técnicas, se destaca por su espíritu colaborativo y su capacidad de trabajar en equipo.' },
+      { name: 'Agamenon Sousa Pereira', headline: 'MBA en Gestión y Economía de la Energía', relation: 'Indra Energia, equipos distintos · jun. 2025', quote: 'Tuve el honor de trabajar con Lucas en Indra Energia, donde desarrollábamos software mediante proyectos integrados. Lucas es comprometido con sus responsabilidades y muy integrador. Sin duda aporta valor a cualquier equipo en el que participe.' },
+      { name: 'Caique Rocha', headline: 'Software Engineer · Python, JavaScript, APIs, IA', relation: 'Mismo equipo en Colégio Rio Branco · jun. 2025', quote: 'Tuve el placer de trabajar con Lucas en nuestro equipo de TI del Colégio Rio Branco, donde fue analista de TI. Durante el tiempo que trabajamos juntos, demostró un profundo conocimiento técnico y mucho compromiso con la calidad y la eficiencia de sus entregas.' },
+    ],
+  },
   services: {
     title: 'Qué puedo construir',
     intro: 'Primero el backend. Cuando un proyecto necesita más, puedo llevarlo de punta a punta.',
