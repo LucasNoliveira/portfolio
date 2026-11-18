@@ -12,8 +12,6 @@ export const pt: Dictionary = {
     email: 'Fale comigo',
     menu: { title: 'Como prefere falar comigo?', email: 'E-mail', whatsapp: 'Mensagem rápida no WhatsApp', call: 'Agendar uma conversa de 30 minutos', linkedin: 'Enviar mensagem no LinkedIn' },
     resume: 'Currículo',
-    copyEmail: 'Copiar e-mail',
-    copied: 'E-mail copiado',
     stackTitle: 'O que uso todos os dias',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
     card: { role: 'Engenheiro backend', location: 'São Paulo, Brasil', timezone: 'UTC-3', openTo: 'vagas remotas' },

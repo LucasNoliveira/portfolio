@@ -12,8 +12,6 @@ export const ja: Dictionary = {
     email: '連絡する',
     menu: { title: 'ご連絡方法をお選びください', email: 'メール', whatsapp: 'WhatsAppですぐにメッセージ', call: '30分の面談を予約', linkedin: 'LinkedInでメッセージ' },
     resume: '職務経歴書',
-    copyEmail: 'メールアドレスをコピー',
-    copied: 'コピーしました',
     stackTitle: '毎日使っている技術',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
     card: { role: 'バックエンドエンジニア', location: 'ブラジル・サンパウロ', timezone: 'UTC-3', openTo: 'リモート（世界中）' },
