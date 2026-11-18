@@ -1,5 +1,6 @@
 import type { Dictionary } from '../content/types';
-import { SITE } from '../config';
+import { cvPdfPath, SITE } from '../config';
+import type { Locale } from '../content/locales';
 import { ContactEmailRow } from './ContactEmailRow';
 import { Icon } from './Icon';
 import { Section } from './Section';
@@ -8,13 +9,14 @@ const ROW = 'grid grid-cols-[28px_1fr] items-center gap-x-4 gap-y-1 px-0.5 py-4 
 const LABEL = 'text-[1.35rem] font-semibold tracking-tight group-hover:underline group-hover:decoration-brand group-hover:decoration-4 group-hover:underline-offset-[5px]';
 const HINT = 'col-start-2 font-code text-sm text-muted [overflow-wrap:anywhere] sm:col-start-auto sm:text-right';
 
-export function Contact({ t }: { t: Dictionary }) {
+export function Contact({ t, locale }: { t: Dictionary; locale: Locale }) {
   const links = [
     { icon: 'whatsapp', color: '#25D366', label: 'WhatsApp', hint: t.contact.whatsapp, href: SITE.whatsapp },
     { icon: 'linkedin', color: '#0A66C2', label: 'LinkedIn', hint: 'in/lucasnevesoliveira', href: SITE.linkedin },
     { icon: 'github', color: 'currentColor', label: 'GitHub', hint: 'LucasNoliveira', href: SITE.github },
     { icon: 'calendly', color: '#006BFF', label: 'Calendly', hint: t.contact.call, href: SITE.calendly },
   ];
+  const resume = { icon: 'resume', label: t.contact.resume, hint: t.cv.download, href: cvPdfPath(locale) };
   return (
     <Section id="contact" title={t.contact.title} intro={t.contact.intro} split>
       <ul className="divide-y divide-rule">
@@ -28,6 +30,13 @@ export function Contact({ t }: { t: Dictionary }) {
             </a>
           </li>
         ))}
+        <li>
+          <a href={resume.href} download className={`group ${ROW}`}>
+            <Icon id={resume.icon} size={28} color="currentColor" />
+            <span className={LABEL}>{resume.label}</span>
+            <span className={HINT}>{resume.hint}</span>
+          </a>
+        </li>
       </ul>
     </Section>
   );

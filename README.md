@@ -45,3 +45,20 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - `/new` is the redesign (`src/app/(new)` + `src/redesign`), in English or Portuguese. `/new` picks the language from the browser's `Accept-Language`; `/new/en` and `/new/pt` are explicit. It is marked `noindex` until it replaces the old site.
 
 Redesign layout: `content/` (typed dictionaries), `components/` (one per section), `tech/` (logo catalog), `hooks/`, `config.ts` (contact links, résumé URL).
+
+## Résumé (new site)
+
+The résumé is a page built from the same text as the site, so there is only one place to edit:
+
+- Online: `/new/{en|pt|es|ja}/cv` (printable, A4 print styles).
+- PDF: `public/cv/lucas-oliveira-cv-{lang}.pdf`, generated from that page.
+
+After changing anything in `src/redesign/content/*.ts` that appears in the résumé, regenerate the PDFs:
+
+```bash
+npm run build && npx next start -p 3000        # terminal 1
+npm i --no-save playwright && npx playwright install chromium   # once
+npm run cv:pdf                                  # terminal 2 (optional argument: base URL)
+```
+
+The old site keeps using `public/cv/Lucas_Oliveira_CV_FullStack_2025.pdf`.

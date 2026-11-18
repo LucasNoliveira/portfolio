@@ -170,5 +170,7 @@ export const pt: Dictionary = {
     intro: 'Estou aberto a vagas remotas de backend e produtos de IA pagas em USD, EUR ou GBP. Costumo responder em até um dia.',
     whatsapp: 'Chamar no WhatsApp',
     call: 'Agendar uma conversa de 30 minutos',
+    resume: 'Currículo',
   },
+  cv: { back: 'Voltar ao site', download: 'Baixar PDF', print: 'Imprimir', summary: 'Resumo', experience: 'Experiência', skills: 'Competências', education: 'Formação', languages: 'Idiomas' },
 };

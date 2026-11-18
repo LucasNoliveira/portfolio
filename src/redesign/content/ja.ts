@@ -170,5 +170,7 @@ export const ja: Dictionary = {
     intro: 'USD、EUR、GBPで支払われる、リモートのバックエンドおよびAIプロダクトのポジションに関心があります。通常1日以内に返信します。',
     whatsapp: 'WhatsAppでメッセージ',
     call: '30分の面談を予約',
+    resume: '職務経歴書',
   },
+  cv: { back: 'サイトに戻る', download: 'PDFをダウンロード', print: '印刷', summary: '概要', experience: '職歴', skills: 'スキル', education: '学歴', languages: '言語' },
 };
