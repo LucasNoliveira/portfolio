@@ -3,7 +3,7 @@ export const SITE = {
   name: 'Lucas Oliveira',
   emailParts: ['lucasnoliveira126', 'gmail.com'],
   whatsapp: 'https://wa.me/5511972571089',
-  linkedin: 'https://www.linkedin.com/', // TODO: replace with the full profile URL
+  linkedin: 'https://www.linkedin.com/in/lucasnevesoliveira/',
   githubUser: 'LucasNoliveira',
   github: 'https://github.com/LucasNoliveira',
   repo: 'https://github.com/LucasNoliveira/portfolio',
