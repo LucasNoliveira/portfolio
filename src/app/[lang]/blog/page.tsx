@@ -8,8 +8,6 @@ import { dictionaries } from '@/redesign/content';
 import { isLocale, LOCALES } from '@/redesign/content/locales';
 import { pageMetadata } from '@/redesign/seo';
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
