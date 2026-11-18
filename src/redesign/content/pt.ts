@@ -6,7 +6,7 @@ export const pt: Dictionary = {
   nav: { work: 'Trabalho', cases: 'Cases', services: 'Serviços', skills: 'Stack', about: 'Sobre', contact: 'Contato', blog: 'Blog' },
   hero: {
     role: 'Engenheiro backend criando produtos com IA.',
-    lead: 'Há quatro anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto com times internacionais.',
+    lead: 'Há 4 anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto com times internacionais.',
     location: 'São Paulo, Brasil (UTC−3)',
     availability: 'Aberto a vagas remotas no exterior',
     email: 'Fale comigo',
@@ -43,7 +43,7 @@ export const pt: Dictionary = {
       {
         companyId: 'independent', company: 'Autônomo', role: 'Engenheiro de software contratado',
         period: 'Out 2023 – Jan 2025 · 1 ano e 4 meses',
-        summary: 'Projetos de backend e full-stack para três clientes.',
+        summary: 'Projetos de backend e full-stack para 3 clientes.',
         highlights: [],
         stack: [],
         engagements: [
@@ -89,7 +89,7 @@ export const pt: Dictionary = {
   },
   cases: {
     title: 'Cases',
-    intro: 'Quatro problemas, o que fiz e o que mudou.',
+    intro: '4 problemas, o que fiz e o que mudou.',
     items: [
       {
         companyId: 'indra', company: 'Indra Energia', title: 'APIs mais rápidas sem reescrever tudo',

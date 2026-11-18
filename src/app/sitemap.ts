@@ -3,7 +3,7 @@ import { SITE_URL } from '@/redesign/config';
 import { getAllPosts } from '@/redesign/blog';
 import { HTML_LANG, LOCALES } from '@/redesign/content/locales';
 
-/** Home, résumé and blog in every language, plus each post in the languages it is written in. */
+/** Home, resume and blog in every language, plus each post in the languages it is written in. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ['', '/cv', '/blog'].flatMap((subpath) =>
     LOCALES.map((lang) => ({

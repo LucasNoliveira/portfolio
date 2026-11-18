@@ -75,7 +75,7 @@
 .gh-3 { fill: color-mix(in oklab, var(--ok) 76%, var(--paper)); }
 .gh-4 { fill: var(--ok); }
 
-/* Résumé page: a sheet on screen, a clean A4 document in print and in the generated PDF. */
+/* Resume page: a sheet on screen, a clean A4 document in print and in the generated PDF. */
 .cv-page { padding: 1.5rem var(--gutter) 4rem; }
 .cv {
   color-scheme: light;

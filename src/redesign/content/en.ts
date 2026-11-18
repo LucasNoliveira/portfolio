@@ -6,12 +6,12 @@ export const en: Dictionary = {
   nav: { work: 'Work', cases: 'Case studies', services: 'Services', skills: 'Stack', about: 'About', contact: 'Contact', blog: 'Blog' },
   hero: {
     role: 'Backend engineer building AI-powered products.',
-    lead: 'I have spent four years taking products from idea to production: secure APIs, cloud infrastructure and LLM features that teams can rely on. Based in São Paulo, working remotely with international teams.',
+    lead: 'I have spent 4 years taking products from idea to production: secure APIs, cloud infrastructure and LLM features that teams can rely on. Based in São Paulo, working remotely with international teams.',
     location: 'São Paulo, Brazil (UTC−3)',
     availability: 'Open to remote roles worldwide',
     email: 'Contact me',
     menu: { title: 'How would you like to reach me?', email: 'Email', whatsapp: 'Quick message on WhatsApp', call: 'Book a 30-minute intro call', linkedin: 'Send a message on LinkedIn' },
-    resume: 'Résumé',
+    resume: 'Resume',
     stackTitle: 'What I reach for every day',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
     card: { role: 'Backend engineer', location: 'São Paulo, Brazil', timezone: 'UTC-3', openTo: 'remote roles, worldwide' },
@@ -43,7 +43,7 @@ export const en: Dictionary = {
       {
         companyId: 'independent', company: 'Self-employed', role: 'Contract software engineer',
         period: 'Oct 2023 – Jan 2025 · 1 yr 4 mos',
-        summary: 'Project-based backend and full-stack engagements for three clients.',
+        summary: 'Project-based backend and full-stack engagements for 3 clients.',
         highlights: [],
         stack: [],
         engagements: [
@@ -89,7 +89,7 @@ export const en: Dictionary = {
   },
   cases: {
     title: 'Case studies',
-    intro: 'Four problems, what I did about them, and what changed.',
+    intro: '4 problems, what I did about them, and what changed.',
     items: [
       {
         companyId: 'indra', company: 'Indra Energia', title: 'Faster APIs without a rewrite',
@@ -194,7 +194,7 @@ export const en: Dictionary = {
     intro: 'I’m open to remote backend and AI-product roles paid in USD, EUR or GBP. I usually reply within a day.',
     whatsapp: 'Message on WhatsApp',
     call: 'Book a 30-minute intro call',
-    resume: 'Résumé',
+    resume: 'Resume',
   },
   cv: { back: 'Back to site', download: 'Download PDF', print: 'Print', summary: 'Summary', experience: 'Experience', skills: 'Skills', education: 'Education', languages: 'Languages' },
 };
