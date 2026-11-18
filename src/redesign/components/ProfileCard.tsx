@@ -23,7 +23,7 @@ export function ProfileCard({ t }: { t: Dictionary }) {
     ['role', card.role],
     ['location', card.location],
     ['timezone', card.timezone],
-    ['open_to', card.openTo],
+    ['work_mode', card.workMode],
   ];
 
   // Each line keeps its plain text so the typing animation knows how many characters (ch) it spans.

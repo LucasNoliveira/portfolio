@@ -1,20 +1,20 @@
 import type { Dictionary } from './types';
 
 export const ja: Dictionary = {
-  meta: { title: 'Lucas Oliveira — バックエンドエンジニア', description: 'サンパウロ在住のバックエンドエンジニア。Python、Django、FastAPI、AWSでAIプロダクトを開発しています。世界中のリモートポジションに対応可能です。' },
+  meta: { title: 'Lucas Oliveira — バックエンドエンジニア', description: 'サンパウロ在住のバックエンドエンジニア。Python、Django、FastAPI、AWSでAIプロダクトを開発しています。' },
   ui: { skip: '本文へスキップ', theme: 'カラーテーマを切り替える', language: '言語', top: 'トップへ戻る', current: '現在', problem: '課題', approach: '対応', result: '成果', source: 'ソースコードを見る' },
   nav: { work: '職歴', cases: '事例', services: 'サービス', skills: 'スタック', about: '自己紹介', contact: '連絡先', blog: 'ブログ' },
   hero: {
     role: 'AIプロダクトを開発するバックエンドエンジニア。',
     lead: '4年間、アイデアから本番運用までプロダクトを届けてきました。安全なAPI、クラウドインフラ、チームが信頼できるLLM機能が得意です。サンパウロを拠点に、海外のチームとリモートで働いています。',
     location: 'ブラジル・サンパウロ（UTC−3）',
-    availability: '世界中のリモートポジションに対応可能',
+    place: 'ブラジル・サンパウロ · UTC−3 · リモート',
     email: '連絡する',
     menu: { title: 'ご連絡方法をお選びください', email: 'メール', whatsapp: 'WhatsAppですぐにメッセージ', call: '30分の面談を予約', linkedin: 'LinkedInでメッセージ' },
     resume: '職務経歴書',
     stackTitle: '毎日使っている技術',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
-    card: { role: 'バックエンドエンジニア', location: 'ブラジル・サンパウロ', timezone: 'UTC-3', openTo: 'リモート（世界中）' },
+    card: { role: 'バックエンドエンジニア', location: 'ブラジル・サンパウロ', timezone: 'UTC-3', workMode: 'リモート' },
   },
   work: {
     title: '職歴',

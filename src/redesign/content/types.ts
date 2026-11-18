@@ -69,10 +69,10 @@ export interface Dictionary {
   ui: { skip: string; theme: string; language: string; top: string; current: string; problem: string; approach: string; result: string; source: string };
   nav: { work: string; cases: string; services: string; skills: string; about: string; contact: string; blog: string };
   hero: {
-    role: string; lead: string; location: string; availability: string;
+    role: string; lead: string; location: string; place: string;
     email: string; resume: string;
     menu: { title: string; email: string; whatsapp: string; call: string; linkedin: string }; stackTitle: string; stack: TechId[];
-    card: { role: string; location: string; timezone: string; openTo: string };
+    card: { role: string; location: string; timezone: string; workMode: string };
   };
   work: { title: string; intro: string; jobs: Job[] };
   cases: { title: string; intro: string; items: CaseStudy[] };

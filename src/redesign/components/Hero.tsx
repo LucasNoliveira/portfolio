@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { Dictionary } from '../content/types';
 import { cvPagePath, SITE } from '../config';
 import type { Locale } from '../content/locales';
-import { AvailabilityBadge } from './AvailabilityBadge';
+import { LocationBadge } from './LocationBadge';
 import { ContactMenu } from './ContactMenu';
 import { ProfileCard } from './ProfileCard';
 import { TechList } from './TechList';
@@ -24,7 +24,7 @@ export function Hero({ t, locale }: { t: Dictionary; locale: Locale }) {
               priority
               className="size-24 rounded-full border border-rule object-cover"
             />
-            <AvailabilityBadge>{hero.availability}</AvailabilityBadge>
+            <LocationBadge>{hero.place}</LocationBadge>
           </div>
           <h1 style={{ '--i': 1 } as CSSProperties} className="rise text-4xl font-semibold tracking-tight md:text-6xl">{SITE.name}</h1>
           <p style={{ '--i': 2 } as CSSProperties} className="rise mt-3 text-xl font-medium text-muted md:text-2xl">{hero.role}</p>
