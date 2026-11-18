@@ -12,7 +12,7 @@ import path from 'node:path';
 const OUT_DIR = path.resolve('public/og');
 const COPY = {
   en: { role: 'Backend engineer', line: 'Building AI-powered products with Python, Django, FastAPI and AWS.', where: 'São Paulo, Brazil · open to remote roles worldwide' },
-  pt: { role: 'Engenheiro backend', line: 'Criando produtos com IA em Python, Django, FastAPI e AWS.', where: 'São Paulo, Brasil · vagas remotas no exterior' },
+  pt: { role: 'Engenheiro backend', line: 'Criando produtos com IA em Python, Django, FastAPI e AWS.', where: 'São Paulo, Brasil · aberto a novas oportunidades' },
   es: { role: 'Ingeniero backend', line: 'Creando productos con IA en Python, Django, FastAPI y AWS.', where: 'São Paulo, Brasil · puestos remotos en todo el mundo' },
   ja: { role: 'バックエンドエンジニア', line: 'Python・Django・FastAPI・AWSでAIプロダクトを開発。', where: 'ブラジル・サンパウロ · リモート勤務（世界中）' },
 };
