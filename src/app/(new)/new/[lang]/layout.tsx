@@ -14,12 +14,6 @@ export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export function generateMetadata({ params }: Pick<LayoutProps, 'params'>): Metadata {
-  const { meta } = dictionaries[isLocale(params.lang) ? params.lang : 'en'];
-  // Work in progress: keep the new version out of search results until it replaces the old one.
-  return { title: meta.title, description: meta.description, robots: { index: false, follow: false } };
-}
-
 export default function NewSiteLayout({ children, params }: LayoutProps) {
   const lang = isLocale(params.lang) ? params.lang : 'en';
   return (

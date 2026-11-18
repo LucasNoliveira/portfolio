@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { dictionaries } from '@/redesign/content';
 import { isLocale, LOCALES } from '@/redesign/content/locales';
@@ -12,11 +13,18 @@ import { Recommendations } from '@/redesign/components/Recommendations';
 import { Services } from '@/redesign/components/Services';
 import { Skills } from '@/redesign/components/Skills';
 import { Work } from '@/redesign/components/Work';
+import { pageMetadata, personJsonLd } from '@/redesign/seo';
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
+}
+
+export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
+  const lang = isLocale(params.lang) ? params.lang : 'en';
+  const { meta } = dictionaries[lang];
+  return pageMetadata(lang, '', meta.title, meta.description);
 }
 
 export default async function NewSitePage({ params }: { params: { lang: string } }) {
@@ -37,6 +45,7 @@ export default async function NewSitePage({ params }: { params: { lang: string }
         <Contact t={t} locale={params.lang} />
       </main>
       <Footer t={t} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd(params.lang)) }} />
     </>
   );
 }

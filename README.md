@@ -42,7 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Two versions of the site
 
 - `/` is the original site (`src/app/(legacy)` + `src/app/components`), unchanged.
-- `/new` is the redesign (`src/app/(new)` + `src/redesign`), in English or Portuguese. `/new` picks the language from the browser's `Accept-Language`; `/new/en` and `/new/pt` are explicit. It is marked `noindex` until it replaces the old site.
+- `/new` is the redesign (`src/app/(new)` + `src/redesign`), in English, Portuguese, Spanish or Japanese. `/new` picks the language from the browser's `Accept-Language`; `/new/en`, `/new/pt`, `/new/es` and `/new/ja` are explicit. It is marked `noindex` until it replaces the old site.
 
 Redesign layout: `content/` (typed dictionaries), `components/` (one per section), `tech/` (logo catalog), `hooks/`, `config.ts` (contact links, résumé URL).
 
@@ -62,3 +62,10 @@ npm run cv:pdf                                  # terminal 2 (optional argument:
 ```
 
 The old site keeps using `public/cv/Lucas_Oliveira_CV_FullStack_2025.pdf`.
+
+## SEO (new site)
+
+- Every page sets a canonical URL, `hreflang` for the four languages (plus `x-default`), Open Graph and Twitter tags, and the home page adds `Person` structured data (`src/redesign/seo.ts`).
+- Link previews are `public/og/og-<lang>.png` (1200×630). Regenerate them with `npm run og:images` after changing the headline in `scripts/build-og.mjs`.
+- Set `NEXT_PUBLIC_SITE_URL` (for example `https://your-domain.dev`) so canonical links, previews and the sitemap use the real domain.
+- The redesign is `noindex` and the sitemap is empty until the launch: set `NEW_SITE_INDEXABLE=1` in the production environment, redeploy, then submit `/sitemap.xml` in Search Console.

@@ -28,7 +28,8 @@ export function Hero({ t, locale }: { t: Dictionary; locale: Locale }) {
           </div>
           <h1 style={{ '--i': 1 } as CSSProperties} className="rise text-4xl font-semibold tracking-tight md:text-6xl">{SITE.name}</h1>
           <p style={{ '--i': 2 } as CSSProperties} className="rise mt-3 text-xl font-medium text-muted md:text-2xl">{hero.role}</p>
-          <p style={{ '--i': 3 } as CSSProperties} className="rise mt-5 max-w-[60ch] text-muted">{hero.lead}</p>
+          {/* No entrance animation here: this paragraph is the largest text on screen, so fading it in delays the page's perceived load. */}
+          <p className="mt-5 max-w-[60ch] text-muted">{hero.lead}</p>
           <div style={{ '--i': 4 } as CSSProperties} className="rise mt-6 flex flex-wrap gap-3">
             <ContactMenu t={t} />
             <a className="btn" href="#cases">{t.nav.cases}</a>
