@@ -41,31 +41,43 @@ export const ja: Dictionary = {
         stack: ['python', 'gcp', 'graphql', 'angular', 'podman'],
       },
       {
-        companyId: 'indra', company: 'Indra Energia', role: 'バックエンドエンジニア（業務委託）',
-        period: '2024年9月 – 2025年1月',
-        highlights: [
-          '非同期FastAPIサービスとキャッシュを構築し、応答時間を30%短縮。',
-          '環境をコンテナ化し、セットアップ関連の問題を40%、デプロイ後のインシデントを20%削減。',
+        companyId: 'independent', company: '個人事業（フリーランス）', role: '業務委託ソフトウェアエンジニア',
+        period: '2023年10月 – 2025年1月 · 1年4か月',
+        summary: '3社向けのバックエンド／フルスタック案件を、プロジェクト単位で担当。',
+        highlights: [],
+        stack: [],
+        engagements: [
+          {
+            companyId: 'vitta', company: 'Vitta Group Franchising', kind: '業務委託（PJ）',
+            highlights: [
+            'Python（Django）とNode.jsでバックエンドサービスを開発・保守し、社内向けおよび顧客向けシステムのRESTful APIを構築。',
+            'PostgreSQLデータベースを設計・運用し、RD Station CRMとテレマーケティングプラットフォームの連携を構築。',
+            'Django、React、PostgreSQLでPOSシステムをリードし、NginxとLinux VPSにデプロイ。',
+          ],
+            stack: ['django', 'react', 'postgresql', 'nginx'],
+          },
+          {
+            companyId: 'indra', company: 'Indra Energia', kind: '業務委託（PJ）',
+            highlights: [
+            'エネルギー取引・小売システム向けのバックエンドサービスを開発。',
+            '非同期処理とキャッシュでFastAPIサービスを最適化し、応答時間を約30%短縮。',
+            'レガシーなサービスをDockerへ移行し、環境関連の問題を約40%、デプロイ後のインシデントを約20%削減。',
+          ],
+            stack: ['python', 'fastapi', 'docker'],
+          },
+          {
+            companyId: 'mont', company: 'Mont Capital Asset', kind: '案件単位（CLT）',
+            highlights: [
+            'OpenAI APIを使ったAIサポートアシスタントを設計し、サポート効率を約30〜40%向上。',
+            'SOAP/RESTで金融データプロバイダーを統合し、WebSocketでリアルタイム機能を実装。',
+            'DockerでAWS（EC2、S3、RDS）にデプロイし、アジャイルチームで10件以上のバックエンド機能を提供。',
+          ],
+            stack: ['python', 'llm', 'websockets', 'aws'],
+          },
         ],
-        stack: ['python', 'fastapi', 'docker'],
       },
       {
-        companyId: 'mont', company: 'Mont Capital Asset', role: 'バックエンドエンジニア',
-        period: '2024年4月 – 8月',
-        highlights: [
-          'OpenAIベースのサポートアシスタントを開発し、チームの効率を30〜40%向上。',
-          'SOAP/RESTとWebSocketで金融データを統合し、AWSへのデプロイを30%高速化。',
-        ],
-        stack: ['python', 'llm', 'websockets', 'aws'],
-      },
-      {
-        companyId: 'vitta', company: 'Vitta Group', role: 'フルスタック開発者（業務委託）',
-        period: '2023年10月 – 2024年12月',
-        highlights: ['POSシステムを最初のコミットから本番稼働までリード。RD Station CRMとの連携を実装し、NginxとVPSで運用。'],
-        stack: ['django', 'react', 'postgresql', 'nginx'],
-      },
-      {
-        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'ITアナリスト／自動化開発者',
+        companyId: 'riobranco', company: 'Colégio Rio Branco', role: 'ITアナリスト／自動化開発者', kind: 'インターン',
         period: '2022年3月 – 2023年10月',
         highlights: [
           'PythonとPowerShellのスクリプトでPCのインストール・設定・管理を自動化し、セットアップ時間を1時間超から15分以下に短縮。',

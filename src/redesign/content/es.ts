@@ -41,31 +41,43 @@ export const es: Dictionary = {
         stack: ['python', 'gcp', 'graphql', 'angular', 'podman'],
       },
       {
-        companyId: 'indra', company: 'Indra Energia', role: 'Ingeniero backend (contratista)',
-        period: 'Sep 2024 – Ene 2025',
-        highlights: [
-          'Construí servicios FastAPI asíncronos con caché y reduje el tiempo de respuesta un 30%.',
-          'Containericé los entornos: 40% menos problemas de configuración y 20% menos incidentes tras los despliegues.',
+        companyId: 'independent', company: 'Autónomo', role: 'Ingeniero de software contratista',
+        period: 'Oct 2023 – Ene 2025 · 1 año y 4 meses',
+        summary: 'Proyectos de backend y full-stack para tres clientes.',
+        highlights: [],
+        stack: [],
+        engagements: [
+          {
+            companyId: 'vitta', company: 'Vitta Group Franchising', kind: 'Contrato (PJ)',
+            highlights: [
+            'Desarrollé y mantuve servicios backend en Python (Django) y Node.js, con APIs RESTful para sistemas internos y de cara al cliente.',
+            'Diseñé y administré bases de datos PostgreSQL y construí integraciones de RD Station CRM con plataformas de telemarketing.',
+            'Lideré un sistema de punto de venta con Django, React y PostgreSQL, desplegado en Nginx y un VPS Linux.',
+          ],
+            stack: ['django', 'react', 'postgresql', 'nginx'],
+          },
+          {
+            companyId: 'indra', company: 'Indra Energia', kind: 'Contrato (PJ)',
+            highlights: [
+            'Desarrollé servicios backend para sistemas de trading de energía y retail.',
+            'Optimicé servicios FastAPI con patrones asíncronos y caché, reduciendo el tiempo de respuesta cerca de un 30%.',
+            'Migré servicios heredados a Docker: cerca de un 40% menos problemas de entorno y un 20% menos incidentes tras los despliegues.',
+          ],
+            stack: ['python', 'fastapi', 'docker'],
+          },
+          {
+            companyId: 'mont', company: 'Mont Capital Asset', kind: 'Por proyecto (CLT)',
+            highlights: [
+            'Diseñé un asistente de soporte con IA usando las APIs de OpenAI, que aumentó la eficiencia del soporte entre un 30% y un 40%.',
+            'Integré proveedores de datos financieros mediante SOAP y REST e implementé funciones en tiempo real con WebSockets.',
+            'Desplegué soluciones en AWS (EC2, S3, RDS) con Docker y entregué más de 10 funcionalidades backend en un equipo ágil.',
+          ],
+            stack: ['python', 'llm', 'websockets', 'aws'],
+          },
         ],
-        stack: ['python', 'fastapi', 'docker'],
       },
       {
-        companyId: 'mont', company: 'Mont Capital Asset', role: 'Ingeniero backend',
-        period: 'Abr – Ago 2024',
-        highlights: [
-          'Entregué un asistente de soporte basado en OpenAI que aumentó la eficiencia del equipo entre un 30% y un 40%.',
-          'Integré datos financieros mediante SOAP/REST y WebSockets; los despliegues en AWS fueron un 30% más rápidos.',
-        ],
-        stack: ['python', 'llm', 'websockets', 'aws'],
-      },
-      {
-        companyId: 'vitta', company: 'Vitta Group', role: 'Desarrollador full-stack (contratista)',
-        period: 'Oct 2023 – Dic 2024',
-        highlights: ['Lideré un sistema de punto de venta desde el primer commit hasta producción, con integraciones con RD Station CRM, sobre Nginx y un VPS.'],
-        stack: ['django', 'react', 'postgresql', 'nginx'],
-      },
-      {
-        companyId: 'rotary', company: 'Fundação de Rotarianos de São Paulo', role: 'Analista de TI / desarrollador de automatización',
+        companyId: 'riobranco', company: 'Colégio Rio Branco', role: 'Analista de TI / desarrollador de automatización', kind: 'Prácticas',
         period: 'Mar 2022 – Oct 2023',
         highlights: [
           'Escribí scripts en Python y PowerShell para automatizar la instalación, configuración y gestión de equipos, reduciendo la preparación de más de una hora a 15 minutos o menos.',
