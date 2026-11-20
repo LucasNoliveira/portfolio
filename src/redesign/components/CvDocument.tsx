@@ -18,7 +18,7 @@ export function CvDocument({ t }: { t: Dictionary }) {
     <article className="cv">
       <header>
         <h1 className="cv-name">{SITE.name}</h1>
-        <p className="cv-role">{hero.role}</p>
+        <p className="cv-role">{cv.role}</p>
         <p className="cv-contact">
           <span>{hero.location}</span>
           <CvEmail />
@@ -29,7 +29,7 @@ export function CvDocument({ t }: { t: Dictionary }) {
 
       <section>
         <Heading>{cv.summary}</Heading>
-        <p>{hero.lead}</p>
+        <p>{cv.lead}</p>
       </section>
 
       <section>
