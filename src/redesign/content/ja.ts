@@ -1,12 +1,12 @@
 import type { Dictionary } from './types';
 
 export const ja: Dictionary = {
-  meta: { title: 'Lucas Oliveira — バックエンドエンジニア', description: 'サンパウロ在住のバックエンドエンジニア。Python、Django、FastAPI、AWSでAIプロダクトを開発しています。' },
+  meta: { title: 'Lucas Oliveira — ソフトウェアエンジニア', description: 'サンパウロ在住のソフトウェアエンジニア。Python、Django、FastAPI、React、AWSでAIプロダクトを開発しています。' },
   ui: { skip: '本文へスキップ', theme: 'カラーテーマを切り替える', language: '言語', top: 'トップへ戻る', current: '現在', problem: '課題', approach: '対応', result: '成果', source: 'ソースコードを見る' },
   nav: { work: '職歴', cases: '事例', services: 'サービス', skills: 'スタック', about: '自己紹介', contact: '連絡先', blog: 'ブログ' },
   hero: {
-    role: 'AIプロダクトを開発するバックエンドエンジニア。',
-    lead: '4年間、アイデアから本番運用までプロダクトを届けてきました。安全なAPI、クラウドインフラ、チームが信頼できるLLM機能が得意です。サンパウロを拠点に、海外のチームとリモートで働いています。',
+    role: 'AIプロダクトを開発するソフトウェアエンジニア。',
+    lead: 'アイデアを、人が実際に使うプロダクトに変え、既存のプロダクトをより良くするソフトウェアエンジニアです。スタートアップでも、大手コンサルティング会社でも、一人のチームでも、プロダクトを届けてきました。現在は、初期段階のスタートアップでAIプロダクトを開発しています。',
     location: 'ブラジル・サンパウロ（UTC−3）',
     place: 'ブラジル・サンパウロ · UTC−3 · リモート',
     email: '連絡する',
@@ -14,7 +14,7 @@ export const ja: Dictionary = {
     resume: '職務経歴書',
     stackTitle: '毎日使っている技術',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
-    card: { role: 'バックエンドエンジニア', location: 'ブラジル・サンパウロ', timezone: 'UTC-3', workMode: 'リモート' },
+    card: { role: 'ソフトウェアエンジニア', location: 'ブラジル・サンパウロ', timezone: 'UTC-3', workMode: 'リモート' },
   },
   work: {
     title: '職歴',
@@ -196,5 +196,5 @@ export const ja: Dictionary = {
     call: '30分の面談を予約',
     resume: '職務経歴書',
   },
-  cv: { back: 'サイトに戻る', download: 'PDFをダウンロード', print: '印刷', summary: '概要', experience: '職歴', skills: 'スキル', education: '学歴', languages: '言語' },
+  cv: { role: 'AIプロダクトを開発するバックエンドエンジニア。', lead: '4年間、アイデアから本番運用までプロダクトを届けてきました。安全なAPI、クラウドインフラ、チームが信頼できるLLM機能が得意です。サンパウロを拠点に、海外のチームとリモートで働いています。', back: 'サイトに戻る', download: 'PDFをダウンロード', print: '印刷', summary: '概要', experience: '職歴', skills: 'スキル', education: '学歴', languages: '言語' },
 };

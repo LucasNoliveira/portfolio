@@ -5,10 +5,10 @@ import { HTML_LANG, LOCALES, type Locale } from './content/locales';
 
 const OG_LOCALE: Record<Locale, string> = { en: 'en_US', pt: 'pt_BR', es: 'es_ES', ja: 'ja_JP' };
 const JOB_TITLE: Record<Locale, string> = {
-  en: 'Backend engineer',
-  pt: 'Engenheiro de backend',
-  es: 'Ingeniero de backend',
-  ja: 'バックエンドエンジニア',
+  en: 'Software engineer',
+  pt: 'Engenheiro de software',
+  es: 'Ingeniero de software',
+  ja: 'ソフトウェアエンジニア',
 };
 
 interface PageOptions {

@@ -94,5 +94,5 @@ export interface Dictionary {
     github: { heatmap: string; heatmapDay: string; title: string; repos: string; stars: string; languages: string; lastPush: string; profile: string };
   };
   contact: { title: string; intro: string; whatsapp: string; call: string; resume: string };
-  cv: { back: string; download: string; print: string; summary: string; experience: string; skills: string; education: string; languages: string };
+  cv: { role: string; lead: string; back: string; download: string; print: string; summary: string; experience: string; skills: string; education: string; languages: string };
 }

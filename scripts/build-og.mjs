@@ -11,10 +11,10 @@ import path from 'node:path';
 
 const OUT_DIR = path.resolve('public/og');
 const COPY = {
-  en: { role: 'Backend engineer', line: 'Building AI-powered products with Python, Django, FastAPI and AWS.', where: 'São Paulo, Brazil · open to remote roles worldwide' },
-  pt: { role: 'Engenheiro backend', line: 'Criando produtos com IA em Python, Django, FastAPI e AWS.', where: 'São Paulo, Brasil · aberto a novas oportunidades' },
-  es: { role: 'Ingeniero backend', line: 'Creando productos con IA en Python, Django, FastAPI y AWS.', where: 'São Paulo, Brasil · puestos remotos en todo el mundo' },
-  ja: { role: 'バックエンドエンジニア', line: 'Python・Django・FastAPI・AWSでAIプロダクトを開発。', where: 'ブラジル・サンパウロ · リモート勤務（世界中）' },
+  en: { role: 'Software engineer', line: 'Turning ideas into products people actually use.', where: 'São Paulo, Brazil · UTC−3' },
+  pt: { role: 'Engenheiro de software', line: 'Transformando ideias em produtos que as pessoas realmente usam.', where: 'São Paulo, Brasil · UTC−3' },
+  es: { role: 'Ingeniero de software', line: 'Convirtiendo ideas en productos que la gente realmente usa.', where: 'São Paulo, Brasil · UTC−3' },
+  ja: { role: 'ソフトウェアエンジニア', line: 'アイデアを、人が実際に使うプロダクトに。', where: 'ブラジル・サンパウロ · UTC−3' },
 };
 
 let chromium;

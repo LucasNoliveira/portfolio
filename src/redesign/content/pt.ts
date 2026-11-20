@@ -1,12 +1,12 @@
 import type { Dictionary } from './types';
 
 export const pt: Dictionary = {
-  meta: { title: 'Lucas Oliveira — Engenheiro backend', description: 'Engenheiro backend em São Paulo criando produtos com IA em Python, Django, FastAPI e AWS.' },
+  meta: { title: 'Lucas Oliveira — Engenheiro de software', description: 'Engenheiro de software em São Paulo criando produtos com IA em Python, Django, FastAPI, React e AWS.' },
   ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'Idioma', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte' },
   nav: { work: 'Trabalho', cases: 'Cases', services: 'Serviços', skills: 'Stack', about: 'Sobre', contact: 'Contato', blog: 'Blog' },
   hero: {
-    role: 'Engenheiro backend criando produtos com IA.',
-    lead: 'Há 4 anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto.',
+    role: 'Engenheiro de software criando produtos com IA.',
+    lead: 'Engenheiro de software que transforma ideias em produtos que as pessoas realmente usam e melhora os que já existem. Já entreguei em startups, em grandes consultorias e em times de uma pessoa só. Hoje construo produtos de IA em uma startup em fase inicial.',
     location: 'São Paulo, Brasil (UTC−3)',
     place: 'São Paulo, Brasil · UTC−3 · Remoto',
     email: 'Fale comigo',
@@ -14,7 +14,7 @@ export const pt: Dictionary = {
     resume: 'Currículo',
     stackTitle: 'O que uso todos os dias',
     stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
-    card: { role: 'Engenheiro backend', location: 'São Paulo, Brasil', timezone: 'UTC-3', workMode: 'remoto' },
+    card: { role: 'Engenheiro de software', location: 'São Paulo, Brasil', timezone: 'UTC-3', workMode: 'remoto' },
   },
   work: {
     title: 'Onde já trabalhei',
@@ -196,5 +196,5 @@ export const pt: Dictionary = {
     call: 'Agendar uma conversa de 30 minutos',
     resume: 'Currículo',
   },
-  cv: { back: 'Voltar ao site', download: 'Baixar PDF', print: 'Imprimir', summary: 'Resumo', experience: 'Experiência', skills: 'Competências', education: 'Formação', languages: 'Idiomas' },
+  cv: { role: 'Engenheiro backend criando produtos com IA.', lead: 'Há 4 anos levo produtos da ideia à produção: APIs seguras, infraestrutura em nuvem e recursos com LLMs em que o time pode confiar. Moro em São Paulo e trabalho remoto.', back: 'Voltar ao site', download: 'Baixar PDF', print: 'Imprimir', summary: 'Resumo', experience: 'Experiência', skills: 'Competências', education: 'Formação', languages: 'Idiomas' },
 };
