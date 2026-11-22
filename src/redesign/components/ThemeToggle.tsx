@@ -7,12 +7,12 @@ export function ThemeToggle({ label }: { label: string }) {
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={(event) => toggle(event.currentTarget)}
       aria-label={label}
       aria-pressed={theme === 'dark'}
       className="grid h-[38px] min-w-[38px] cursor-pointer place-items-center rounded-full border border-rule hover:bg-paper-2"
     >
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+      <svg key={theme} className="theme-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
         {theme === 'dark' ? (
           <path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z" />
         ) : (

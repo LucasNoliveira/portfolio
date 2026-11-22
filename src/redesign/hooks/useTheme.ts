@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useSyncExternalStore } from 'react';
+import { flushSync } from 'react-dom';
 import { readStore, writeStore } from './storage';
 
 export type Theme = 'light' | 'dark';
@@ -35,8 +36,33 @@ const readChoice = (): Theme | null => {
   return saved === 'light' || saved === 'dark' ? saved : null;
 };
 
+/**
+ * Swaps the theme with a circle that grows from the toggle button, using the View Transitions API.
+ * Browsers without it, and visitors who prefer reduced motion, just get the instant swap.
+ */
+function revealTheme(apply: () => void, origin?: HTMLElement | null) {
+  const root = document.documentElement;
+  if (!origin || !('startViewTransition' in document) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    apply();
+    return;
+  }
+  const box = origin.getBoundingClientRect();
+  const x = box.left + box.width / 2;
+  const y = box.top + box.height / 2;
+  const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  const transition = document.startViewTransition(() => flushSync(apply));
+  transition.ready
+    .then(() =>
+      root.animate(
+        { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+        { duration: 700, easing: 'cubic-bezier(.65, 0, .35, 1)', pseudoElement: '::view-transition-new(root)' },
+      ),
+    )
+    .catch(() => {});
+}
+
 /** Follows the OS until the visitor picks a theme explicitly. */
-export function useTheme(): [Theme, () => void] {
+export function useTheme(): [Theme, (origin?: HTMLElement | null) => void] {
   const system = useSyncExternalStore(subscribeToSystem, readSystem, () => 'light' as Theme);
   const chosen = useSyncExternalStore(subscribeToChoice, readChoice, () => null);
 
@@ -47,11 +73,15 @@ export function useTheme(): [Theme, () => void] {
   }, [chosen]);
 
   const theme = chosen ?? system;
-  const toggle = useCallback(() => {
+  const toggle = useCallback((origin?: HTMLElement | null) => {
     const next: Theme = theme === 'dark' ? 'light' : 'dark';
-    override = next;
-    writeStore(KEY, next);
-    listeners.forEach((listener) => listener());
+    const apply = () => {
+      override = next;
+      writeStore(KEY, next);
+      document.documentElement.dataset.theme = next;
+      listeners.forEach((listener) => listener());
+    };
+    revealTheme(apply, origin);
   }, [theme]);
 
   return [theme, toggle];
