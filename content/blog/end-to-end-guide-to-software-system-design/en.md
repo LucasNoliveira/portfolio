@@ -12,6 +12,9 @@ If you are a software engineer, you already know that building software from scr
 
 This article presents the main stages of the SDLC — Requirements Analysis, System Design, Implementation (Coding), Testing, Deployment, and Maintenance — and explains what each of them involves, from an end-to-end perspective.
 
+![A laptop showing code on a desk](/img/blog/end-to-end-guide-to-software-system-design/sdlc-laptop.webp)
+*Photo by Christopher Gower on [Unsplash](https://unsplash.com)*
+
 ## Requirements Analysis
 
 **Goal:** Understand what the software should do.
@@ -198,5 +201,8 @@ These phases do not necessarily imply a strict or linear process. Whether a team
 This article provides a high-level but detailed overview of each stage. There is much more to explore, especially within each individual phase, which is why I included recommended books related to each topic. I have not read every single one of them, but I have read most and selected the others based on the experience and recommendations of software engineers I deeply respect.
 
 Understanding the software development process as a connected system, rather than a set of isolated steps, is what enables engineers to design, build, and evolve software in a sustainable and effective way.
+
+![A stack of programming and design books in front of a monitor with code](/img/blog/end-to-end-guide-to-software-system-design/sdlc-books.webp)
+*Photo by Nangialai Stoman on [Unsplash](https://unsplash.com)*
 
 *Originally published on [Medium](https://medium.com/@lucasnoliveira126/an-end-to-end-guide-to-software-system-design-f613d0b95b67).*
