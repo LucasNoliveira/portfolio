@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
   // A post is listed in the languages it is written in, with alternates only for those.
-  const slugs = Array.from(new Set(getAllPosts().map((post) => post.slug)));
+  const slugs = Array.from(new Set(getAllPosts().filter((post) => !post.canonical).map((post) => post.slug)));
   const posts = slugs.map((slug) => {
     const langs = getAllPosts().filter((post) => post.slug === slug).map((post) => post.lang);
     return langs.map((lang) => ({

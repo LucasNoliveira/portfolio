@@ -25,6 +25,8 @@ export interface PostMeta {
   date: string;
   tags: string[];
   minutes: number;
+  /** Set when the post was first published elsewhere (e.g. Medium); search engines are pointed there. */
+  canonical?: string;
 }
 
 export interface Post extends PostMeta {
@@ -56,6 +58,7 @@ function readFile(slug: string, lang: PostLang): { meta: PostMeta; body: string;
       date,
       tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
       minutes: Math.max(1, Math.round(words / 220)),
+      ...(typeof data.canonical === 'string' && /^https:\/\//.test(data.canonical) ? { canonical: data.canonical } : {}),
     },
   };
 }

@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     languages: getTranslations(post.slug),
     article: { publishedTime: post.date },
     rss: `/${lang}/blog/feed.xml`,
+    canonical: post.canonical,
   });
 }
 

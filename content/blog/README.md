@@ -17,6 +17,7 @@ title: Making webhook handlers idempotent in Django
 description: One or two sentences, used in lists, search results and link previews.
 date: 2026-11-18
 tags: [django, webhooks]
+canonical: https://example.com/original   # optional: the post was first published elsewhere; search engines are pointed there and it is left out of the sitemap
 draft: true          # optional: drafts show in `npm run dev` but are left out of the build
 ---
 

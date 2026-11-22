@@ -16,6 +16,8 @@ interface PageOptions {
   languages?: readonly Locale[];
   article?: { publishedTime: string };
   rss?: string;
+  /** Absolute URL of the original, when the content was first published on another site. */
+  canonical?: string;
 }
 
 export function pageMetadata(lang: Locale, subpath: string, title: string, description: string, options: PageOptions = {}): Metadata {
@@ -29,8 +31,9 @@ export function pageMetadata(lang: Locale, subpath: string, title: string, descr
     title,
     description,
     alternates: {
-      canonical: url,
-      languages: alternates,
+      canonical: options.canonical ?? url,
+      // A page whose original lives elsewhere does not advertise its own language versions.
+      ...(options.canonical ? {} : { languages: alternates }),
       ...(options.rss ? { types: { 'application/rss+xml': options.rss } } : {}),
     },
     robots: { index: true, follow: true },
