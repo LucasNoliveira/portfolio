@@ -13,7 +13,7 @@ export const pt: Dictionary = {
     menu: { title: 'Como prefere falar comigo?', email: 'E-mail', whatsapp: 'Mensagem rápida no WhatsApp', call: 'Agendar uma conversa de 30 minutos', linkedin: 'Enviar mensagem no LinkedIn' },
     resume: 'Currículo',
     stackTitle: 'O que uso todos os dias',
-    stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
+    stack: ['python', 'django', 'react', 'aws', 'docker', 'postgresql', 'llm'],
     card: { role: 'Engenheiro de software', location: 'São Paulo, Brasil', timezone: 'UTC-3', workMode: 'remoto' },
   },
   work: {

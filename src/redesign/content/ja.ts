@@ -13,7 +13,7 @@ export const ja: Dictionary = {
     menu: { title: 'ご連絡方法をお選びください', email: 'メール', whatsapp: 'WhatsAppですぐにメッセージ', call: '30分の面談を予約', linkedin: 'LinkedInでメッセージ' },
     resume: '職務経歴書',
     stackTitle: '毎日使っている技術',
-    stack: ['python', 'django', 'fastapi', 'aws', 'docker', 'postgresql', 'graphql', 'llm'],
+    stack: ['python', 'django', 'react', 'aws', 'docker', 'postgresql', 'llm'],
     card: { role: 'ソフトウェアエンジニア', location: 'ブラジル・サンパウロ', timezone: 'UTC-3', workMode: 'リモート' },
   },
   work: {
