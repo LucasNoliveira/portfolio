@@ -52,7 +52,7 @@ export const pt: Dictionary = {
             highlights: [
             'Desenvolvi e mantive serviços de backend em Python (Django) e Node.js, com APIs RESTful para sistemas internos e voltados a clientes.',
             'Projetei e administrei bancos PostgreSQL e criei integrações do RD Station CRM com plataformas de telemarketing.',
-            'Liderei um sistema de PDV em Django, React e PostgreSQL, publicado em Nginx e em um VPS Linux.',
+            'Liderei um sistema POS em Django, React e PostgreSQL, publicado em Nginx e em um VPS Linux.',
           ],
             stack: ['django', 'react', 'postgresql', 'nginx'],
           },
@@ -113,9 +113,9 @@ export const pt: Dictionary = {
         stack: ['django', 'jwt', 'pytest', 'aws'],
       },
       {
-        companyId: 'vitta', company: 'Vitta Group', title: 'Um PDV construído do zero',
+        companyId: 'vitta', company: 'Vitta Group', title: 'Um sistema POS construído do zero',
         result: { value: '0 → 1', label: 'em produção' },
-        problem: 'O negócio precisava de um PDV sob medida que também falasse com o CRM.',
+        problem: 'O negócio precisava de um sistema POS sob medida que também falasse com o CRM.',
         approach: 'Liderei design e entrega com Django, React e PostgreSQL, conectei o RD Station e publiquei em Nginx.',
         stack: ['django', 'react', 'postgresql', 'nginx'],
       },
@@ -155,7 +155,7 @@ export const pt: Dictionary = {
       { title: 'Automação', description: 'Scripts, webhooks e integrações que tiram o trabalho repetitivo das pessoas.', stack: ['python', 'graphql', 'git'] },
       {
         title: 'Plataformas completas, de ponta a ponta',
-        description: 'Quando faz sentido uma pessoa cuidar do produto inteiro: frontend em React, backend, banco de dados, deploy e integrações. Liderei um sistema de PDV do primeiro commit à produção.',
+        description: 'Quando faz sentido uma pessoa cuidar do produto inteiro: frontend em React, backend, banco de dados, deploy e integrações. Liderei um sistema POS do primeiro commit à produção.',
         stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
         featured: true,
       },
