@@ -164,10 +164,11 @@ export const ja: Dictionary = {
   skills: {
     title: 'スタック',
     groups: [
-      { name: 'バックエンド', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'websockets'] },
+      { name: 'バックエンド', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'mongodb', 'redis', 'websockets'] },
+      { name: 'フロントエンド', items: ['react', 'typescript', 'angular'] },
       { name: 'クラウドとインフラ', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
+      { name: '可観測性', items: ['prometheus', 'grafana'] },
       { name: 'AIと品質', items: ['llm', 'pytest', 'jwt', 'git'] },
-      { name: 'フロントエンド', items: ['react', 'angular'] },
     ],
   },
   about: {

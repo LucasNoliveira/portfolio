@@ -164,10 +164,11 @@ export const en: Dictionary = {
   skills: {
     title: 'Stack',
     groups: [
-      { name: 'Backend', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'websockets'] },
+      { name: 'Backend', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'mongodb', 'redis', 'websockets'] },
+      { name: 'Frontend', items: ['react', 'typescript', 'angular'] },
       { name: 'Cloud and infrastructure', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
+      { name: 'Observability', items: ['prometheus', 'grafana'] },
       { name: 'AI and quality', items: ['llm', 'pytest', 'jwt', 'git'] },
-      { name: 'Frontend', items: ['react', 'angular'] },
     ],
   },
   about: {

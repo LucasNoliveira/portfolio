@@ -47,4 +47,9 @@ export const TECH: Record<TechId, Tech> = {
   llm: { label: 'OpenAI / LLMs', color: 'var(--accent)' },
   websockets: { label: 'WebSockets', color: 'var(--accent)' },
   jwt: { label: 'JWT + HMAC', color: 'var(--accent)' },
+  typescript: { label: 'TypeScript', color: '#3178C6' },
+  mongodb: { label: 'MongoDB', color: '#47A248' },
+  redis: { label: 'Redis', color: '#DC382D' },
+  prometheus: { label: 'Prometheus', color: '#E6522C' },
+  grafana: { label: 'Grafana', color: '#F46800' },
 };

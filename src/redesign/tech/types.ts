@@ -11,6 +11,7 @@ export interface IconShape {
 export type TechId =
   | 'python' | 'django' | 'fastapi' | 'postgresql' | 'graphql' | 'aws' | 'docker'
   | 'react' | 'angular' | 'git' | 'nginx' | 'gcp' | 'podman' | 'pytest'
-  | 'llm' | 'websockets' | 'jwt';
+  | 'llm' | 'websockets' | 'jwt'
+  | 'typescript' | 'mongodb' | 'redis' | 'prometheus' | 'grafana';
 
 export type ContactIconId = 'gmail' | 'whatsapp' | 'linkedin' | 'github' | 'calendly';
