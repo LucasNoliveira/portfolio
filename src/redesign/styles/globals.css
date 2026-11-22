@@ -152,6 +152,8 @@
 .typing .line { display: block; white-space: pre; }
 .typing .line { overflow: hidden; width: calc(var(--n) * 1ch); animation: type var(--dur) steps(var(--n)) var(--start) backwards; }
 @keyframes type { from { width: 0; } }
+/* Weakest devices (see PERF_PROBE in the layout): show the text at once, no per-step layout work. */
+:root[data-perf='min'] .typing .line { animation: none; }
 
 /* Hero entrance: one short sequence on load. */
 @keyframes rise { from { opacity: 0; translate: 0 14px; } }

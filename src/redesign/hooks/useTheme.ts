@@ -38,11 +38,12 @@ const readChoice = (): Theme | null => {
 
 /**
  * Swaps the theme with a circle that grows from the toggle button, using the View Transitions API.
- * Browsers without it, and visitors who prefer reduced motion, just get the instant swap.
+ * Browsers without it, visitors who prefer reduced motion and weak devices (data-perf, set in the layout) get the instant swap.
  */
 function revealTheme(apply: () => void, origin?: HTMLElement | null) {
   const root = document.documentElement;
-  if (!origin || !('startViewTransition' in document) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const weakDevice = root.dataset.perf !== undefined;
+  if (!origin || weakDevice || !('startViewTransition' in document) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     apply();
     return;
   }
