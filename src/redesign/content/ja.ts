@@ -18,7 +18,7 @@ export const ja: Dictionary = {
   },
   work: {
     title: '職歴',
-    intro: 'スタートアップ、大手コンサルティング会社、そして数件の業務委託。一貫してバックエンド側で働いてきました。',
+    intro: 'スタートアップ、大手コンサルティング会社、そして数件の業務委託。',
     jobs: [
       {
         companyId: 'vocal', company: 'Vocal Silence', role: 'バックエンドエンジニア（ミドルレベル）',
@@ -123,7 +123,7 @@ export const ja: Dictionary = {
   },
   blog: {
     title: 'ブログ',
-    intro: 'バックエンド開発（Python、Django、API、クラウド）に関するノート。',
+    intro: 'ソフトウェア開発（Python、Django、API、クラウド）に関するノート。',
     empty: '最初の記事を準備中です。',
     minRead: '読了目安 {n}分',
     back: '記事一覧',
@@ -131,7 +131,7 @@ export const ja: Dictionary = {
     alsoIn: '{language}でも読めます',
     feed: 'RSSフィード',
     latest: '最新の記事',
-    latestIntro: 'バックエンド開発に関する技術記事。',
+    latestIntro: 'ソフトウェア開発に関する技術記事。',
     all: '記事一覧',
   },
   recommendations: {
@@ -147,7 +147,7 @@ export const ja: Dictionary = {
   },
   services: {
     title: 'お手伝いできること',
-    intro: 'まずはバックエンド。必要に応じて、プロジェクトを最初から最後まで担当できます。',
+    intro: 'プロジェクトに必要なことを、APIからインターフェースまで。',
     items: [
       { title: 'APIとバックエンド', description: 'チームやパートナーが頼れる安全なAPI。認証、連携、テストを最初から備えます。', stack: ['python', 'django', 'fastapi', 'graphql', 'jwt', 'postgresql'] },
       { title: 'クラウドとデプロイ', description: 'AWSまたはGCP上で動くコンテナ化されたサービス。ノートPCから本番まで、一貫した環境を保ちます。', stack: ['aws', 'gcp', 'docker', 'nginx'] },
@@ -167,7 +167,7 @@ export const ja: Dictionary = {
       { name: 'バックエンド', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'websockets'] },
       { name: 'クラウドとインフラ', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
       { name: 'AIと品質', items: ['llm', 'pytest', 'jwt', 'git'] },
-      { name: 'フロントエンド（必要なとき）', items: ['react', 'angular'] },
+      { name: 'フロントエンド', items: ['react', 'angular'] },
     ],
   },
   about: {
@@ -175,7 +175,6 @@ export const ja: Dictionary = {
     paragraphs: [
       '漠然としたプロダクトのアイデアを、安定して動き続けるサービスに変えるのが好きです。得意分野はPython、クラウドインフラ、言語モデルを使った機能です。',
       'クリーンな設計、テスト、セキュリティ、可観測性を大切にし、トレードオフをチームメイトやステークホルダーにわかりやすく説明することを心がけています。',
-      '海外のチームとリモートで働いており、条件が合えば移住も歓迎します。',
     ],
     github: { heatmap: '過去1年間のコントリビューション', heatmapDay: '{date}：{count}件のコントリビューション', title: 'GitHub', repos: '公開リポジトリ', stars: 'スター', languages: 'よく使う言語', lastPush: '最終プッシュ', profile: 'プロフィールを見る' },
     languagesTitle: '言語',
@@ -191,7 +190,7 @@ export const ja: Dictionary = {
   },
   contact: {
     title: 'お話ししましょう',
-    intro: 'USD、EUR、GBPで支払われる、リモートのバックエンドおよびAIプロダクトのポジションに関心があります。通常1日以内に返信します。',
+    intro: 'プロダクトやチーム、課題についてお聞かせください。通常1日以内に返信します。',
     whatsapp: 'WhatsAppでメッセージ',
     call: '30分の面談を予約',
     resume: '職務経歴書',

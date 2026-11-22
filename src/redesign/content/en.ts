@@ -18,7 +18,7 @@ export const en: Dictionary = {
   },
   work: {
     title: 'Where I’ve worked',
-    intro: 'A startup, an enterprise consultancy and a few contract engagements, always on the backend side.',
+    intro: 'A startup, an enterprise consultancy and a few contract engagements.',
     jobs: [
       {
         companyId: 'vocal', company: 'Vocal Silence', role: 'Mid-level backend engineer',
@@ -123,7 +123,7 @@ export const en: Dictionary = {
   },
   blog: {
     title: 'Blog',
-    intro: 'Notes on backend engineering: Python, Django, APIs and cloud.',
+    intro: 'Notes on software engineering: Python, Django, APIs and cloud.',
     empty: 'The first posts are on their way.',
     minRead: '{n} min read',
     back: 'All posts',
@@ -131,7 +131,7 @@ export const en: Dictionary = {
     alsoIn: 'Also available in {language}',
     feed: 'RSS feed',
     latest: 'Latest writing',
-    latestIntro: 'Technical posts on backend engineering.',
+    latestIntro: 'Technical posts on software engineering.',
     all: 'All posts',
   },
   recommendations: {
@@ -147,7 +147,7 @@ export const en: Dictionary = {
   },
   services: {
     title: 'What I can build',
-    intro: 'Backend first. When a project needs more, I can take it end to end.',
+    intro: 'Whatever the project needs, from the API to the interface.',
     items: [
       { title: 'APIs and backend', description: 'Secure APIs that teams and partners can depend on, with authentication, integrations and tests from the start.', stack: ['python', 'django', 'fastapi', 'graphql', 'jwt', 'postgresql'] },
       { title: 'Cloud and deployment', description: 'Containerized services running on AWS or GCP, with environments that stay consistent from a laptop to production.', stack: ['aws', 'gcp', 'docker', 'nginx'] },
@@ -167,7 +167,7 @@ export const en: Dictionary = {
       { name: 'Backend', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'websockets'] },
       { name: 'Cloud and infrastructure', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
       { name: 'AI and quality', items: ['llm', 'pytest', 'jwt', 'git'] },
-      { name: 'Frontend, when needed', items: ['react', 'angular'] },
+      { name: 'Frontend', items: ['react', 'angular'] },
     ],
   },
   about: {
@@ -175,7 +175,6 @@ export const en: Dictionary = {
     paragraphs: [
       'I like turning loose product ideas into services that stay up. My focus is Python, cloud infrastructure and features built on language models.',
       'I care about clean design, tests, security and observability, and about explaining trade-offs plainly to teammates and stakeholders.',
-      'I work remotely with international teams and I’m open to relocating for the right role.',
     ],
     github: { heatmap: 'contributions in the last year', heatmapDay: '{count} contributions on {date}', title: 'On GitHub', repos: 'Public repositories', stars: 'Stars', languages: 'Most used', lastPush: 'Last push', profile: 'View profile' },
     languagesTitle: 'Languages',
@@ -191,7 +190,7 @@ export const en: Dictionary = {
   },
   contact: {
     title: 'Let’s talk',
-    intro: 'I’m open to remote backend and AI-product roles paid in USD, EUR or GBP. I usually reply within a day.',
+    intro: 'Tell me about the product, the team or the problem. I usually reply within a day.',
     whatsapp: 'Message on WhatsApp',
     call: 'Book a 30-minute intro call',
     resume: 'Resume',

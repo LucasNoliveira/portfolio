@@ -18,7 +18,7 @@ export const pt: Dictionary = {
   },
   work: {
     title: 'Onde já trabalhei',
-    intro: 'Uma startup, uma consultoria global e alguns projetos como PJ, sempre no backend.',
+    intro: 'Uma startup, uma consultoria global e alguns projetos como PJ.',
     jobs: [
       {
         companyId: 'vocal', company: 'Vocal Silence', role: 'Engenheiro backend pleno',
@@ -123,7 +123,7 @@ export const pt: Dictionary = {
   },
   blog: {
     title: 'Blog',
-    intro: 'Notas sobre engenharia de backend: Python, Django, APIs e nuvem.',
+    intro: 'Notas sobre engenharia de software: Python, Django, APIs e nuvem.',
     empty: 'Os primeiros posts estão a caminho.',
     minRead: '{n} min de leitura',
     back: 'Todos os posts',
@@ -131,7 +131,7 @@ export const pt: Dictionary = {
     alsoIn: 'Também disponível em {language}',
     feed: 'Feed RSS',
     latest: 'Últimos textos',
-    latestIntro: 'Posts técnicos sobre engenharia de backend.',
+    latestIntro: 'Posts técnicos sobre engenharia de software.',
     all: 'Todos os posts',
   },
   recommendations: {
@@ -147,7 +147,7 @@ export const pt: Dictionary = {
   },
   services: {
     title: 'O que posso construir',
-    intro: 'Backend em primeiro lugar. Quando o projeto pede mais, levo ele de ponta a ponta.',
+    intro: 'O que o projeto pedir, da API à interface.',
     items: [
       { title: 'APIs e backend', description: 'APIs seguras em que times e parceiros podem confiar, com autenticação, integrações e testes desde o início.', stack: ['python', 'django', 'fastapi', 'graphql', 'jwt', 'postgresql'] },
       { title: 'Cloud e deploy', description: 'Serviços em contêineres na AWS ou GCP, com ambientes consistentes do notebook até a produção.', stack: ['aws', 'gcp', 'docker', 'nginx'] },
@@ -167,7 +167,7 @@ export const pt: Dictionary = {
       { name: 'Backend', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'websockets'] },
       { name: 'Cloud e infraestrutura', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
       { name: 'IA e qualidade', items: ['llm', 'pytest', 'jwt', 'git'] },
-      { name: 'Frontend, quando preciso', items: ['react', 'angular'] },
+      { name: 'Frontend', items: ['react', 'angular'] },
     ],
   },
   about: {
@@ -175,7 +175,6 @@ export const pt: Dictionary = {
     paragraphs: [
       'Gosto de transformar ideias soltas de produto em serviços que ficam no ar. Meu foco é Python, infraestrutura em nuvem e recursos baseados em modelos de linguagem.',
       'Me importo com design limpo, testes, segurança e observabilidade, e com explicar trade-offs de forma simples para colegas e stakeholders.',
-      'Trabalho remoto e estou aberto a me mudar pela vaga certa.',
     ],
     github: { heatmap: 'contribuições no último ano', heatmapDay: '{count} contribuições em {date}', title: 'No GitHub', repos: 'Repositórios públicos', stars: 'Estrelas', languages: 'Mais usadas', lastPush: 'Último push', profile: 'Ver perfil' },
     languagesTitle: 'Idiomas',
@@ -191,7 +190,7 @@ export const pt: Dictionary = {
   },
   contact: {
     title: 'Vamos conversar',
-    intro: 'Estou aberto a vagas remotas de backend e produtos de IA. Costumo responder em até um dia.',
+    intro: 'Me conte sobre o produto, o time ou o problema. Costumo responder em até um dia.',
     whatsapp: 'Chamar no WhatsApp',
     call: 'Agendar uma conversa de 30 minutos',
     resume: 'Currículo',
