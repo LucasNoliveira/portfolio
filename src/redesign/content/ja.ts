@@ -156,7 +156,7 @@ export const ja: Dictionary = {
       {
         title: 'プラットフォームを最初から最後まで',
         description: '一人がプロダクト全体を担当するのが適している場合に、Reactのフロントエンド、バックエンド、データベース、デプロイ、連携まで対応します。POSシステムを最初のコミットから本番稼働までリードした経験があります。',
-        stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
+        stack: ['react', 'tailwind', 'django', 'postgresql', 'docker', 'nginx'],
         featured: true,
       },
     ],
@@ -165,7 +165,7 @@ export const ja: Dictionary = {
     title: 'スタック',
     groups: [
       { name: 'バックエンド', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'mongodb', 'redis', 'websockets'] },
-      { name: 'フロントエンド', items: ['react', 'typescript', 'angular'] },
+      { name: 'フロントエンド', items: ['react', 'typescript', 'tailwind', 'angular'] },
       { name: 'クラウドとインフラ', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
       { name: '可観測性', items: ['prometheus', 'grafana'] },
       { name: 'AIと品質', items: ['llm', 'pytest', 'jwt', 'git'] },

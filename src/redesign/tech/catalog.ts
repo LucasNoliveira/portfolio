@@ -52,4 +52,5 @@ export const TECH: Record<TechId, Tech> = {
   redis: { label: 'Redis', color: '#DC382D' },
   prometheus: { label: 'Prometheus', color: '#E6522C' },
   grafana: { label: 'Grafana', color: '#F46800' },
+  tailwind: { label: 'Tailwind CSS', color: '#06B6D4' },
 };

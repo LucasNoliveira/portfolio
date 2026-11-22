@@ -156,7 +156,7 @@ export const pt: Dictionary = {
       {
         title: 'Plataformas completas, de ponta a ponta',
         description: 'Quando faz sentido uma pessoa cuidar do produto inteiro: frontend em React, backend, banco de dados, deploy e integrações. Liderei um sistema POS do primeiro commit à produção.',
-        stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
+        stack: ['react', 'tailwind', 'django', 'postgresql', 'docker', 'nginx'],
         featured: true,
       },
     ],
@@ -165,7 +165,7 @@ export const pt: Dictionary = {
     title: 'Stack',
     groups: [
       { name: 'Backend', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'mongodb', 'redis', 'websockets'] },
-      { name: 'Frontend', items: ['react', 'typescript', 'angular'] },
+      { name: 'Frontend', items: ['react', 'typescript', 'tailwind', 'angular'] },
       { name: 'Cloud e infraestrutura', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
       { name: 'Observabilidade', items: ['prometheus', 'grafana'] },
       { name: 'IA e qualidade', items: ['llm', 'pytest', 'jwt', 'git'] },

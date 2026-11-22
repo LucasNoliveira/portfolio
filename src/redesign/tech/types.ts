@@ -12,6 +12,6 @@ export type TechId =
   | 'python' | 'django' | 'fastapi' | 'postgresql' | 'graphql' | 'aws' | 'docker'
   | 'react' | 'angular' | 'git' | 'nginx' | 'gcp' | 'podman' | 'pytest'
   | 'llm' | 'websockets' | 'jwt'
-  | 'typescript' | 'mongodb' | 'redis' | 'prometheus' | 'grafana';
+  | 'typescript' | 'mongodb' | 'redis' | 'prometheus' | 'grafana' | 'tailwind';
 
 export type ContactIconId = 'gmail' | 'whatsapp' | 'linkedin' | 'github' | 'calendly';

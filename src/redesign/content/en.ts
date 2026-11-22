@@ -156,7 +156,7 @@ export const en: Dictionary = {
       {
         title: 'Complete platforms, end to end',
         description: 'When it makes sense to have one person own the whole product: React frontend, backend, database, deployment and integrations. I led a point-of-sale system from the first commit to production.',
-        stack: ['react', 'django', 'postgresql', 'docker', 'nginx'],
+        stack: ['react', 'tailwind', 'django', 'postgresql', 'docker', 'nginx'],
         featured: true,
       },
     ],
@@ -165,7 +165,7 @@ export const en: Dictionary = {
     title: 'Stack',
     groups: [
       { name: 'Backend', items: ['python', 'django', 'fastapi', 'graphql', 'postgresql', 'mongodb', 'redis', 'websockets'] },
-      { name: 'Frontend', items: ['react', 'typescript', 'angular'] },
+      { name: 'Frontend', items: ['react', 'typescript', 'tailwind', 'angular'] },
       { name: 'Cloud and infrastructure', items: ['aws', 'gcp', 'docker', 'podman', 'nginx'] },
       { name: 'Observability', items: ['prometheus', 'grafana'] },
       { name: 'AI and quality', items: ['llm', 'pytest', 'jwt', 'git'] },
