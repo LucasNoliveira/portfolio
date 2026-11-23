@@ -27,8 +27,8 @@ export function CaseCarousel({ label, previous, next, hint, children }: Props) {
     if (!el) return;
     const max = el.scrollWidth - el.clientWidth;
     setEdge({
-      start: el.scrollLeft <= 2,
-      end: el.scrollLeft >= max - 2,
+      start: el.scrollLeft <= 6,
+      end: el.scrollLeft >= max - 6,
       progress: max > 0 ? el.scrollLeft / max : 0,
       thumb: el.scrollWidth > 0 ? Math.min(1, el.clientWidth / el.scrollWidth) : 1,
     });
