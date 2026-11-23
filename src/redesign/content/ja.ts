@@ -2,7 +2,7 @@ import type { Dictionary } from './types';
 
 export const ja: Dictionary = {
   meta: { title: 'Lucas Oliveira — ソフトウェアエンジニア', description: 'サンパウロ在住のソフトウェアエンジニア。Python、Django、FastAPI、React、AWSでAIプロダクトを開発しています。' },
-  ui: { skip: '本文へスキップ', theme: 'カラーテーマを切り替える', language: '言語', top: 'トップへ戻る', current: '現在', problem: '課題', approach: '対応', result: '成果', source: 'ソースコードを見る' },
+  ui: { skip: '本文へスキップ', theme: 'カラーテーマを切り替える', language: '言語', top: 'トップへ戻る', current: '現在', problem: '課題', approach: '対応', result: '成果', source: 'ソースコードを見る', previous: '前へ', next: '次へ', drag: 'ドラッグして続きを見る' },
   nav: { work: '職歴', cases: '事例', services: 'サービス', skills: 'スタック', about: '自己紹介', contact: '連絡先', blog: 'ブログ' },
   hero: {
     role: 'AIプロダクトを開発するソフトウェアエンジニア。',

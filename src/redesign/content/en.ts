@@ -2,7 +2,7 @@ import type { Dictionary } from './types';
 
 export const en: Dictionary = {
   meta: { title: 'Lucas Oliveira — Software engineer', description: 'Software engineer in São Paulo building AI-powered products with Python, Django, FastAPI, React and AWS.' },
-  ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Language', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source' },
+  ui: { skip: 'Skip to content', theme: 'Toggle color theme', language: 'Language', top: 'Back to top', current: 'Current', problem: 'Problem', approach: 'What I did', result: 'Result', source: 'View source', previous: 'Previous', next: 'Next', drag: 'Drag or swipe to see more' },
   nav: { work: 'Work', cases: 'Case studies', services: 'Services', skills: 'Stack', about: 'About', contact: 'Contact', blog: 'Blog' },
   hero: {
     role: 'Software engineer building AI-powered products.',
