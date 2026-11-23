@@ -2,7 +2,7 @@ import type { Dictionary } from './types';
 
 export const pt: Dictionary = {
   meta: { title: 'Lucas Oliveira — Engenheiro de software', description: 'Engenheiro de software em São Paulo criando produtos com IA em Python, Django, FastAPI, React e AWS.' },
-  ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'Idioma', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte', previous: 'Anterior', next: 'Próximo', drag: 'Arraste para ver mais' },
+  ui: { skip: 'Ir para o conteúdo', theme: 'Alternar tema de cores', language: 'Idioma', top: 'Voltar ao topo', current: 'Atual', problem: 'Problema', approach: 'O que fiz', result: 'Resultado', source: 'Ver código-fonte', previous: 'Anterior', next: 'Próximo' },
   nav: { work: 'Trabalho', cases: 'Cases', services: 'Serviços', skills: 'Stack', about: 'Sobre', contact: 'Contato', blog: 'Blog' },
   hero: {
     role: 'Engenheiro de software criando produtos com IA.',

@@ -56,6 +56,9 @@ export function CaseCarousel({ label, previous, next, hint, children }: Props) {
   const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
     if (event.pointerType !== 'mouse' || event.button !== 0 || !track.current) return;
     drag.current = { active: true, moved: false, startX: event.clientX, startLeft: track.current.scrollLeft };
+    // Pressing inside the track means "scroll", not "select": stop a selection from starting at all.
+    track.current.style.userSelect = 'none';
+    window.getSelection()?.removeAllRanges();
   };
 
   const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
@@ -76,6 +79,7 @@ export function CaseCarousel({ label, previous, next, hint, children }: Props) {
     const el = track.current;
     const wasDragging = drag.current.moved;
     drag.current.active = false;
+    if (el) el.style.userSelect = '';
     if (!wasDragging || !el) return;
     drag.current.moved = false;
     if (el.hasPointerCapture(event.pointerId)) el.releasePointerCapture(event.pointerId);
