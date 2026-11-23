@@ -21,15 +21,17 @@ export const en: Dictionary = {
     intro: 'A startup, an enterprise consultancy and a few contract engagements.',
     jobs: [
       {
-        companyId: 'vocal', company: 'Vocal Silence', role: 'Mid-level backend engineer',
+        companyId: 'vocal', company: 'Vocal Silence', role: 'Mid-level software engineer',
         period: 'Feb 2026 – now', current: true,
         highlights: [
-          'Lead the backend architecture of AI applications built on Python and Django.',
-          'Designed partner APIs secured with JWT and HMAC request signing.',
-          'Wrote the backend test suite from scratch and added LLM-assisted code review to pull requests.',
-          'Run workloads on AWS (ECS, Lambda, RDS, S3, SES, CloudWatch) and mentor a junior engineer.',
+          'Joined a very early-stage startup and helped build its products from the start: first an NR-1 mental-health survey platform and, when it lost traction, Viva Corporate, an AI-assisted HR platform where I became one of the main engineers.',
+          'Built a large part of both products across the stack: backend, frontend, data modeling and AWS infrastructure.',
+          'On Viva Corporate: a multi-tenant platform with PostgreSQL row-level security, a survey engine for 10+ validated instruments (BAT-23, WHO-5, ERI and others), a conversational check-in chat, and people and HR data imports of up to 10k rows.',
+          'Wrote the test suite from scratch and design for scale and observability; Viva Corporate now runs on 900+ automated tests.',
+          'Exposed the platform’s APIs to partners, secured with JWT and HMAC request signing.',
+          'Own what I build end to end: I talk to the founders constantly to shape the roadmap as priorities change, and I mentor a junior engineer, in English.',
         ],
-        stack: ['python', 'django', 'aws', 'docker', 'pytest', 'llm'],
+        stack: ['python', 'django', 'fastapi', 'react', 'postgresql', 'aws', 'docker', 'pytest', 'llm'],
       },
       {
         companyId: 'accenture', company: 'Accenture', role: 'Software engineer',
@@ -92,8 +94,15 @@ export const en: Dictionary = {
   },
   cases: {
     title: 'Case studies',
-    intro: '6 problems, what I did about them, and what changed.',
+    intro: '7 problems, what I did about them, and what changed.',
     items: [
+      {
+        companyId: 'vocal', company: 'Vocal Silence', title: 'From a product that lost traction to an HR platform',
+        result: { value: '10+', label: 'validated instruments in one platform' },
+        problem: 'The first product, an NR-1 mental-health survey platform, was losing traction and the company needed a broader one, fast.',
+        approach: 'As one of the main engineers, built Viva Corporate: a multi-tenant platform with a survey engine, a check-in chat, people and HR imports, and a risk map with the monthly cost of each risk.',
+        stack: ['django', 'fastapi', 'postgresql', 'react', 'aws'],
+      },
       {
         companyId: 'vocal', company: 'Vocal Silence', title: 'APIs partners can trust',
         result: { value: '−50%', label: 'Docker image size' },

@@ -21,15 +21,17 @@ export const ja: Dictionary = {
     intro: 'スタートアップ、大手コンサルティング会社、そして数件の業務委託。',
     jobs: [
       {
-        companyId: 'vocal', company: 'Vocal Silence', role: 'バックエンドエンジニア（ミドルレベル）',
+        companyId: 'vocal', company: 'Vocal Silence', role: 'ソフトウェアエンジニア（ミドルレベル）',
         period: '2026年2月 – 現在', current: true,
         highlights: [
-          'PythonとDjangoで構築するAIアプリケーションのバックエンドアーキテクチャを主導。',
-          'JWTとHMACによるリクエスト署名で保護された、パートナー向けAPIを設計。',
-          'バックエンドのテストスイートをゼロから整備し、プルリクエストにLLMによるコードレビューを導入。',
-          'AWS（ECS、Lambda、RDS、S3、SES、CloudWatch）でワークロードを運用し、ジュニアエンジニアをメンタリング。',
+          '創業初期のスタートアップに参画し、最初からプロダクト開発に携わりました。最初はNR-1向けのメンタルヘルス調査プラットフォーム、勢いが落ちた後は、AI活用のHRプラットフォーム「Viva Corporate」で主要エンジニアの一人として開発。',
+          '2つのプロダクトの大部分を、バックエンド、フロントエンド、データモデリング、AWSインフラまで一貫して構築。',
+          'Viva Corporateでは、PostgreSQLのRow-Level Securityによるマルチテナント基盤、10種類以上の検証済み指標（BAT-23、WHO-5、ERIなど）に対応するサーベイエンジン、会話形式のチェックインチャット、最大1万行までの人事データ・従業員のインポートを構築。',
+          'テストスイートをゼロから整備し、スケーラビリティと可観測性を意識して設計。Viva Corporateは現在900件以上の自動テストで稼働。',
+          'プラットフォームのAPIをパートナー向けに公開し、JWTとHMACによるリクエスト署名で保護。',
+          '作るものを最初から最後まで自分で担い、優先順位が変わるたびに創業者と密に話し合って方向性を調整。ジュニアエンジニアの指導は英語で行っています。',
         ],
-        stack: ['python', 'django', 'aws', 'docker', 'pytest', 'llm'],
+        stack: ['python', 'django', 'fastapi', 'react', 'postgresql', 'aws', 'docker', 'pytest', 'llm'],
       },
       {
         companyId: 'accenture', company: 'Accenture', role: 'ソフトウェアエンジニア',
@@ -92,8 +94,15 @@ export const ja: Dictionary = {
   },
   cases: {
     title: '事例',
-    intro: '6つの課題と、私の対応、そして変わったこと。',
+    intro: '7つの課題と、私の対応、そして変わったこと。',
     items: [
+      {
+        companyId: 'vocal', company: 'Vocal Silence', title: '勢いを失ったプロダクトからHRプラットフォームへ',
+        result: { value: '10+', label: '1つの基盤で10以上の検証済み指標' },
+        problem: '最初のプロダクトであるNR-1向けのメンタルヘルス調査プラットフォームは勢いを失い、会社はより幅広いプロダクトを急いで必要としていました。',
+        approach: '主要エンジニアの一人として「Viva Corporate」を構築。サーベイエンジン、チェックインチャット、従業員・人事データのインポート、リスクごとの月次コストを示すリスクマップを備えたマルチテナント基盤です。',
+        stack: ['django', 'fastapi', 'postgresql', 'react', 'aws'],
+      },
       {
         companyId: 'vocal', company: 'Vocal Silence', title: 'パートナーが信頼できるAPI',
         result: { value: '−50%', label: 'Dockerイメージのサイズ' },

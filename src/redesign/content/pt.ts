@@ -21,15 +21,17 @@ export const pt: Dictionary = {
     intro: 'Uma startup, uma consultoria global e alguns projetos como PJ.',
     jobs: [
       {
-        companyId: 'vocal', company: 'Vocal Silence', role: 'Engenheiro backend pleno',
+        companyId: 'vocal', company: 'Vocal Silence', role: 'Engenheiro de software pleno',
         period: 'Fev 2026 – atual', current: true,
         highlights: [
-          'Lidero a arquitetura backend de aplicações de IA em Python e Django.',
-          'Projetei APIs para parceiros protegidas com JWT e assinatura HMAC das requisições.',
-          'Criei a suíte de testes do backend do zero e incluí code review com LLM nos pull requests.',
-          'Opero cargas na AWS (ECS, Lambda, RDS, S3, SES, CloudWatch) e faço mentoria de um engenheiro júnior.',
+          'Entrei numa startup em fase bem inicial e ajudei a construir seus produtos desde o começo: primeiro uma plataforma de pesquisas de saúde mental para a NR-1 e, quando ela perdeu força, o Viva Corporate, uma plataforma de RH com IA da qual me tornei um dos principais engenheiros.',
+          'Construí boa parte dos dois produtos de ponta a ponta: backend, frontend, modelagem de dados e infraestrutura na AWS.',
+          'No Viva Corporate: plataforma multi-tenant com row-level security no PostgreSQL, motor de pesquisas com mais de 10 instrumentos validados (BAT-23, WHO-5, ERI e outros), chat de check-in conversacional e importações de pessoas e dados de RH de até 10 mil linhas.',
+          'Escrevi a suíte de testes do zero e projeto pensando em escala e observabilidade; o Viva Corporate roda hoje com mais de 900 testes automatizados.',
+          'Expus as APIs da plataforma para parceiros, protegidas com JWT e assinatura HMAC das requisições.',
+          'Tenho ownership do que construo de ponta a ponta: converso o tempo todo com os donos para ajustar o rumo conforme as prioridades mudam e oriento um dev júnior, em inglês.',
         ],
-        stack: ['python', 'django', 'aws', 'docker', 'pytest', 'llm'],
+        stack: ['python', 'django', 'fastapi', 'react', 'postgresql', 'aws', 'docker', 'pytest', 'llm'],
       },
       {
         companyId: 'accenture', company: 'Accenture', role: 'Engenheiro de software',
@@ -92,8 +94,15 @@ export const pt: Dictionary = {
   },
   cases: {
     title: 'Cases',
-    intro: '6 problemas, o que fiz e o que mudou.',
+    intro: '7 problemas, o que fiz e o que mudou.',
     items: [
+      {
+        companyId: 'vocal', company: 'Vocal Silence', title: 'De um produto que perdeu força a uma plataforma de RH',
+        result: { value: '10+', label: 'instrumentos validados em uma plataforma' },
+        problem: 'O primeiro produto, uma plataforma de pesquisas de saúde mental para a NR-1, estava perdendo força e a empresa precisava de uma mais ampla, rápido.',
+        approach: 'Como um dos principais engenheiros, construí o Viva Corporate: plataforma multi-tenant com motor de pesquisas, chat de check-in, importações de pessoas e dados de RH e um mapa de riscos com o custo mensal de cada risco.',
+        stack: ['django', 'fastapi', 'postgresql', 'react', 'aws'],
+      },
       {
         companyId: 'vocal', company: 'Vocal Silence', title: 'APIs em que parceiros confiam',
         result: { value: '−50%', label: 'no tamanho da imagem Docker' },

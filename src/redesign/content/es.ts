@@ -21,15 +21,17 @@ export const es: Dictionary = {
     intro: 'Una startup, una consultora global y algunos proyectos como contratista.',
     jobs: [
       {
-        companyId: 'vocal', company: 'Vocal Silence', role: 'Ingeniero backend semi senior',
+        companyId: 'vocal', company: 'Vocal Silence', role: 'Ingeniero de software semi senior',
         period: 'Feb 2026 – actualidad', current: true,
         highlights: [
-          'Lidero la arquitectura backend de aplicaciones de IA construidas con Python y Django.',
-          'Diseñé APIs para socios protegidas con JWT y firma HMAC de las solicitudes.',
-          'Escribí desde cero la suite de pruebas del backend y añadí revisión de código con LLM en los pull requests.',
-          'Opero cargas de trabajo en AWS (ECS, Lambda, RDS, S3, SES, CloudWatch) y hago mentoría a un ingeniero junior.',
+          'Me uní a una startup en una etapa muy temprana y ayudé a construir sus productos desde el inicio: primero una plataforma de encuestas de salud mental para la NR-1 y, cuando perdió fuerza, Viva Corporate, una plataforma de RR. HH. con IA en la que me convertí en uno de los principales ingenieros.',
+          'Construí buena parte de ambos productos de punta a punta: backend, frontend, modelado de datos e infraestructura en AWS.',
+          'En Viva Corporate: plataforma multi-tenant con row-level security en PostgreSQL, motor de encuestas con más de 10 instrumentos validados (BAT-23, WHO-5, ERI y otros), chat de check-in conversacional e importaciones de personas y datos de RR. HH. de hasta 10 mil filas.',
+          'Escribí la suite de pruebas desde cero y diseño pensando en escala y observabilidad; Viva Corporate funciona hoy con más de 900 pruebas automatizadas.',
+          'Expuse las APIs de la plataforma a socios, protegidas con JWT y firma HMAC de las solicitudes.',
+          'Tengo ownership de lo que construyo de punta a punta: hablo constantemente con los dueños para ajustar el rumbo cuando cambian las prioridades y oriento a un dev junior, en inglés.',
         ],
-        stack: ['python', 'django', 'aws', 'docker', 'pytest', 'llm'],
+        stack: ['python', 'django', 'fastapi', 'react', 'postgresql', 'aws', 'docker', 'pytest', 'llm'],
       },
       {
         companyId: 'accenture', company: 'Accenture', role: 'Ingeniero de software',
@@ -92,8 +94,15 @@ export const es: Dictionary = {
   },
   cases: {
     title: 'Casos de estudio',
-    intro: '6 problemas, lo que hice y qué cambió.',
+    intro: '7 problemas, lo que hice y qué cambió.',
     items: [
+      {
+        companyId: 'vocal', company: 'Vocal Silence', title: 'De un producto que perdió fuerza a una plataforma de RR. HH.',
+        result: { value: '10+', label: 'instrumentos validados en una plataforma' },
+        problem: 'El primer producto, una plataforma de encuestas de salud mental para la NR-1, estaba perdiendo fuerza y la empresa necesitaba una más amplia, rápido.',
+        approach: 'Como uno de los principales ingenieros, construí Viva Corporate: plataforma multi-tenant con motor de encuestas, chat de check-in, importaciones de personas y datos de RR. HH. y un mapa de riesgos con el costo mensual de cada riesgo.',
+        stack: ['django', 'fastapi', 'postgresql', 'react', 'aws'],
+      },
       {
         companyId: 'vocal', company: 'Vocal Silence', title: 'APIs en las que los socios pueden confiar',
         result: { value: '−50%', label: 'tamaño de la imagen Docker' },
