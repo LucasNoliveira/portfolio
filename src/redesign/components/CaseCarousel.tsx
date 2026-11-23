@@ -6,20 +6,17 @@ interface Props {
   label: string;
   previous: string;
   next: string;
-  hint: string;
   children: ReactNode;
 }
 
 const arrow = 'M9 6l6 6-6 6';
 
 /**
- * Horizontal track of cards: native scroll with snap on touch and keyboard, plus mouse dragging
- * (grab cursor) and previous/next buttons. Nothing here is required to read the cards.
+ * Horizontal track of cards: native scroll with snap (swipe on touch, arrow keys, trackpad), plus
+ * previous/next buttons on wider screens. There is no mouse dragging.
  */
-export function CaseCarousel({ label, previous, next, hint, children }: Props) {
+export function CaseCarousel({ label, previous, next, children }: Props) {
   const track = useRef<HTMLDivElement>(null);
-  const drag = useRef({ active: false, moved: false, startX: 0, startLeft: 0 });
-  const [dragging, setDragging] = useState(false);
   const [edge, setEdge] = useState({ start: true, end: false, progress: 0, thumb: 1 });
 
   const measure = useCallback(() => {
@@ -53,39 +50,6 @@ export function CaseCarousel({ label, previous, next, hint, children }: Props) {
     el.scrollBy({ left: direction * width, behavior: smooth() });
   };
 
-  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
-    if (event.pointerType !== 'mouse' || event.button !== 0 || !track.current) return;
-    drag.current = { active: true, moved: false, startX: event.clientX, startLeft: track.current.scrollLeft };
-    // Pressing inside the track means "scroll", not "select": stop a selection from starting at all.
-    track.current.style.userSelect = 'none';
-    window.getSelection()?.removeAllRanges();
-  };
-
-  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
-    const state = drag.current;
-    const el = track.current;
-    if (!state.active || !el) return;
-    const delta = event.clientX - state.startX;
-    if (!state.moved && Math.abs(delta) < 4) return;
-    if (!state.moved) {
-      state.moved = true;
-      setDragging(true);
-      el.setPointerCapture(event.pointerId);
-    }
-    el.scrollLeft = state.startLeft - delta;
-  };
-
-  const endDrag = (event: React.PointerEvent<HTMLDivElement>) => {
-    const el = track.current;
-    const wasDragging = drag.current.moved;
-    drag.current.active = false;
-    if (el) el.style.userSelect = '';
-    if (!wasDragging || !el) return;
-    drag.current.moved = false;
-    if (el.hasPointerCapture(event.pointerId)) el.releasePointerCapture(event.pointerId);
-    setDragging(false);
-  };
-
   const button =
     'grid h-9 w-9 cursor-pointer place-items-center rounded-full border border-rule hover:bg-paper-2 disabled:cursor-default disabled:opacity-40 disabled:hover:bg-transparent';
 
@@ -97,14 +61,7 @@ export function CaseCarousel({ label, previous, next, hint, children }: Props) {
         aria-label={label}
         tabIndex={0}
         onScroll={measure}
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={endDrag}
-        onPointerCancel={endDrag}
-        onDragStart={(event) => event.preventDefault()}
-        className={`-mx-1 flex gap-4 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
-          dragging ? 'cursor-grabbing select-none' : 'cursor-grab snap-x snap-mandatory'
-        }`}
+        className="-mx-1 flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {children}
       </div>
@@ -116,8 +73,7 @@ export function CaseCarousel({ label, previous, next, hint, children }: Props) {
             style={{ width: `${edge.thumb * 100}%`, left: `${edge.progress * (1 - edge.thumb) * 100}%` }}
           />
         </div>
-        <p className="hidden text-sm text-muted sm:block">{hint}</p>
-        <div className="flex gap-2">
+        <div className="hidden gap-2 sm:flex">
           <button type="button" className={button} onClick={() => step(-1)} disabled={edge.start} aria-label={previous}>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ transform: 'scaleX(-1)' }}>
               <path d={arrow} />

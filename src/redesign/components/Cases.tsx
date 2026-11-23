@@ -16,7 +16,7 @@ const TONES = [
 export function Cases({ t }: { t: Dictionary }) {
   return (
     <Section id="cases" title={t.cases.title} intro={t.cases.intro} split>
-      <CaseCarousel label={t.cases.title} previous={t.ui.previous} next={t.ui.next} hint={t.ui.drag}>
+      <CaseCarousel label={t.cases.title} previous={t.ui.previous} next={t.ui.next}>
         {t.cases.items.map((item, i) => {
           const tone = TONES[i % TONES.length];
           return (
