@@ -24,7 +24,7 @@ export const en: Dictionary = {
         companyId: 'vocal', company: 'Vocal Silence', role: 'Mid-level software engineer',
         period: 'Feb 2026 – now', current: true,
         highlights: [
-          'Joined a very early-stage startup and helped build its products from the start: first an NR-1 mental-health survey platform and, when it lost traction, Viva Corporate, an AI-assisted HR platform where I became one of the main engineers.',
+          'Joined a very early-stage startup and helped build its products from the start: first an NR-1 mental-health survey platform and then Viva Corporate, an AI-assisted HR platform where I became one of the main engineers.',
           'Built a large part of both products across the stack: backend, frontend, data modeling and AWS infrastructure.',
           'On Viva Corporate: a multi-tenant platform with PostgreSQL row-level security, a survey engine for 10+ validated instruments (BAT-23, WHO-5, ERI and others), a conversational check-in chat, and people and HR data imports of up to 10k rows.',
           'Wrote the test suite from scratch and design for scale and observability; Viva Corporate now runs on 900+ automated tests.',
@@ -97,9 +97,9 @@ export const en: Dictionary = {
     intro: '7 problems, what I did about them, and what changed.',
     items: [
       {
-        companyId: 'vocal', company: 'Vocal Silence', title: 'From a product that lost traction to an HR platform',
+        companyId: 'vocal', company: 'Vocal Silence', title: 'From NR-1 surveys to a full HR platform',
         result: { value: '10+', label: 'validated instruments in one platform' },
-        problem: 'The first product, an NR-1 mental-health survey platform, was losing traction and the company needed a broader one, fast.',
+        problem: 'The company wanted to go beyond NR-1 mental-health surveys to complete, AI-assisted HR management.',
         approach: 'As one of the main engineers, built Viva Corporate: a multi-tenant platform with a survey engine, a check-in chat, people and HR imports, and a risk map with the monthly cost of each risk.',
         stack: ['django', 'fastapi', 'postgresql', 'react', 'aws'],
       },

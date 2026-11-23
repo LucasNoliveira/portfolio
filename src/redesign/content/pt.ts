@@ -24,7 +24,7 @@ export const pt: Dictionary = {
         companyId: 'vocal', company: 'Vocal Silence', role: 'Engenheiro de software pleno',
         period: 'Fev 2026 – atual', current: true,
         highlights: [
-          'Entrei numa startup em fase bem inicial e ajudei a construir seus produtos desde o começo: primeiro uma plataforma de pesquisas de saúde mental para a NR-1 e, quando ela perdeu força, o Viva Corporate, uma plataforma de RH com IA da qual me tornei um dos principais engenheiros.',
+          'Entrei numa startup em fase bem inicial e ajudei a construir seus produtos desde o começo: primeiro uma plataforma de pesquisas de saúde mental para a NR-1 e depois o Viva Corporate, uma plataforma de RH com IA da qual me tornei um dos principais engenheiros.',
           'Construí boa parte dos dois produtos de ponta a ponta: backend, frontend, modelagem de dados e infraestrutura na AWS.',
           'No Viva Corporate: plataforma multi-tenant com row-level security no PostgreSQL, motor de pesquisas com mais de 10 instrumentos validados (BAT-23, WHO-5, ERI e outros), chat de check-in conversacional e importações de pessoas e dados de RH de até 10 mil linhas.',
           'Escrevi a suíte de testes do zero e projeto pensando em escala e observabilidade; o Viva Corporate roda hoje com mais de 900 testes automatizados.',
@@ -97,9 +97,9 @@ export const pt: Dictionary = {
     intro: '7 problemas, o que fiz e o que mudou.',
     items: [
       {
-        companyId: 'vocal', company: 'Vocal Silence', title: 'De um produto que perdeu força a uma plataforma de RH',
+        companyId: 'vocal', company: 'Vocal Silence', title: 'Das pesquisas da NR-1 a uma plataforma completa de RH',
         result: { value: '10+', label: 'instrumentos validados em uma plataforma' },
-        problem: 'O primeiro produto, uma plataforma de pesquisas de saúde mental para a NR-1, estava perdendo força e a empresa precisava de uma mais ampla, rápido.',
+        problem: 'A empresa queria ir além das pesquisas de saúde mental da NR-1 e chegar a uma gestão de RH completa, com IA.',
         approach: 'Como um dos principais engenheiros, construí o Viva Corporate: plataforma multi-tenant com motor de pesquisas, chat de check-in, importações de pessoas e dados de RH e um mapa de riscos com o custo mensal de cada risco.',
         stack: ['django', 'fastapi', 'postgresql', 'react', 'aws'],
       },

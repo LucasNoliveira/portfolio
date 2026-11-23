@@ -24,7 +24,7 @@ export const ja: Dictionary = {
         companyId: 'vocal', company: 'Vocal Silence', role: 'ソフトウェアエンジニア（ミドルレベル）',
         period: '2026年2月 – 現在', current: true,
         highlights: [
-          '創業初期のスタートアップに参画し、最初からプロダクト開発に携わりました。最初はNR-1向けのメンタルヘルス調査プラットフォーム、勢いが落ちた後は、AI活用のHRプラットフォーム「Viva Corporate」で主要エンジニアの一人として開発。',
+          '創業初期のスタートアップに参画し、最初からプロダクト開発に携わりました。最初はNR-1向けのメンタルヘルス調査プラットフォーム、その後はAI活用のHRプラットフォーム「Viva Corporate」で主要エンジニアの一人として開発。',
           '2つのプロダクトの大部分を、バックエンド、フロントエンド、データモデリング、AWSインフラまで一貫して構築。',
           'Viva Corporateでは、PostgreSQLのRow-Level Securityによるマルチテナント基盤、10種類以上の検証済み指標（BAT-23、WHO-5、ERIなど）に対応するサーベイエンジン、会話形式のチェックインチャット、最大1万行までの人事データ・従業員のインポートを構築。',
           'テストスイートをゼロから整備し、スケーラビリティと可観測性を意識して設計。Viva Corporateは現在900件以上の自動テストで稼働。',
@@ -97,9 +97,9 @@ export const ja: Dictionary = {
     intro: '7つの課題と、私の対応、そして変わったこと。',
     items: [
       {
-        companyId: 'vocal', company: 'Vocal Silence', title: '勢いを失ったプロダクトからHRプラットフォームへ',
+        companyId: 'vocal', company: 'Vocal Silence', title: 'NR-1の調査から総合HRプラットフォームへ',
         result: { value: '10+', label: '1つの基盤で10以上の検証済み指標' },
-        problem: '最初のプロダクトであるNR-1向けのメンタルヘルス調査プラットフォームは勢いを失い、会社はより幅広いプロダクトを急いで必要としていました。',
+        problem: '会社は、NR-1向けのメンタルヘルス調査にとどまらず、AIを活用した総合的なHR管理へと広げることを目指していました。',
         approach: '主要エンジニアの一人として「Viva Corporate」を構築。サーベイエンジン、チェックインチャット、従業員・人事データのインポート、リスクごとの月次コストを示すリスクマップを備えたマルチテナント基盤です。',
         stack: ['django', 'fastapi', 'postgresql', 'react', 'aws'],
       },
